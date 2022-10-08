@@ -5,6 +5,7 @@ on:
       - "src/**"
       - "public/**"
       - "*.json"
+      - "*.html"
 
   workflow_dispatch:
 
