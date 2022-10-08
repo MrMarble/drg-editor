@@ -34,7 +34,7 @@ jobs:
           node-version: 16
           cache: "npm"
 
-      - run: nmp ci
+      - run: npm ci
       - run: npm run build
 
       - name: Upload artifact
