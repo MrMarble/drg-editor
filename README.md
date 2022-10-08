@@ -6,10 +6,13 @@ Online save editor for deep rock galactic game. [Try it out!](https://mrmarble.d
 
 > ⚠️ ALWAYS BACKUP YOUR SAVE FILE!
 
+## Work in progress
+
+The only thing you can edit right now are resources and credits, dwarfs and season will come soon (if I don't start another project :wink:)
+
 ## Offline!
 
 This editor runs fully on your browser, your save file never leaves your computer
-
 
 ## Snapshots
 ![](assets/first.png)
