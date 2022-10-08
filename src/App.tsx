@@ -1,5 +1,3 @@
-import logoUrl from "./assets/logo.png";
-import seasonUrl from "./assets/season02.png";
 import { Download } from "./components/Download";
 import { Editor } from "./components/Editor";
 import { SaveUpload } from "./components/SaveUpload";
@@ -14,8 +12,8 @@ function App() {
         {!isLoaded && (
           <>
             <div className="flex items-center justify-center">
-              <img src={logoUrl} alt="logo" className="w-32 mx-auto" />
-              <img src={seasonUrl} alt="season logo" className="w-32 mx-auto" />
+              <img src='assets/logo.png' alt="logo" className="w-32 mx-auto" />
+              <img src='assets/season02.png' alt="season logo" className="w-32 mx-auto" />
             </div>
             <SaveUpload />
           </>

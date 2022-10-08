@@ -2,20 +2,19 @@ import { useEffect, useState } from "react";
 import { useChangesStore } from "../../stores/changesStore";
 import { useSaveStore } from "../../stores/saveStore";
 
-const Resource = ({ name, uuid }: { name: string; uuid: number[] }) => {
-  const [icon, setIcon] = useState("");
+type Props = {
+  name: string; 
+  uuid: number[];
+}
+
+const Resource = ({ name, uuid }: Props) => {
+
   const [amount, setAmount] = useState(0);
   const [oldAmount, setOldAmount] = useState(0);
   const [resourceOffset, setResourceOffset] = useState(0);
 
   const { save, setSave } = useSaveStore();
   const { increment } = useChangesStore();
-
-  useEffect(() => {
-    import(`../../assets/${name.toLowerCase()}.webp`).then((url) =>
-      setIcon(url.default)
-    );
-  }, [name]);
 
   const handleChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value);
@@ -91,7 +90,7 @@ const Resource = ({ name, uuid }: { name: string; uuid: number[] }) => {
         </label>
         <label className="input-group">
           <span>
-            <img src={icon} className="w-6 max-w-none" />
+            <img src={`assets/${name.toLowerCase()}.webp`} className="w-6 max-w-none" />
           </span>
           <input
             type="text"

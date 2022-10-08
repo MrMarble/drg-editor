@@ -1,11 +1,5 @@
-import clsx from "clsx";
 import { FC, useState } from "react";
-
-import drillerUrl from "../../assets/driller.webp";
-import engineerUrl from "../../assets/engineer.webp";
-import gunnerUrl from "../../assets/gunner.webp";
-import hollomiteUrl from "../../assets/hollomite.webp";
-import scoutUrl from "../../assets/scout.webp";
+import clsx from "clsx";
 
 const Tab = ({
   active,
@@ -35,11 +29,11 @@ const Tab = ({
 };
 
 export const TABS = [
-  { name: "Resources", url: hollomiteUrl },
-  { name: "Driller", url: drillerUrl },
-  { name: "Gunner", url: gunnerUrl },
-  { name: "Scout", url: scoutUrl },
-  { name: "Engineer", url: engineerUrl },
+  { name: "Resources", url: 'assets/hollomite.webp' },
+  { name: "Driller", url: 'assets/driller.webp' },
+  { name: "Gunner", url: 'assets/gunner.webp' },
+  { name: "Scout", url: 'assets/scout.webp' },
+  { name: "Engineer", url: 'assets/engineer.webp' },
 ];
 
 export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
