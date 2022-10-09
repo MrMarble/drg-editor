@@ -42,7 +42,7 @@ export const SaveUpload = () => {
   return (
     <div
       {...getRootProps()}
-      className="rounded m-6 border-dashed border-2 p-6 border-slate-700 text-center"
+      className="rounded m-6 border-dashed border-drg-primary-700 border-2 p-6 text-center cursor-pointer select-none hover:bg-drg-primary-400 hover:text-slate-900 transition-all duration-200"
     >
       <input {...getInputProps()} />
       <p>Drag 'n' drop your save here, or click to select files</p>

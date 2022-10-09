@@ -1,6 +1,7 @@
 import { createPortal } from "react-dom";
 import { useChangesStore } from "../../stores/changesStore";
 import { useSaveStore } from "../../stores/saveStore";
+import { Button } from "../UI";
 
 const downloadURL = (data: string, fileName: string) => {
   const a = document.createElement("a");
@@ -34,7 +35,7 @@ export const Download = () => {
   };
 
   const component = (
-    <div className="alert shadow-lg absolute bottom-10 right-10 w-96">
+    <div className="alert shadow-lg absolute bottom-10 right-10 w-96 rounded-none drg-framer">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -52,12 +53,12 @@ export const Download = () => {
         <span>You made {changes} changes</span>
       </div>
       <div className="flex-none">
-        <button className="btn btn-sm btn-primary" onClick={handleDownload}>
+        <Button onClick={handleDownload}>
           Download
-        </button>
+        </Button>
       </div>
     </div>
   );
 
-  return createPortal(changes && component, document.body);
+  return createPortal(changes ? component : null, document.body);
 };

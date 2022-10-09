@@ -14,15 +14,17 @@ const Tab = ({
   disabled?: boolean;
   onClick: (label: string) => void;
 }) => {
+
   const onClickHandler = () => {
     if (disabled) return;
     onClick(label);
   };
+
   return (
-    <li onClick={onClickHandler} className={clsx(disabled && "disabled")}>
-      <a className={clsx(active && "active")}>
+    <li onClick={onClickHandler} className={clsx(disabled ? "disabled" : "hover:border-drg-primary-300", "rounded-md my-1 font-medium")}>
+      <a className={clsx(active && "border-b-4 border-drg-primary-500", "hover:border-drg-secondary-500 justify-center md:justify-start flex-col md:flex-col lg:flex-row  active:bg-drg-primary-400 focus:bg-drg-primary-400")}>
         <img src={icon} alt={label} className="w-12" />
-        {label}
+        <p className="my-auto text-sm md:text-lg">{label}</p>
       </a>
     </li>
   );
@@ -47,8 +49,8 @@ export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
   };
 
   return (
-    <div className="border-r-2 border-indigo-800">
-      <ul className="menu rounded-box p-2">
+    <div className="mr-10 p-3 border-drg-primary-500 lg:border-r-2 w-full h-full">
+      <ul className="menu mr-4 flex-row justify-evenly flex-wrap md:flex-row lg:flex-col">
         {TABS.map((tab) => (
           <Tab
             active={activeTab === tab.name}
