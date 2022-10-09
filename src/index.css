@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: rgba(255, 255, 255, 0.87);
   @apply bg-gray-900;
+  min-height: 100vh;
+}
+
+.drg-framer {
+  @apply border-drg-primary-500 border-t-2 border-b-2;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.04) 100%);
 }
