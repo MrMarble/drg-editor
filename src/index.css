@@ -2,7 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: rgba(255, 255, 255, 0.87);
   @apply bg-gray-900;
+  min-height: 100vh;
+}
+@layer utilities {
+  .drg-gradient {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.04) 100%);
+  }
+}
+
+.drg-framer {
+  @apply border-drg-primary-500 border-t-2 border-b-2 drg-gradient;
+}
+
+.drg-button {
+  @apply px-10 py-3 bg-black hover:bg-drg-primary-600 text-white cursor-pointer transition-all duration-300 mx-2;
+}
+
+.drg-button-disabled {
+  @apply text-slate-400 bg-black opacity-80 cursor-not-allowed hover:bg-gray-900;
 }

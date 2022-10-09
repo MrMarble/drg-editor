@@ -3,11 +3,15 @@ import { Resources } from "../Resources";
 import { SideBar, TABS } from "../SideBar";
 
 export const Editor = () => {
+
   const [activeTab, setActiveTab] = useState(TABS[0].name);
+
   return (
-    <div className="flex m-h-100">
-      <SideBar onChange={(tab) => setActiveTab(tab)} />
-      <div className="p-6">
+    <div className="flex flex-col md:flex-col lg:flex-row max-w-7xl">
+      <div>
+        <SideBar onChange={(tab) => setActiveTab(tab)} />
+      </div>
+      <div className="p-6 flex flex-row box-border">
         {activeTab === "Resources" && <Resources />}
         {activeTab === "Drill" && <div>Resources</div>}
       </div>
