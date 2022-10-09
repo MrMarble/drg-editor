@@ -53,6 +53,7 @@ export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
       <ul className="menu mr-4 flex-row justify-evenly flex-wrap md:flex-row lg:flex-col">
         {TABS.map((tab) => (
           <Tab
+            key={tab.name}
             active={activeTab === tab.name}
             icon={tab.url}
             label={tab.name}
