@@ -1,23 +1,28 @@
 export class U8Array extends Uint8Array {
-  indexOfMulti(searchElements: Array<number>, offset?: number): number {
+  indexOfMulti(needle: Array<number>, offset?: number): number {
     offset = offset || 0;
 
-    var index = Array.prototype.indexOf.call(this, searchElements[0], offset);
-    if (searchElements.length === 1 || index === -1) {
+    let index = Array.prototype.indexOf.call(this, needle[0], offset);
+    if (needle.length === 1 || index === -1) {
       // Not found or no other elements to check
       return index;
     }
 
-    for (
-      var i = index, j = 0;
-      j < searchElements.length && i < this.length;
-      i++, j++
-    ) {
-      if (this[i] !== searchElements[j]) {
-        return this.indexOfMulti(searchElements, i);
+    let needleIndex = 0;
+    let i = index;
+    for (; i < this.length; i++) {
+      if (this[i] === needle[needleIndex]) {
+        needleIndex++;
+        index = i;
+        if (needleIndex === needle.length) {
+          return index - needle.length + 1;
+        }
+      } else {
+        needleIndex = 1;
+        i = this.indexOf(needle[0], i);
       }
     }
 
-    return i === index + searchElements.length ? index : -1;
+    return i === index + needle.length ? index : -1;
   }
 }
