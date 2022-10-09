@@ -1,3 +1,5 @@
 *.config.cjs
 *.md
 *.css
+*.png
+*.webp
