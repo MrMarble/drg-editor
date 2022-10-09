@@ -53,9 +53,7 @@ export const Download = () => {
         <span>You made {changes} changes</span>
       </div>
       <div className="flex-none">
-        <Button onClick={handleDownload}>
-          Download
-        </Button>
+        <Button onClick={handleDownload}>Download</Button>
       </div>
     </div>
   );

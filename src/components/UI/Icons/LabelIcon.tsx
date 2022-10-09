@@ -1,6 +1,6 @@
-import { SVGProps } from "react"
+import { SVGProps } from "react";
 
-const LabelIcon = ({fill = "#afafaf", ...props}: SVGProps<SVGSVGElement>) => (
+const LabelIcon = ({ fill = "#afafaf", ...props }: SVGProps<SVGSVGElement>) => (
   <svg
     data-name="data"
     xmlns="http://www.w3.org/2000/svg"
@@ -14,6 +14,6 @@ const LabelIcon = ({fill = "#afafaf", ...props}: SVGProps<SVGSVGElement>) => (
       }}
     />
   </svg>
-)
+);
 
-export default LabelIcon
+export default LabelIcon;

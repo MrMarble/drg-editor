@@ -3,7 +3,6 @@ import { Resources } from "../Resources";
 import { SideBar, TABS } from "../SideBar";
 
 export const Editor = () => {
-
   const [activeTab, setActiveTab] = useState(TABS[0].name);
 
   return (

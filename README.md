@@ -1,4 +1,5 @@
 # Deep Rock Galactic Save Editor
+
 ![DRG Version](https://img.shields.io/badge/DRG%20Version-1.36-yellow.svg?style=flat)
 ![DRG Season](https://img.shields.io/badge/DRG%20Season-2-blue.svg?style=flat)
 
@@ -15,5 +16,6 @@ The only thing you can edit right now are resources and credits, dwarfs and seas
 This editor runs fully on your browser, your save file never leaves your computer
 
 ## Snapshots
+
 ![](assets/first.png)
 ![](assets/second.png)
