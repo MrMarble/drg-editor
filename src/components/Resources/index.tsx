@@ -31,7 +31,7 @@ const Resource = ({ name, item, uuid }: Props) => {
     if ([ITEMS.CREDITS as string].includes(item)) {
       save.setInt32(uuid, 0, value);
     } else {
-      save.setFloat32(uuid, 4, value);
+      save.setFloat32(uuid, 0, value);
     }
 
     setSave(save);
