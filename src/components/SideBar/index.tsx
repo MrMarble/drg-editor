@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { FC, useState } from "react";
+import { DWARFS } from "../../constant/dwarfs";
 
 const Tab = ({
   active,
@@ -43,10 +44,10 @@ const Tab = ({
 export const TABS = [
   { name: "Resources", url: "assets/resources.webp" },
   { name: "Season", url: "assets/pb.webp" },
-  { name: "Driller", url: "assets/driller.webp" },
-  { name: "Gunner", url: "assets/gunner.webp" },
-  { name: "Scout", url: "assets/scout.webp" },
-  { name: "Engineer", url: "assets/engineer.webp" },
+  { name: DWARFS.DRILLER, url: "assets/driller.webp" },
+  { name: DWARFS.GUNNER, url: "assets/gunner.webp" },
+  { name: DWARFS.SCOUT, url: "assets/scout.webp" },
+  { name: DWARFS.ENGINEER, url: "assets/engineer.webp" },
 ];
 
 export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
@@ -69,7 +70,6 @@ export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
             icon={tab.url}
             label={tab.name}
             onClick={onClickTabItem}
-            disabled={!["Resources", "Season"].includes(tab.name)}
           />
         ))}
       </ul>

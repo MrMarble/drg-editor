@@ -1,4 +1,6 @@
 import { useState } from "react";
+import type { DWARFS } from "../../constant/dwarfs";
+import { Dwarf } from "../Dwarf";
 import { Resources } from "../Resources";
 import { Season } from "../Season";
 import { SideBar, TABS } from "../SideBar";
@@ -14,6 +16,9 @@ export const Editor = () => {
       <div className="p-6 flex flex-row box-border">
         {activeTab === "Resources" && <Resources />}
         {activeTab === "Season" && <Season />}
+        {!["Resources", "Season"].includes(activeTab) && (
+          <Dwarf key={activeTab} dwarf={activeTab as DWARFS} />
+        )}
       </div>
     </div>
   );

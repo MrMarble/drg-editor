@@ -34,7 +34,3 @@ body {
 .drg-button-disabled {
   @apply text-slate-400 bg-black opacity-80 cursor-not-allowed hover:bg-gray-900;
 }
-
-.drg-button-disabled {
-  @apply text-slate-400 bg-black opacity-80 cursor-not-allowed hover:bg-gray-900;
-}

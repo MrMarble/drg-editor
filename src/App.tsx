@@ -2,7 +2,6 @@ import { Download } from "./components/Download";
 import { Editor } from "./components/Editor";
 import { SaveUpload } from "./components/SaveUpload";
 import { useSaveStore } from "./stores/saveStore";
-import Navbar from "./components/UI/Layout/Navbar";
 
 function App() {
   const { isLoaded } = useSaveStore();
