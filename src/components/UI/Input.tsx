@@ -56,18 +56,21 @@ export const Input: FC<{
 
   return (
     <div className="block">
-      <label htmlFor={name.toLowerCase()} className="label-text capitalize">
+      <label
+        htmlFor={name.toLowerCase()}
+        className="label-text capitalize text-sm"
+      >
         {name}
       </label>
       <div className="input-group">
-        <span className="pointer-events-none select-none border-drg-primary-700 border">
+        <span className="pointer-events-none select-none border-drg-primary-700 border text-sm">
           {icon && <img src={icon} className="w-6 max-w-none" />}
           {label && <b>{label}</b>}
         </span>
         <input
           id={name.toLowerCase()}
           type="text"
-          className="input bg-transparent border-drg-primary-700 w-full lg:w-32"
+          className="input bg-transparent border-drg-primary-700 w-full lg:w-32 text-sm tracking-wider"
           value={value}
           onChange={handleChange}
           onBlur={handleBlur}
@@ -75,7 +78,7 @@ export const Input: FC<{
         />
         {max && (
           <button
-            className="btn btn-square bg-drg-primary-400 hover:bg-drg-secondary-500 text-slate-900"
+            className="btn btn-square bg-drg-primary-400 hover:bg-drg-secondary-500 text-slate-900 text-xs"
             onClick={handleMax}
           >
             Max
