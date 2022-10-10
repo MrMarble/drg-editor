@@ -1,5 +1,5 @@
-import { FC, useState } from "react";
 import clsx from "clsx";
+import { FC, useState } from "react";
 
 const Tab = ({
   active,
@@ -41,7 +41,8 @@ const Tab = ({
 };
 
 export const TABS = [
-  { name: "Resources", url: "assets/hollomite.webp" },
+  { name: "Resources", url: "assets/resources.webp" },
+  { name: "Season", url: "assets/pb.webp" },
   { name: "Driller", url: "assets/driller.webp" },
   { name: "Gunner", url: "assets/gunner.webp" },
   { name: "Scout", url: "assets/scout.webp" },
@@ -68,7 +69,7 @@ export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
             icon={tab.url}
             label={tab.name}
             onClick={onClickTabItem}
-            disabled={tab.name !== "Resources"}
+            disabled={!["Resources", "Season"].includes(tab.name)}
           />
         ))}
       </ul>

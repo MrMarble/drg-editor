@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Resources } from "../Resources";
+import { Season } from "../Season";
 import { SideBar, TABS } from "../SideBar";
 
 export const Editor = () => {
@@ -12,7 +13,7 @@ export const Editor = () => {
       </div>
       <div className="p-6 flex flex-row box-border">
         {activeTab === "Resources" && <Resources />}
-        {activeTab === "Drill" && <div>Resources</div>}
+        {activeTab === "Season" && <Season />}
       </div>
     </div>
   );

@@ -109,11 +109,10 @@ export const CATEGORIES: Record<string, Array<ITEMS>> = {
   ],
   brewing: [ITEMS.STARCH, ITEMS.YEAST, ITEMS.MALT, ITEMS.BARLEY],
   miscellaneous: [
+    ITEMS.CREDITS,
     ITEMS.ERROR,
     ITEMS.DATA,
     ITEMS.CORE,
     ITEMS.PHAZYONITE,
-    ITEMS.CREDITS,
-    ITEMS.SCRIP,
   ],
 };
