@@ -25,7 +25,7 @@ export class U8Array extends Uint8Array {
 
     return i === index + needle.length ? index : -1;
   }
-  getInt32(needle: Array<number>, offset: number): number {
+  getInt32(needle: Array<number>, offset = 0): number {
     const index = this.indexOfMulti(needle, 0x42d);
     const data = this.slice(
       index + needle.length + offset,
