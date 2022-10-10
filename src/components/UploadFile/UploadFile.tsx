@@ -45,7 +45,7 @@ export const UploadeFile = () => {
       className="rounded m-6 border-dashed border-drg-primary-700 border-2 p-6 text-center cursor-pointer select-none hover:bg-drg-primary-400 hover:text-slate-900 transition-all duration-200"
     >
       <input {...getInputProps()} />
-      <p>Drag &apos;n&apos; drop your save here, or click to select files</p>
+      <p>{`Drag 'n' drop your save here, or click to select files`}</p>
       <em>(Only *.sav files will be accepted)</em>
     </div>
   );
