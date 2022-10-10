@@ -15,7 +15,11 @@ body {
 }
 @layer utilities {
   .drg-gradient {
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.04) 100%);
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.04) 100%
+    );
   }
 }
 
@@ -25,6 +29,10 @@ body {
 
 .drg-button {
   @apply px-10 py-3 bg-black hover:bg-drg-primary-600 text-white cursor-pointer transition-all duration-300 mx-2;
+}
+
+.drg-button-disabled {
+  @apply text-slate-400 bg-black opacity-80 cursor-not-allowed hover:bg-gray-900;
 }
 
 .drg-button-disabled {

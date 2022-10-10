@@ -1,3 +1,5 @@
+name: Deployment
+
 on:
   push:
     branches: [main]
@@ -14,6 +16,9 @@ permissions:
   contents: read
   pages: write
   id-token: write
+
+env:
+  VITE_DOWN_HIT: ${{ secrets.VITE_DOWN_HIT }}
 
 # Allow one concurrent deployment
 concurrency:

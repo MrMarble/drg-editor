@@ -1,5 +1,5 @@
-import { FC, useState } from "react";
 import clsx from "clsx";
+import { FC, useState } from "react";
 
 const Tab = ({
   active,
@@ -14,15 +14,25 @@ const Tab = ({
   disabled?: boolean;
   onClick: (label: string) => void;
 }) => {
-
   const onClickHandler = () => {
     if (disabled) return;
     onClick(label);
   };
 
   return (
-    <li onClick={onClickHandler} className={clsx(disabled ? "disabled" : "hover:border-drg-primary-300", "rounded-md my-1 font-medium")}>
-      <a className={clsx(active && "border-b-4 border-drg-primary-500", "hover:border-drg-secondary-500 justify-center md:justify-start flex-col md:flex-col lg:flex-row  active:bg-drg-primary-400 focus:bg-drg-primary-400")}>
+    <li
+      onClick={onClickHandler}
+      className={clsx(
+        disabled ? "disabled" : "hover:border-drg-primary-300",
+        "rounded-md my-1 font-medium"
+      )}
+    >
+      <a
+        className={clsx(
+          active && "border-b-4 border-drg-primary-500",
+          "hover:border-drg-secondary-500 justify-center md:justify-start flex-col md:flex-col lg:flex-row  active:bg-drg-primary-400 focus:bg-drg-primary-400"
+        )}
+      >
         <img src={icon} alt={label} className="w-12" />
         <p className="my-auto text-sm md:text-lg">{label}</p>
       </a>
@@ -31,11 +41,12 @@ const Tab = ({
 };
 
 export const TABS = [
-  { name: "Resources", url: 'assets/hollomite.webp' },
-  { name: "Driller", url: 'assets/driller.webp' },
-  { name: "Gunner", url: 'assets/gunner.webp' },
-  { name: "Scout", url: 'assets/scout.webp' },
-  { name: "Engineer", url: 'assets/engineer.webp' },
+  { name: "Resources", url: "assets/resources.webp" },
+  { name: "Season", url: "assets/pb.webp" },
+  { name: "Driller", url: "assets/driller.webp" },
+  { name: "Gunner", url: "assets/gunner.webp" },
+  { name: "Scout", url: "assets/scout.webp" },
+  { name: "Engineer", url: "assets/engineer.webp" },
 ];
 
 export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
@@ -58,7 +69,7 @@ export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
             icon={tab.url}
             label={tab.name}
             onClick={onClickTabItem}
-            disabled={tab.name !== "Resources"}
+            disabled={!["Resources", "Season"].includes(tab.name)}
           />
         ))}
       </ul>

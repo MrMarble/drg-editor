@@ -1,3 +1,4 @@
+import { hit } from "countapi-js";
 import { createPortal } from "react-dom";
 import { useChangesStore } from "../../stores/changesStore";
 import { useSaveStore } from "../../stores/saveStore";
@@ -32,6 +33,10 @@ export const Download = () => {
   const handleDownload = () => {
     downloadBlob(save, name, "application/octet-stream");
     reset();
+
+    if (import.meta.env.PROD) {
+      hit("mrmarble.dev", import.meta.env.VITE_DOWN_HIT); // Track downloads with countapi
+    }
   };
 
   const component = (
@@ -53,9 +58,7 @@ export const Download = () => {
         <span>You made {changes} changes</span>
       </div>
       <div className="flex-none">
-        <Button onClick={handleDownload}>
-          Download
-        </Button>
+        <Button onClick={handleDownload}>Download</Button>
       </div>
     </div>
   );

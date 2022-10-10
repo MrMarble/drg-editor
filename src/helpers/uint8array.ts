@@ -25,4 +25,43 @@ export class U8Array extends Uint8Array {
 
     return i === index + needle.length ? index : -1;
   }
+  getInt32(needle: Array<number>, offset: number): number {
+    const index = this.indexOfMulti(needle, 0x42d);
+    const data = this.slice(
+      index + needle.length + offset,
+      index + needle.length + offset + 4
+    );
+    const view = new DataView(data.buffer);
+    return view.getInt32(0, true);
+  }
+
+  setInt32(needle: Array<number>, offset: number, value: number): void {
+    const index = this.indexOfMulti(needle, 0x42d);
+    const view = new DataView(new ArrayBuffer(4));
+    view.setInt32(0, value, true);
+
+    const u8 = new Uint8Array(view.buffer);
+
+    this.set(u8, index + needle.length + offset);
+  }
+
+  getFloat32(needle: Array<number>, offset: number): number {
+    const index = this.indexOfMulti(needle, 0x42d);
+    const data = this.slice(
+      index + needle.length + offset,
+      index + needle.length + offset + 4
+    );
+    const view = new DataView(data.buffer);
+    return view.getFloat32(0, true);
+  }
+
+  setFloat32(needle: Array<number>, offset: number, value: number): void {
+    const index = this.indexOfMulti(needle, 0x42d);
+    const view = new DataView(new ArrayBuffer(4));
+    view.setFloat32(0, value, true);
+
+    const u8 = new Uint8Array(view.buffer);
+
+    this.set(u8, index + needle.length + offset);
+  }
 }
