@@ -3,6 +3,7 @@ import { ITEMS, RESOURCES } from "../../constant/resources";
 import { useChangesStore } from "../../stores/changesStore";
 import { useSaveStore } from "../../stores/saveStore";
 import { Input } from "../UI";
+import { Rank } from "../UI/Layout";
 import { WIP } from "../Wip";
 
 const XP_PER_LEVEL = 5000;
@@ -46,34 +47,29 @@ export const Season = () => {
 
   return (
     <div className="w-full ">
-      <div className="not-first:mt-10">
-        <span className="border-b-2 border-drg-primary-500 capitalize text-sm">
-          Rank
-        </span>
-        <div className="mt-3 md:w-auto grid grid-cols grid-rows-1 gap-2 md:grid-cols-2 lg:grid-cols-2 lg:gap-x-10 xl:grid-cols-3">
-          <Input
-            name="Level"
-            initialValue={level}
-            icon="assets/pb.webp"
-            max={Math.floor(0x0fffffff / XP_PER_LEVEL)}
-            onChange={handleLevelChange}
-          />
-          <Input
-            name="Experience"
-            initialValue={xp}
-            label="XP"
-            max={XP_PER_LEVEL - 1}
-            onChange={handleXpChange}
-          />
-          <Input
-            name={ITEMS.SCRIP}
-            icon={`assets/${ITEMS.SCRIP.toLowerCase()}.webp`}
-            initialValue={scrip}
-            max={0x0fffffff}
-            onChange={handleScripChange}
-          />
-        </div>
-      </div>
+      <Rank>
+        <Input
+          name="Level"
+          initialValue={level}
+          icon="assets/pb.webp"
+          max={Math.floor(0x0fffffff / XP_PER_LEVEL)}
+          onChange={handleLevelChange}
+        />
+        <Input
+          name="Experience"
+          initialValue={xp}
+          label="XP"
+          max={XP_PER_LEVEL - 1}
+          onChange={handleXpChange}
+        />
+        <Input
+          name={ITEMS.SCRIP}
+          icon={`assets/${ITEMS.SCRIP.toLowerCase()}.webp`}
+          initialValue={scrip}
+          max={0x0fffffff}
+          onChange={handleScripChange}
+        />
+      </Rank>
       <div className="not-first:mt-10">
         <span className="border-b-2 border-drg-primary-500 capitalize text-sm">
           Cosmetic Tree
@@ -85,3 +81,5 @@ export const Season = () => {
     </div>
   );
 };
+
+export default Season;

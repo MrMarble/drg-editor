@@ -65,3 +65,5 @@ export const Download = () => {
 
   return createPortal(changes ? component : null, document.body);
 };
+
+export default Download;

@@ -1,6 +1,6 @@
 import { Download } from "./components/Download";
 import { Editor } from "./components/Editor";
-import { SaveUpload } from "./components/SaveUpload";
+import { UploadFile } from "./components/UploadFile";
 import { useSaveStore } from "./stores/saveStore";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
                   className="w-32 mx-auto"
                 />
               </div>
-              <SaveUpload />
+              <UploadFile />
             </>
           )}
           {isLoaded && <Editor />}
