@@ -25,6 +25,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      VITE_DOWN_HIT: ${{ secrets.VITE_DOWN_HIT }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
