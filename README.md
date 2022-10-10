@@ -20,3 +20,5 @@ This editor runs fully on your browser, your save file never leaves your compute
 
 ![](assets/first.png)
 ![](assets/second.png)
+![](assets/third.png)
+![](assets/forth.png)
