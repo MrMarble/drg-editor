@@ -8,6 +8,21 @@
   box-sizing: border-box;
 }
 
+.drg-scrollbar::-webkit-scrollbar {
+  z-index: -2;
+  width: 20px;
+}
+
+.drg-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-800 my-2;
+}
+
+.drg-scrollbar::-webkit-scrollbar-thumb {
+  border: 5px solid transparent;
+  background-clip: content-box;
+  @apply bg-drg-primary-500;
+}
+
 body {
   color: rgba(255, 255, 255, 0.87);
   @apply bg-gray-900;
@@ -33,4 +48,19 @@ body {
 
 .drg-button-disabled {
   @apply text-slate-400 bg-black opacity-80 cursor-not-allowed hover:bg-gray-900;
+}
+
+.drg-select > option {
+  @apply bg-gray-800 rounded-none border-0;
+}
+
+.drg-select > option:checked {
+  @apply bg-gray-700 rounded-none border-0;
+}
+
+.emblems {
+  background: url("/assets/promotion_emblems.webp") no-repeat;
+  background-size: 330% 620%, cover;
+  width: 30px;
+  height: 30px;
 }

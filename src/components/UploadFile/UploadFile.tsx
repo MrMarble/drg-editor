@@ -5,7 +5,7 @@ import { useSaveStore } from "../../stores/saveStore";
 
 const HEADER = [0x47, 0x56, 0x41, 0x53]; // GVAS
 
-export const SaveUpload = () => {
+export const UploadeFile = () => {
   const fr = new FileReader();
   const { setSave, setName } = useSaveStore();
   fr.onloadend = () => {
@@ -50,3 +50,5 @@ export const SaveUpload = () => {
     </div>
   );
 };
+
+export default UploadeFile;
