@@ -23,3 +23,26 @@ export const UUIDS: Record<DWARFS, Array<number>> = {
     0xf3, 0x90, 0x9d, 0x2e,
   ],
 };
+
+export const PROMO_RANKS: Array<string> = [
+  "None",
+  "Bronze 1",
+  "Bronze 2",
+  "Bronze 3",
+  "Silver 1",
+  "Silver 2",
+  "Silver 3",
+  "Gold 1",
+  "Gold 2",
+  "Gold 3",
+  "Platinum 1",
+  "Platinum 2",
+  "Platinum 3",
+  "Diamond 1",
+  "Diamond 2",
+  "Diamond 3",
+  "Legendary 1",
+  "Legendary 2",
+  "Legendary 3",
+  "Legendary 3+",
+];

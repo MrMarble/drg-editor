@@ -49,3 +49,18 @@ body {
 .drg-button-disabled {
   @apply text-slate-400 bg-black opacity-80 cursor-not-allowed hover:bg-gray-900;
 }
+
+.drg-select > option {
+  @apply bg-gray-800 rounded-none border-0;
+}
+
+.drg-select > option:checked {
+  @apply bg-gray-700 rounded-none border-0;
+}
+
+.emblems {
+  background: url("/assets/promotion_emblems.webp") no-repeat;
+  background-size: 330% 620%, cover;
+  width: 30px;
+  height: 30px;
+}

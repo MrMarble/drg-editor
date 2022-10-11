@@ -1,8 +1,10 @@
 import { FC, useState } from "react";
+import { PROMO_RANKS } from "../../constant";
 import { DWARFS, UUIDS } from "../../constant/dwarfs";
 import { useChangesStore } from "../../stores/changesStore";
 import { useSaveStore } from "../../stores/saveStore";
 import { Input } from "../UI";
+import { Dropdown } from "./Dropdown";
 import { Rank } from "../UI/Layout";
 import { WIP } from "../Wip";
 
@@ -35,6 +37,10 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
     xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).xp
   );
 
+  const [promotion, setPromotion] = useState(() =>
+    save.getInt32(DWARF_UID, XP_OFFSET + 108)
+  );
+
   const handleLevelChange = (value: number) => {
     if (value < 1) {
       value = 1;
@@ -61,6 +67,13 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
     setSave(save);
   };
 
+  const handlePromotionChange = (value: number) => {
+    setPromotion(value);
+    increment();
+    save.setInt32(DWARF_UID, XP_OFFSET + 108, value);
+    setSave(save);
+  };
+
   return (
     <div className="w-full ">
       <Rank>
@@ -77,6 +90,12 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
           label="XP"
           max={XP_TABLE[level] - XP_TABLE[level - 1] || undefined}
           onChange={handleXpChange}
+        />
+        <Dropdown
+          items={PROMO_RANKS}
+          name="Promotion"
+          initialValue={promotion}
+          onChange={handlePromotionChange}
         />
       </Rank>
 
