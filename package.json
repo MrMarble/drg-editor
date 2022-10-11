@@ -20,7 +20,7 @@
       "eslint --fix"
     ],
     "**/*.tsx": [
-      "tsc --jsx preserve",
+      "tsc --jsx preserve --noEmit",
       "prettier --write --ignore-unknown",
       "eslint --fix"
     ]
