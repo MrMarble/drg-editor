@@ -1,5 +1,5 @@
 import create from "zustand";
-import { U8Array } from "../helpers/uint8array";
+import { U8Array } from "../helpers";
 
 interface SaveState {
   isLoaded: boolean;

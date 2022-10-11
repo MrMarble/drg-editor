@@ -1,8 +1,25 @@
+import { HEADER_OFFSET } from "../../constant";
+import { hexStringToByteArray } from "../hexToByte/hexToByte";
+
+/**
+ * Wrapper for Uint8Array
+ */
 export class U8Array extends Uint8Array {
-  indexOfMulti(needle: Array<number>, offset?: number): number {
-    offset = offset || 0;
+  /**
+   *
+   * Find the first index of a multi-byte needle in a haystack
+   *
+   * @param needle Array of bytes to search for
+   * @param offset Offset to start searching from
+   * @returns Index of first byte of needle
+   */
+  indexOfMulti(needle: Array<number> | string, offset = 0): number {
+    if (typeof needle === "string") {
+      needle = hexStringToByteArray(needle);
+    }
 
     let index = Array.prototype.indexOf.call(this, needle[0], offset);
+
     if (needle.length === 1 || index === -1) {
       // Not found or no other elements to check
       return index;
@@ -25,8 +42,9 @@ export class U8Array extends Uint8Array {
 
     return i === index + needle.length ? index : -1;
   }
+
   getInt32(needle: Array<number>, offset = 0): number {
-    const index = this.indexOfMulti(needle, 0x42d);
+    const index = this.indexOfMulti(needle, HEADER_OFFSET);
     const data = this.slice(
       index + needle.length + offset,
       index + needle.length + offset + 4
@@ -36,7 +54,7 @@ export class U8Array extends Uint8Array {
   }
 
   setInt32(needle: Array<number>, offset: number, value: number): void {
-    const index = this.indexOfMulti(needle, 0x42d);
+    const index = this.indexOfMulti(needle, HEADER_OFFSET);
     const view = new DataView(new ArrayBuffer(4));
     view.setInt32(0, value, true);
 
@@ -45,8 +63,8 @@ export class U8Array extends Uint8Array {
     this.set(u8, index + needle.length + offset);
   }
 
-  getFloat32(needle: Array<number>, offset: number): number {
-    const index = this.indexOfMulti(needle, 0x42d);
+  getFloat32(needle: Array<number>, offset = 0): number {
+    const index = this.indexOfMulti(needle, HEADER_OFFSET);
     const data = this.slice(
       index + needle.length + offset,
       index + needle.length + offset + 4
@@ -56,7 +74,7 @@ export class U8Array extends Uint8Array {
   }
 
   setFloat32(needle: Array<number>, offset: number, value: number): void {
-    const index = this.indexOfMulti(needle, 0x42d);
+    const index = this.indexOfMulti(needle, HEADER_OFFSET);
     const view = new DataView(new ArrayBuffer(4));
     view.setFloat32(0, value, true);
 

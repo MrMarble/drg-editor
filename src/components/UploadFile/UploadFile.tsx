@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import { U8Array } from "../../helpers/uint8array";
+import { U8Array } from "../../helpers";
 import { useSaveStore } from "../../stores/saveStore";
 
 const HEADER = [0x47, 0x56, 0x41, 0x53]; // GVAS
