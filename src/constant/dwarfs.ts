@@ -1,3 +1,5 @@
+import { UUID } from "../helpers/u8array/uint8array";
+
 export const enum DWARFS {
   DRILLER = "driller",
   GUNNER = "gunner",
@@ -5,23 +7,11 @@ export const enum DWARFS {
   ENGINEER = "engineer",
 }
 
-export const UUIDS: Record<DWARFS, Array<number>> = {
-  [DWARFS.DRILLER]: [
-    0x9e, 0xdd, 0x56, 0xf1, 0xee, 0xbc, 0xc5, 0x48, 0x8d, 0x5b, 0x5e, 0x5b,
-    0x80, 0xb6, 0x2d, 0xb4,
-  ],
-  [DWARFS.GUNNER]: [
-    0xae, 0x56, 0xe1, 0x80, 0xfe, 0xc0, 0xc4, 0x4d, 0x96, 0xfa, 0x29, 0xc2,
-    0x83, 0x66, 0xb9, 0x7b,
-  ],
-  [DWARFS.SCOUT]: [
-    0x30, 0xd8, 0xea, 0x17, 0xd8, 0xfb, 0xba, 0x4c, 0x95, 0x30, 0x6d, 0xe9,
-    0x65, 0x5c, 0x2f, 0x8c,
-  ],
-  [DWARFS.ENGINEER]: [
-    0x85, 0xef, 0x62, 0x6c, 0x65, 0xf1, 0x02, 0x4a, 0x8d, 0xfe, 0xb5, 0xd0,
-    0xf3, 0x90, 0x9d, 0x2e,
-  ],
+export const UUIDS: Record<DWARFS, UUID> = {
+  [DWARFS.DRILLER]: "9edd56f1eebcc5488d5b5e5b80b62db4",
+  [DWARFS.GUNNER]: "ae56e180fec0c44d96fa29c28366b97b",
+  [DWARFS.SCOUT]: "30d8ea17d8fbba4c95306de9655c2f8c",
+  [DWARFS.ENGINEER]: "85ef626c65f1024a8dfeb5d0f3909d2e",
 };
 
 export const PROMO_RANKS: Array<string> = [
@@ -45,4 +35,14 @@ export const PROMO_RANKS: Array<string> = [
   "Legendary 2",
   "Legendary 3",
   "Legendary 3+",
+];
+
+export const XP_TABLE = [
+  0, 3000, 7000, 12000, 18000, 25000, 33000, 42000, 52000, 63000, 75000, 88000,
+  102000, 117000, 132500, 148500, 165000, 182000, 199500, 217500, 236000,
+  255000, 274500, 294500, 315000,
+];
+
+export const PERK_UID = [
+  0x50, 0x65, 0x72, 0x6b, 0x50, 0x6f, 0x69, 0x6e, 0x74, 0x73,
 ];

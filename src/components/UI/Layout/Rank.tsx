@@ -1,8 +1,6 @@
-import React from "react";
+import type { FC, PropsWithChildren } from "react";
 
-type Props = React.PropsWithChildren;
-
-const Rank = ({ children }: Props) => {
+const Rank: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className="not-first:mt-10">
       <span className="border-b-2 border-drg-primary-500 capitalize text-sm">

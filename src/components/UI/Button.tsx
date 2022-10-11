@@ -1,11 +1,10 @@
-import React from "react";
+import type { FC, ReactNode } from "react";
 
-type Props = {
-  children: React.ReactNode;
-  onClick: () => void;
-};
-
-const Button = ({ children, onClick, ...restProps }: Props) => {
+const Button: FC<{ children: ReactNode; onClick: () => void }> = ({
+  children,
+  onClick,
+  ...restProps
+}) => {
   return (
     <div className="border-drg-primary-600 border-l-4 border-r-4 px-1 hover:border-drg-secondary-400 group transition-all duration-300">
       <button
