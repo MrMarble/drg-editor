@@ -1,2 +1,3 @@
 *.md
 /*.config.cjs
+/dist
