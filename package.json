@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "**/*.ts": [
-      "tsc",
+      "tsc --noEmit",
       "prettier --write --ignore-unknown",
       "eslint --fix"
     ],
