@@ -109,7 +109,7 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
           initialValue={perks}
           icon="assets/perks.webp"
           max={0x0fffffff}
-          onChange={handleXpChange}
+          onChange={handlePerkChange}
         />
       </Rank>
 
