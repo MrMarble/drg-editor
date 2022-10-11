@@ -11,18 +11,15 @@
     "bench": "vitest bench",
     "prepare": "husky install",
     "lint": "eslint src",
-    "lint:types": "tsc --noEmit --jsx preserve",
     "lint:fix": "eslint --fix src",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
   },
   "lint-staged": {
     "**/*.ts": [
-      "tsc --noEmit",
       "prettier --write --ignore-unknown",
       "eslint --fix"
     ],
     "**/*.tsx": [
-      "tsc --jsx preserve --noEmit",
       "prettier --write --ignore-unknown",
       "eslint --fix"
     ]
