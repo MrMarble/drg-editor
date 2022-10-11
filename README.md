@@ -10,7 +10,15 @@ Online save editor for deep rock galactic game. [Try it out!](https://mrmarble.d
 
 ## Work in progress
 
-The only thing you can edit right now are resources and credits, dwarfs and season will come soon (if I don't start another project :wink:)
+Current features:
+- Edit resources and credits
+- Edit Performance pass level and tokens
+- Edit dwarf level and promotion
+- Edit perk points
+
+Planned features (hopefully :wink:):
+- Edit overclocks
+- Unlock cosmetics
 
 ## Offline!
 
