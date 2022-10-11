@@ -10,9 +10,9 @@
     "test": "vitest run",
     "bench": "vitest bench",
     "prepare": "husky install",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx,.vue src",
+    "lint": "eslint src",
     "lint:types": "tsc --noEmit --jsx preserve",
-    "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx src",
+    "lint:fix": "eslint --fix src",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
   },
   "lint-staged": {
