@@ -46,6 +46,9 @@ export class U8Array extends Uint8Array {
   }
 
   getInt32(needle: UUID, offset = 0): number {
+    if (typeof needle === "string") {
+      needle = hexStringToByteArray(needle);
+    }
     const index = this.indexOfMulti(needle, HEADER_OFFSET);
     if (index === -1) {
       return -1;
@@ -59,6 +62,9 @@ export class U8Array extends Uint8Array {
   }
 
   setInt32(needle: UUID, offset: number, value: number): void {
+    if (typeof needle === "string") {
+      needle = hexStringToByteArray(needle);
+    }
     const index = this.indexOfMulti(needle, HEADER_OFFSET);
 
     const view = new DataView(new ArrayBuffer(4));
@@ -70,6 +76,9 @@ export class U8Array extends Uint8Array {
   }
 
   getFloat32(needle: UUID, offset = 0): number {
+    if (typeof needle === "string") {
+      needle = hexStringToByteArray(needle);
+    }
     const index = this.indexOfMulti(needle, HEADER_OFFSET);
     if (index === -1) {
       return -1;
@@ -83,6 +92,9 @@ export class U8Array extends Uint8Array {
   }
 
   setFloat32(needle: UUID, offset: number, value: number): void {
+    if (typeof needle === "string") {
+      needle = hexStringToByteArray(needle);
+    }
     const index = this.indexOfMulti(needle, HEADER_OFFSET);
     const view = new DataView(new ArrayBuffer(4));
     view.setFloat32(0, value, true);
