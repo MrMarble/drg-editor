@@ -17,6 +17,10 @@
   @apply bg-gray-800 my-2;
 }
 
+.drg-internal-scrollbar::-webkit-scrollbar-track {
+  @apply !my-0;
+}
+
 .drg-scrollbar::-webkit-scrollbar-thumb {
   border: 5px solid transparent;
   background-clip: content-box;

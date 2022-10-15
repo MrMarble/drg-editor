@@ -15,7 +15,7 @@ function App() {
           </div>
         )}
 
-        <div className=" shadow-md min-w-[400px] max-w-[90%] p-6 bg-gray-800 drg-framer !border-b-[15px] max-h-[90%] overflow-auto transition-all duration-1000  drg-scrollbar">
+        <div className="shadow-md max-w-[90%] p-6 bg-gray-800 drg-framer !border-b-[15px] max-h-[90%] overflow-auto transition-all duration-1000 drg-scrollbar">
           {!isLoaded && (
             <>
               <div className="flex items-center justify-center">
