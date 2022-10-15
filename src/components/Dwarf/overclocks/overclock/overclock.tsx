@@ -51,13 +51,13 @@ export const Overclock: FC<{
     </div>
     <div
       className={clsx(
-        "text-left self-center ml-1 text-sm",
+        "text-left self-center ml-1 text-sm w-3/5",
         !(owned || forged) && "opacity-40"
       )}
     >
       {name}
     </div>
-    <div className="absolute w-18 h-8 bottom-0 right-0 bg-gray-700 p-0 flex flex-row rounded-tl-lg rounded-br-lg">
+    <div className="absolute w-18 h-8 bottom-0 right-0 bg-gray-700 p-0 flex flex-row rounded-tl-lg rounded-br-md">
       <button
         className={clsx(
           "btn btn-sm btn-square btn-ghost rounded-none rounded-tl-lg",
@@ -78,7 +78,7 @@ export const Overclock: FC<{
       </button>
       <button
         className={clsx(
-          "btn btn-sm btn-square btn-ghost rounded-none rounded-br-lg",
+          "btn btn-sm btn-square btn-ghost rounded-none rounded-br-md",
           forged && "bg-drg-primary-400 text-black btn-disabled"
         )}
         onClick={() => handleForge(ID)}

@@ -117,8 +117,10 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
         <span className="border-b-2 border-drg-primary-500 capitalize text-sm">
           Overclocks
         </span>
-        <div className="mt-3 md:w-auto grid grid-cols gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3  max-h-96 overflow-auto">
-          <Overclocks dwarf={dwarf} />
+        <div className="mt-3 md:w-auto max-h-96 overflow-auto drg-scrollbar drg-internal-scrollbar">
+          <div className="mr-4 grid grid-cols gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+            <Overclocks dwarf={dwarf} />
+          </div>
         </div>
       </div>
     </div>
