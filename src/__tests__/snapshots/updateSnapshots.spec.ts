@@ -1,9 +1,17 @@
-import { toMatchImageSnapshot } from "jest-image-snapshot";
+import { configureToMatchImageSnapshot } from "jest-image-snapshot";
 import type { Browser, ElementHandle, Page } from "puppeteer";
 import { launch } from "puppeteer";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
-expect.extend({ toMatchImageSnapshot });
+const toMatchImageSnapshot = configureToMatchImageSnapshot({
+  comparisonMethod: "ssim",
+  failureThreshold: 0.01,
+  failureThresholdType: "percent",
+});
+
+expect.extend({
+  toMatchImageSnapshot,
+});
 
 describe("update snapshots", () => {
   let browser: Browser;
