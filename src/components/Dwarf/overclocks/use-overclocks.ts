@@ -6,39 +6,31 @@ import { UUID } from "../../../helpers/u8array/uint8array";
 import { useChangesStore } from "../../../stores/changesStore";
 import { useSaveStore } from "../../../stores/saveStore";
 
-const OWNED_NEEDLE = [
-  0x4f, 0x77, 0x6e, 0x65, 0x64, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x74, 0x69,
-  0x63, 0x73, 0x00, 0x0f, 0x00, 0x00, 0x00, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74,
-  0x50, 0x72, 0x6f, 0x70, 0x65, 0x72, 0x74, 0x79, 0x00,
-];
-
 const FORGED_NEEDLE: UUID = [
   0x46, 0x6f, 0x72, 0x67, 0x65, 0x64, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x74,
   0x69, 0x63, 0x73, 0x00, 0x0e, 0x00, 0x00, 0x00, 0x41, 0x72, 0x72, 0x61, 0x79,
   0x50, 0x72, 0x6f, 0x70, 0x65, 0x72, 0x74, 0x79, 0x00,
 ];
 
-const LENGTH_NEEDLE: UUID = [
+const OWNED_NEEDLE: UUID = [
   0x4f, 0x77, 0x6e, 0x65, 0x64, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x74, 0x69,
   0x63, 0x73, 0x00, 0x0e, 0x00, 0x00, 0x00, 0x41, 0x72, 0x72, 0x61, 0x79, 0x50,
   0x72, 0x6f, 0x70, 0x65, 0x72, 0x74, 0x79, 0x00,
 ];
 
-const SAVE_NEEDLE = [
-  0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x74, 0x69, 0x63, 0x53, 0x61, 0x76, 0x65,
-  0x00, 0x0f, 0x00, 0x00, 0x00, 0x53, 0x74, 0x72, 0x75, 0x63, 0x74, 0x50, 0x72,
-  0x6f, 0x70, 0x65, 0x72, 0x74, 0x79, 0x00,
-];
+const COUNT_OFFSET = 28;
+const OWNED_OFFSET = 105;
+const FORGED_OFFSET = 106;
 
 export const useOverclocks = (dwarf: DWARFS) => {
   const { save, setSave } = useSaveStore();
   const { increment } = useChangesStore();
 
   const [owned, setOwned] = useState(() => {
-    const length = save.getInt32(OWNED_NEEDLE) / 16;
+    const length = save.getInt32(OWNED_NEEDLE, COUNT_OFFSET);
     const overclocks = [];
     for (let i = 0; i < length; i++) {
-      overclocks.push(save.getUUID(OWNED_NEEDLE, 34 + i * 16));
+      overclocks.push(save.getUUID(OWNED_NEEDLE, OWNED_OFFSET + i * 16));
     }
     return overclocks;
   });
@@ -46,10 +38,10 @@ export const useOverclocks = (dwarf: DWARFS) => {
   const [forged, setForged] = useState(() => {
     if (!save.has("ForgedSchematics")) return [];
 
-    const length = save.getInt32(FORGED_NEEDLE, 28);
+    const length = save.getInt32(FORGED_NEEDLE, COUNT_OFFSET);
     const forged = [];
     for (let i = 0; i < length; i++) {
-      forged.push(save.getUUID(FORGED_NEEDLE, 106 + i * 16));
+      forged.push(save.getUUID(FORGED_NEEDLE, FORGED_OFFSET + i * 16));
     }
     console.log({ length, forged });
     return forged;
@@ -100,7 +92,7 @@ const updateSize = ({
 
   old = save.getInt32(needle, 0);
   save.setInt32(needle, 0, old + (add ? 16 : -16));
-  save.setInt32(needle, 28, count);
+  save.setInt32(needle, COUNT_OFFSET, count);
   save.setInt32(needle, 71, count * 16);
 };
 const handleForge = ({
@@ -127,7 +119,7 @@ const handleForge = ({
     const start =
       save.indexOfMulti(FORGED_NEEDLE) +
       FORGED_NEEDLE.length +
-      106 +
+      FORGED_OFFSET +
       (forged.length - 1) * 16;
     save.unshift(16, start);
 
@@ -144,10 +136,10 @@ const handleForge = ({
     const start =
       save.indexOfMulti(FORGED_NEEDLE) +
       FORGED_NEEDLE.length +
-      106 +
+      FORGED_OFFSET +
       forged.length * 16;
     newSave.shift(16, start);
-    newSave.setUUID(FORGED_NEEDLE, 106 + forged.length * 16, id);
+    newSave.setUUID(FORGED_NEEDLE, FORGED_OFFSET + forged.length * 16, id);
 
     setSave(newSave);
     setForged([...forged, id]);
@@ -169,7 +161,7 @@ const handleLock = ({
 }) => {
   updateSize({
     save,
-    needle: LENGTH_NEEDLE,
+    needle: OWNED_NEEDLE,
     count: owned.length - 1,
     add: false,
   });
@@ -177,7 +169,7 @@ const handleLock = ({
   const start =
     save.indexOfMulti(OWNED_NEEDLE) +
     OWNED_NEEDLE.length +
-    34 +
+    OWNED_OFFSET +
     (owned.length - 1) * 16;
   save.unshift(16, start);
 
@@ -198,16 +190,16 @@ const handleUnlock = ({
   setSave: (save: U8Array) => void;
   setOwned: (owned: string[]) => void;
 }) => {
-  updateSize({ save, needle: LENGTH_NEEDLE, count: owned.length + 1 });
+  updateSize({ save, needle: OWNED_NEEDLE, count: owned.length + 1 });
 
   const newSave = save.grow(16);
   const start =
     save.indexOfMulti(OWNED_NEEDLE) +
     OWNED_NEEDLE.length +
-    34 +
+    OWNED_OFFSET +
     owned.length * 16;
   newSave.shift(16, start);
-  newSave.setUUID(OWNED_NEEDLE, 34 + owned.length * 16, id);
+  newSave.setUUID(OWNED_NEEDLE, OWNED_OFFSET + owned.length * 16, id);
 
   setSave(newSave);
   setOwned([...owned, id]);
