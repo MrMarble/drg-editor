@@ -22,7 +22,7 @@ export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
   };
 
   return (
-    <div className="mr-10 p-3 border-drg-primary-500 lg:border-r-2 w-full h-full">
+    <div className="mr-3 p-3 border-drg-primary-500 lg:border-r-2 w-[250px] h-full">
       <ul className="menu mr-4 flex-row justify-evenly flex-wrap md:flex-row lg:flex-col">
         {TABS.map((tab) => (
           <Tab
