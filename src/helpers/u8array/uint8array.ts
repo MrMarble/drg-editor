@@ -155,4 +155,9 @@ export class U8Array extends Uint8Array {
     this.set(this.subarray(start > 0 ? start + steps : steps), start);
     this.fill(0, -steps);
   }
+
+  has(str: string): boolean {
+    const tmp = new TextDecoder("utf-8").decode(this.buffer);
+    return tmp.includes(str);
+  }
 }

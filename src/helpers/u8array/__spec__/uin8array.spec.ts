@@ -5,7 +5,7 @@ import { hexStringToByteArray } from "../../hexToByte";
 import { U8Array } from "../uint8array";
 
 describe("U8Array", () => {
-  const buff = readFileSync("src/__tests__/fixtures/example.sav");
+  const buff = readFileSync("src/__tests__/fixtures/with_overclocks.sav");
   let haystack: U8Array;
 
   beforeEach(() => {
@@ -119,5 +119,16 @@ describe("U8Array", () => {
     const haystack = new U8Array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     haystack.unshift(2, 4);
     expect(haystack.shrink(2)).toEqual(new U8Array([1, 2, 3, 4, 7, 8, 9, 10]));
+  });
+
+  test("Should return true if save has substring", () => {
+    expect(haystack.has("ForgedSchematics")).toBe(true);
+  });
+
+  test("Should return false if save doesnt have substring", () => {
+    const buff = readFileSync("src/__tests__/fixtures/without_overclocks.sav");
+    const haystack = new U8Array([...buff]);
+
+    expect(haystack.has("ForgedSchematics")).toBe(false);
   });
 });

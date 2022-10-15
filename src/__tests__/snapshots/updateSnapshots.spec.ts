@@ -43,7 +43,7 @@ describe.skipIf(!process.env?.CI)("update snapshots", () => {
       throw new Error("File input not found");
     }
 
-    await fileInput.uploadFile("src/__tests__/fixtures/example.sav");
+    await fileInput.uploadFile("src/__tests__/fixtures/with_overclocks.sav");
     await page.waitForSelector("ul.menu");
 
     await waitForTransition();
