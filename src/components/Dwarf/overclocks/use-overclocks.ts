@@ -44,11 +44,7 @@ export const useOverclocks = (dwarf: DWARFS) => {
   });
 
   const [forged, setForged] = useState(() => {
-    // TODO: This is a bit of a hack, but it works for now
-    // We need to find a better way to handle missing data
-    const tmp = save.indexOfMulti(b`SchematicSave`);
-    const hasForged = save.indexOfMulti(FORGED_NEEDLE, tmp) !== -1;
-    if (!hasForged) return [];
+    if (!save.has("ForgedSchematics")) return [];
 
     const length = save.getInt32(FORGED_NEEDLE, 28);
     const forged = [];
