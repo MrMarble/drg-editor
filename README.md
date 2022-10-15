@@ -15,9 +15,10 @@ Current features:
 - Edit Performance pass level and tokens
 - Edit dwarf level and promotion
 - Edit perk points
+- Edit weapon overclocks
 
 Planned features (hopefully :wink:):
-- Edit overclocks
+- cosmetic overclocks
 - Unlock cosmetics
 
 ## Offline!
