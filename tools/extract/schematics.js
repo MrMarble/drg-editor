@@ -84,6 +84,10 @@ async function main() {
       const ID = schematic.Properties.SaveGameID;
       const infoFile = schematic.Properties.Item.ObjectPath;
       const index = infoFile.split(".")[1];
+      const weapon = schematic?.Outer?.split("_")[1] ?? "SMG";
+      if (!weapon) {
+        console.error("No weapon found in", file);
+      }
 
       if (infoFile.includes("Overclock") || infoFile.includes("OCs")) {
         const bank = json[index];
@@ -146,6 +150,7 @@ async function main() {
             description,
             type,
             category,
+            weapon,
             asset: `assets/icons/${asset}.png`,
           });
           //console.log({ dwarf, ID, name, current });
