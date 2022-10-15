@@ -5,7 +5,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 const toMatchImageSnapshot = configureToMatchImageSnapshot({
   comparisonMethod: "ssim",
-  failureThreshold: 0.01,
+  failureThreshold: 1,
   failureThresholdType: "percent",
 });
 
