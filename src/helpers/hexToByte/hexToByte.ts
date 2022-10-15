@@ -9,3 +9,11 @@ export function hexStringToByteArray(hexString: string): Array<number> {
   }
   return byteArray;
 }
+
+export const b = (strs: TemplateStringsArray): Array<number> =>
+  hexStringToByteArray(
+    strs[0]
+      .split("")
+      .map((c) => c.charCodeAt(0).toString(16))
+      .join("")
+  );
