@@ -1,6 +1,53 @@
 {
   "driller": [
     {
+      "name": "Chain Hit",
+      "description": "Any shot that hits a weakspot has a chance to ricochet into a nearby enemy.",
+      "type": "Clean",
+      "category": "Ricochet",
+      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "ID": "a4ab7c627af7fe4fa235e3aac398ed1f"
+    },
+    {
+      "name": "Oversized Magazine",
+      "description": "Custom magazine that can fit a lot more ammo but it's a bit unwieldy and takes longer to reload.",
+      "type": "Balanced",
+      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "ID": "f13e20c4e74976438e85c237ae071830"
+    },
+    {
+      "name": "Explosive Reload",
+      "description": "Micro-explosives that explode inside hit targets when you reload. However, these fancy bullets come at the cost of total ammo and magazine capacity.",
+      "type": "Unstable",
+      "category": "Reload Effect",
+      "asset": "assets/icons/Icon_Overclock_Special_Magazine.png",
+      "ID": "2949a3be68ea2a4197d532af80549101"
+    },
+    {
+      "name": "Automatic Fire",
+      "description": "Fully automatic action, watch out for the recoil.",
+      "type": "Unstable",
+      "category": "Rate of Fire",
+      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "ID": "28a8e817e50a7346963e418ba08dfe18"
+    },
+    {
+      "name": "Homebrew Powder",
+      "description": "More damage on average but it's a bit inconsistent.",
+      "type": "Clean",
+      "category": "Randomized Damage",
+      "asset": "assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
+      "ID": "d57b542fbc793542b6bb5617c1a67229"
+    },
+    {
+      "name": "Tranquilizer Rounds",
+      "description": "Part bullet, part syringe these rounds are very effective at stunning most enemies.",
+      "type": "Unstable",
+      "category": "Stun",
+      "asset": "assets/icons/Icon_Upgrade_Stun.png",
+      "ID": "587488ba77b28d4da177400d995737a7"
+    },
+    {
       "name": "Improved Thermal Efficiency",
       "description": "Get all you can from your fuel and lose pressure slower from the main chamber.",
       "type": "Clean",
@@ -46,45 +93,6 @@
       "category": "Area of Effect",
       "asset": "assets/icons/Icon_Upgrade_Area.png",
       "ID": "c1f16f970c9c1047af836bf6cbfebcad"
-    },
-    {
-      "name": "Chain Hit",
-      "description": "Any shot that hits a weakspot has a chance to ricochet into a nearby enemy.",
-      "type": "Clean",
-      "category": "Ricochet",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
-      "ID": "a4ab7c627af7fe4fa235e3aac398ed1f"
-    },
-    {
-      "name": "Oversized Magazine",
-      "description": "Custom magazine that can fit a lot more ammo but it's a bit unwieldy and takes longer to reload.",
-      "type": "Balanced",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
-      "ID": "f13e20c4e74976438e85c237ae071830"
-    },
-    {
-      "name": "Explosive Reload",
-      "description": "Micro-explosives that explode inside hit targets when you reload. However, these fancy bullets come at the cost of total ammo and magazine capacity.",
-      "type": "Unstable",
-      "category": "Reload Effect",
-      "asset": "assets/icons/Icon_Overclock_Special_Magazine.png",
-      "ID": "2949a3be68ea2a4197d532af80549101"
-    },
-    {
-      "name": "Automatic Fire",
-      "description": "Fully automatic action, watch out for the recoil.",
-      "type": "Unstable",
-      "category": "Rate of Fire",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
-      "ID": "28a8e817e50a7346963e418ba08dfe18"
-    },
-    {
-      "name": "Tranquilizer Rounds",
-      "description": "Part bullet, part syringe these rounds are very effective at stunning most enemies.",
-      "type": "Unstable",
-      "category": "Stun",
-      "asset": "assets/icons/Icon_Upgrade_Stun.png",
-      "ID": "587488ba77b28d4da177400d995737a7"
     },
     {
       "name": "Heat Pipe",
@@ -288,6 +296,14 @@
       "ID": "86aa0dd13fd37e43b2fbf176ee5de815"
     },
     {
+      "name": "Carpet Bomber",
+      "description": "A few tweaks here and there and the Autocannon can now shoot HE rounds! Direct damage is lower but the increased splash damage and range lets you saturate an area like no other weapon can.",
+      "type": "Balanced",
+      "category": "Area Damage",
+      "asset": "assets/icons/Icon_Upgrade_Area_Damage.png",
+      "ID": "8c0142a687637a4ea4cc8a7f84b9610a"
+    },
+    {
       "name": "Composite Drums",
       "description": "Lighter weight materials means you can carry even more ammo!",
       "type": "Clean",
@@ -376,6 +392,53 @@
       "ID": "f1ae55cf592e7746a0001d61584bdf2a"
     },
     {
+      "name": "Six Shooter",
+      "description": "An updated casing profile lets you squeeze 2 more rounds into the cylinder and take a few more rounds with you, but all that filing and drilling has compromised the accuracy of the weapon and it takes longer to reload.",
+      "type": "Balanced",
+      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "ID": "a937dc3938dee8418cd0641cce19b46a"
+    },
+    {
+      "name": "Elephant Rounds",
+      "description": "Heavy tweaking has made it possible to use modified autocannon rounds in the revolver! The damage is crazy but so is the recoil and you can't carry as many rounds. Also, only 3 rounds fit in the gun and reload time is a bit slower but base accuracy is improved.",
+      "type": "Unstable",
+      "category": "Damage",
+      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "ID": "d53f94fbc05e0448b57bc9df6846267b"
+    },
+    {
+      "name": "Chain Hit",
+      "description": "Any shot that hits a weakspot has a high chance to ricochet into a nearby enemy.",
+      "type": "Clean",
+      "category": "Ricochet",
+      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "ID": "5885a33b15ae844591a66b65a2e5494e"
+    },
+    {
+      "name": "Magic Bullets",
+      "description": "Smaller, bouncy bullets ricochet off hard surfaces, hitting nearby enemies like magic! Overall, the damage of the weapon is reduced, but you can carry a few more rounds due to their compact size.",
+      "type": "Unstable",
+      "category": "Ricochet",
+      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "ID": "db02b4e77d43bf44a4749982c0879b77"
+    },
+    {
+      "name": "Homebrew Powder",
+      "description": "More damage on average but it's a bit inconsistent.",
+      "type": "Balanced",
+      "category": "Randomized Damage",
+      "asset": "assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
+      "ID": "cd6993f938e27c49ac69293bf942a8f0"
+    },
+    {
+      "name": "Volatile Bullets",
+      "description": "Fuel on the fire! These rounds are extremely effective against burning targets but at the cost of direct damage dealt to unaffected creatures.",
+      "type": "Balanced",
+      "category": "Heat",
+      "asset": "assets/icons/Icon_Upgrade_Heat.png",
+      "ID": "d1306cbc8421b248a4b95b332df3e056"
+    },
+    {
       "name": "Compact Feed Mechanism",
       "description": "More space left for ammo at the cost of a reduced rate of fire.",
       "type": "Balanced",
@@ -430,45 +493,6 @@
       "category": "Ricochet",
       "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
       "ID": "ed4036806a69e848bc72dde3cdeac456"
-    },
-    {
-      "name": "Six Shooter",
-      "description": "An updated casing profile lets you squeeze 2 more rounds into the cylinder and take a few more rounds with you, but all that filing and drilling has compromised the accuracy of the weapon and it takes longer to reload.",
-      "type": "Balanced",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
-      "ID": "a937dc3938dee8418cd0641cce19b46a"
-    },
-    {
-      "name": "Elephant Rounds",
-      "description": "Heavy tweaking has made it possible to use modified autocannon rounds in the revolver! The damage is crazy but so is the recoil and you can't carry as many rounds. Also, only 3 rounds fit in the gun and reload time is a bit slower but base accuracy is improved.",
-      "type": "Unstable",
-      "category": "Damage",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
-      "ID": "d53f94fbc05e0448b57bc9df6846267b"
-    },
-    {
-      "name": "Chain Hit",
-      "description": "Any shot that hits a weakspot has a high chance to ricochet into a nearby enemy.",
-      "type": "Clean",
-      "category": "Ricochet",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
-      "ID": "5885a33b15ae844591a66b65a2e5494e"
-    },
-    {
-      "name": "Magic Bullets",
-      "description": "Smaller, bouncy bullets ricochet off hard surfaces, hitting nearby enemies like magic! Overall, the damage of the weapon is reduced, but you can carry a few more rounds due to their compact size.",
-      "type": "Unstable",
-      "category": "Ricochet",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
-      "ID": "db02b4e77d43bf44a4749982c0879b77"
-    },
-    {
-      "name": "Volatile Bullets",
-      "description": "Fuel on the fire! These rounds are extremely effective against burning targets but at the cost of direct damage dealt to unaffected creatures.",
-      "type": "Balanced",
-      "category": "Heat",
-      "asset": "assets/icons/Icon_Upgrade_Heat.png",
-      "ID": "d1306cbc8421b248a4b95b332df3e056"
     },
     {
       "name": "Fragmentation Missiles",
@@ -624,6 +648,62 @@
       "ID": "d1544b3528938a48964e8d9a6309d1da"
     },
     {
+      "name": "Rewiring Mod",
+      "description": "By rewiring the thermal systems into a secondary cell and connecting it to the primary battery, your weapon can convert the energy from overheating into ammo. However this reduces the maximum capacity of the primary battery significantly.",
+      "type": "Balanced",
+      "category": "Total Ammo",
+      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "ID": "5abf1c487bf3bd4bafdaf2a4428720ec"
+    },
+    {
+      "name": "Impact Deflection",
+      "description": "Tinkering with the particle density makes your projectiles react on impact with armor and surfaces, making them bounce up to 2 times! However the rate of fire needs to be reduced to keep the gun from exploding in your hands.",
+      "type": "Balanced",
+      "category": "Ricochet",
+      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "ID": "1bd74059739e094bbe0a3b79f2e94b46"
+    },
+    {
+      "name": "Thermal Liquid Coolant",
+      "description": "With a liquid coolant fitted to the weapons thermal systems it transfers heat more efficiently, accelerating its cooling rate and reducing heat per shot.",
+      "type": "Clean",
+      "category": "Cooling",
+      "asset": "assets/icons/Icon_Upgrade_Cooling.png",
+      "ID": "00ea09da14da7646982dd5a1b2467a08"
+    },
+    {
+      "name": "Thermal Exhaust Feedback",
+      "description": "Feeding the thermal exhaust back into the system transfers the heat generated after a 50% threshold to the plasma, making it increasingly hot. The modifications means more heat generated and it takes longer to get rid of during overheat. ",
+      "type": "Unstable",
+      "category": "Heat",
+      "asset": "assets/icons/Icon_Upgrade_Heat.png",
+      "ID": "bffe0c3436ac584d890b6efe9124aaf1"
+    },
+    {
+      "name": "Overtuned Particle Accelerator",
+      "description": "The particle accelerator has been tuned way over safety standards to push the damage output to the limit! The modifications comes with a price to overall stability of the weapon and increased heat generation.",
+      "type": "Unstable",
+      "category": "Damage",
+      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "ID": "9225769777355041bdeb70cacd946a27"
+    },
+    {
+      "name": "Aggressive Venting",
+      "description": "Directional vents burn everything around you and send enemies running when the weapon overheats. They also reduce the overheat recovery time.",
+      "type": "Clean",
+      "category": "Special",
+      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "ID": "d831b000f2a2c84c8749a5b182348574"
+    },
+    {
+      "name": "Shield Battery Booster",
+      "description": "Plugging your shield directly into the weapon battery boosts the plasma feed and density significantly while at full shield and improves total ammo and rate of fire at all times. However the extra energy generates more heat and overheating the weapon will short circuit your shield.",
+      "type": "Unstable",
+      "category": "Resistance",
+      "asset": "assets/icons/Icon_Upgrade_Resistance.png",
+      "ID": "532714b803867c4f8aa6ea78fa4eaaea"
+    },
+    {
       "name": "Shaped Shells",
       "description": "Specially shaped shells result in a tighter shot, but you can't carry quite as many of them.",
       "type": "Balanced",
@@ -670,54 +750,6 @@
       "category": "Special Mobility",
       "asset": "assets/icons/Icon_Overclock_ShotgunJump.png",
       "ID": "e6daf7d6065004439ef966d6fdbd69a6"
-    },
-    {
-      "name": "Rewiring Mod",
-      "description": "By rewiring the thermal systems into a secondary cell and connecting it to the primary battery, your weapon can convert the energy from overheating into ammo. However this reduces the maximum capacity of the primary battery significantly.",
-      "type": "Balanced",
-      "category": "Total Ammo",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
-      "ID": "5abf1c487bf3bd4bafdaf2a4428720ec"
-    },
-    {
-      "name": "Impact Deflection",
-      "description": "Tinkering with the particle density makes your projectiles react on impact with armor and surfaces, making them bounce up to 2 times! However the rate of fire needs to be reduced to keep the gun from exploding in your hands.",
-      "type": "Balanced",
-      "category": "Ricochet",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
-      "ID": "1bd74059739e094bbe0a3b79f2e94b46"
-    },
-    {
-      "name": "Thermal Liquid Coolant",
-      "description": "With a liquid coolant fitted to the weapons thermal systems it transfers heat more efficiently, accelerating its cooling rate and reducing heat per shot.",
-      "type": "Clean",
-      "category": "Cooling",
-      "asset": "assets/icons/Icon_Upgrade_Cooling.png",
-      "ID": "00ea09da14da7646982dd5a1b2467a08"
-    },
-    {
-      "name": "Thermal Exhaust Feedback",
-      "description": "Feeding the thermal exhaust back into the system transfers the heat generated after a 50% threshold to the plasma, making it increasingly hot. The modifications means more heat generated and it takes longer to get rid of during overheat. ",
-      "type": "Unstable",
-      "category": "Heat",
-      "asset": "assets/icons/Icon_Upgrade_Heat.png",
-      "ID": "bffe0c3436ac584d890b6efe9124aaf1"
-    },
-    {
-      "name": "Overtuned Particle Accelerator",
-      "description": "The particle accelerator has been tuned way over safety standards to push the damage output to the limit! The modifications comes with a price to overall stability of the weapon and increased heat generation.",
-      "type": "Unstable",
-      "category": "Damage",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
-      "ID": "9225769777355041bdeb70cacd946a27"
-    },
-    {
-      "name": "Shield Battery Booster",
-      "description": "Plugging your shield directly into the weapon battery boosts the plasma feed and density significantly while at full shield and improves total ammo and rate of fire at all times. However the extra energy generates more heat and overheating the weapon will short circuit your shield.",
-      "type": "Unstable",
-      "category": "Resistance",
-      "asset": "assets/icons/Icon_Upgrade_Resistance.png",
-      "ID": "532714b803867c4f8aa6ea78fa4eaaea"
     },
     {
       "name": "Bodkin Points",
@@ -828,6 +860,14 @@
       "category": "Accuracy",
       "asset": "assets/icons/Icon_Upgrade_Accuracy.png",
       "ID": "11f123e174103140957957506bd576d7"
+    },
+    {
+      "name": "Homebrew Powder",
+      "description": "More damage on average but it's a bit inconsistent.",
+      "type": "Clean",
+      "category": "Randomized Damage",
+      "asset": "assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
+      "ID": "4cdf41f3a0f8e4499d1bac6168347799"
     },
     {
       "name": "Overclocked Firing Mechanism",
@@ -998,6 +1038,14 @@
       "ID": "956bb51f4d8f254291a0c0e740bd07cf"
     },
     {
+      "name": "Turret EM Discharge",
+      "description": "Shoot a turret to turn it into the epicenter of an electric explosion! The bullet modifications unfortunately also lower the direct damage and magazine capacity.",
+      "type": "Unstable",
+      "category": "Area Damage",
+      "asset": "assets/icons/Icon_Upgrade_Area_Damage.png",
+      "ID": "2e424ee0192cd643a0daf8f73b5351b3"
+    },
+    {
       "name": "Light-weight Rounds",
       "description": "They don't hit quite as hard, and can't handle fast fire rates but you sure can carry a lot more of them!",
       "type": "Balanced",
@@ -1043,14 +1091,6 @@
       "category": "Electricity",
       "asset": "assets/icons/Icon_Upgrade_Electricity.png",
       "ID": "3c42dbea3021ee44af6d944a91314d75"
-    },
-    {
-      "name": "Turret EM Discharge",
-      "description": "Shoot a turret to turn it into the epicenter of an electric explosion! The bullet modifications unfortunately also lower the direct damage and magazine capacity.",
-      "type": "Unstable",
-      "category": "Area Damage",
-      "asset": "assets/icons/Icon_Upgrade_Area_Damage.png",
-      "ID": "2e424ee0192cd643a0daf8f73b5351b3"
     },
     {
       "name": "Pack Rat",

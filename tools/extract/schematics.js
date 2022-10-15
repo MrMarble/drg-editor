@@ -82,7 +82,6 @@ async function main() {
       )[1].replace("ID", "");
 
       const ID = schematic.Properties.SaveGameID;
-      const current = schematic.Outer;
       const infoFile = schematic.Properties.Item.ObjectPath;
       const index = infoFile.split(".")[1];
 
@@ -90,24 +89,37 @@ async function main() {
         const bank = json[index];
         if (bank.Type === "OverclockShematicItem") {
           const oc = bank.Properties.Overclock.ObjectPath.split(".")[0];
-
+          const index = bank.Properties.Overclock.ObjectPath.split(".")[1];
           const ocjson = await readJSON(`${oc}.json`);
 
-          const name = ocjson?.[0]?.Properties?.Name?.SourceString;
+          let name = ocjson?.[index]?.Properties?.Name?.SourceString;
           //const class = ocjson?.[0]?.Properties?.Category?.ObjectPath;
-          const description =
-            ocjson?.[0]?.Properties?.Description?.SourceString;
+          let description =
+            ocjson?.[index]?.Properties?.Description?.SourceString;
           if (!name) {
-            //TODO: Support tables
-            //console.error("No name found for", oc);
-            continue;
+            const table =
+              ocjson?.[index]?.Properties?.Name?.TableId.split(".")[0];
+            const key = ocjson?.[index]?.Properties?.Name?.Key;
+            const tablejson = await readJSON(`FSD/${table}.json`);
+            name = tablejson?.[0]?.StringTable?.KeysToMetaData?.[key];
+            if (!name) {
+              console.error("No name found for", oc);
+              continue;
+            }
+
+            if (!description) {
+              const key = ocjson?.[index]?.Properties?.Description?.Key;
+              description = tablejson?.[0]?.StringTable?.KeysToMetaData?.[key];
+            }
           }
           let type =
-            ocjson?.[0]?.Properties?.SchematicCategory?.ObjectName?.split("_");
+            ocjson?.[index]?.Properties?.SchematicCategory?.ObjectName?.split(
+              "_"
+            );
           type = type[type.length - 1];
 
           const categoryPath =
-            ocjson?.[0]?.Properties?.Category?.ObjectPath.split(".")[0];
+            ocjson?.[index]?.Properties?.Category?.ObjectPath.split(".")[0];
 
           const categoryJson = JSON.parse(
             (await readFile(`${categoryPath}.json`)).toString()
@@ -138,7 +150,7 @@ async function main() {
           });
           //console.log({ dwarf, ID, name, current });
         } else {
-          //console.error("Unknown type", bank.Type);
+          console.error("Unknown type", bank.Type);
           continue;
         }
       } else {
