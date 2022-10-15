@@ -4,8 +4,8 @@ import { useChangesStore } from "../../stores/changesStore";
 import { useSaveStore } from "../../stores/saveStore";
 import { Input } from "../UI";
 import { Rank } from "../UI/Layout";
-import { WIP } from "../Wip";
 import { Dropdown } from "./Dropdown";
+import { Overclocks } from "./overclocks";
 
 const XP_OFFSET = 26;
 const CLASS_UID = "030000005850";
@@ -115,10 +115,10 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
 
       <div className="not-first:mt-10">
         <span className="border-b-2 border-drg-primary-500 capitalize text-sm">
-          Cosmetics
+          Overclocks
         </span>
-        <div className="mt-3 md:w-auto grid grid-cols grid-rows-1 gap-2 md:grid-cols-2 lg:grid-cols-2 lg:gap-x-10 xl:grid-cols-3  max-h-96 overflow-auto">
-          <WIP />
+        <div className="mt-3 md:w-auto grid grid-cols gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3  max-h-96 overflow-auto">
+          <Overclocks dwarf={dwarf} />
         </div>
       </div>
     </div>
