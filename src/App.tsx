@@ -1,5 +1,6 @@
 import { Download } from "./components/Download";
 import { Editor } from "./components/Editor";
+import GithubButton from "./components/UI/GithubButton";
 import { UploadFile } from "./components/UploadFile";
 import { useSaveStore } from "./stores/saveStore";
 
@@ -36,6 +37,7 @@ function App() {
           {isLoaded && <Editor />}
           {isLoaded && <Download />}
         </div>
+        <GithubButton />
       </div>
     </>
   );
