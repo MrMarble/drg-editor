@@ -76,14 +76,13 @@ export const Input: FC<{
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
         />
-        {max && (
-          <button
-            className="btn btn-square bg-drg-primary-400 hover:bg-drg-secondary-500 text-slate-900 text-xs"
-            onClick={handleMax}
-          >
-            Max
-          </button>
-        )}
+        <button
+          className="btn btn-square bg-drg-primary-400 hover:bg-drg-secondary-500 text-slate-900 text-xs disabled:border-2 disabled:border-drg-primary-700 disabled:border-l-0"
+          onClick={handleMax}
+          disabled={!max}
+        >
+          Max
+        </button>
       </div>
     </div>
   );

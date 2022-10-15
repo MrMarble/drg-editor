@@ -13,7 +13,7 @@ export const Editor = () => {
       <div>
         <SideBar onChange={(tab) => setActiveTab(tab)} />
       </div>
-      <div className="p-6 flex flex-row box-border">
+      <div className="p-6 flex flex-row box-border w-auto h-full lg:w-[1200px] lg:h-[700px]">
         {activeTab === "Resources" && <Resources />}
         {activeTab === "Season" && <Season />}
         {!["Resources", "Season"].includes(activeTab) && (
