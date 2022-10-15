@@ -1,11 +1,19 @@
-import { toMatchImageSnapshot } from "jest-image-snapshot";
+import { configureToMatchImageSnapshot } from "jest-image-snapshot";
 import type { Browser, ElementHandle, Page } from "puppeteer";
 import { launch } from "puppeteer";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
-expect.extend({ toMatchImageSnapshot });
+const toMatchImageSnapshot = configureToMatchImageSnapshot({
+  comparisonMethod: "ssim",
+  failureThreshold: 0.01,
+  failureThresholdType: "percent",
+});
 
-describe("update snapshots", () => {
+expect.extend({
+  toMatchImageSnapshot,
+});
+
+describe.skipIf(!process.env?.CI)("update snapshots", () => {
   let browser: Browser;
   let page: Page;
 
@@ -35,8 +43,7 @@ describe("update snapshots", () => {
       throw new Error("File input not found");
     }
 
-    console.log("Uploading file...");
-    await fileInput.uploadFile("src/__tests__/fixtures/example.sav");
+    await fileInput.uploadFile("src/__tests__/fixtures/with_overclocks.sav");
     await page.waitForSelector("ul.menu");
 
     await waitForTransition();

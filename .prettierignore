@@ -1,3 +1,4 @@
 *.md
 /*.config.cjs
 /dist
+/data

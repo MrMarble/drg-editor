@@ -24,3 +24,6 @@ yarn.lock
 *.njsproj
 *.sln
 *.sw?
+/FSD
+__diff_output__
+/*.json

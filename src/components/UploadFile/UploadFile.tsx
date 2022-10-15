@@ -24,7 +24,6 @@ export const UploadeFile = () => {
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     // Do something with the files
-    console.log(acceptedFiles);
     acceptedFiles.forEach((file) => {
       setName(file.name);
       fr.readAsArrayBuffer(file);
