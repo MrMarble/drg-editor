@@ -3,11 +3,6 @@ name: Deployment
 on:
   push:
     branches: [main]
-    paths:
-      - "src/**"
-      - "public/**"
-      - "*.json"
-      - "*.html"
 
   workflow_dispatch:
 
