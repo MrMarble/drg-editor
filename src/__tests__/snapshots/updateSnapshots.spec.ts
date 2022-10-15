@@ -13,7 +13,7 @@ expect.extend({
   toMatchImageSnapshot,
 });
 
-describe("update snapshots", () => {
+describe.skipIf(!process.env?.CI)("update snapshots", () => {
   let browser: Browser;
   let page: Page;
 
@@ -43,7 +43,6 @@ describe("update snapshots", () => {
       throw new Error("File input not found");
     }
 
-    console.log("Uploading file...");
     await fileInput.uploadFile("src/__tests__/fixtures/example.sav");
     await page.waitForSelector("ul.menu");
 
