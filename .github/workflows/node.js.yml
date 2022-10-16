@@ -56,7 +56,7 @@ jobs:
           body: |
             **Visual regression test failed!**
 
-            ${{ contains(steps.upload-diff.outputs,'diff-1') && format('![diff-1]({0})',steps.upload-diff.outputs.diff-1) || '' }}
-            ${{ contains(steps.upload-diff.outputs,'diff-2') && format('![diff-2]({0})',steps.upload-diff.outputs.diff-2) || '' }}
-            ${{ contains(steps.upload-diff.outputs,'diff-3') && format('![diff-3]({0})',steps.upload-diff.outputs.diff-3) || '' }}
-            ${{ contains(steps.upload-diff.outputs,'diff-4') && format('![diff-4]({0})',steps.upload-diff.outputs.diff-4) || '' }}
+            ${{ steps.upload-diff.outputs.diff-1 && format('![diff-1]({0})',steps.upload-diff.outputs.diff-1) }}
+            ${{ steps.upload-diff.outputs.diff-2 && format('![diff-2]({0})',steps.upload-diff.outputs.diff-2) }}
+            ${{ steps.upload-diff.outputs.diff-3 && format('![diff-3]({0})',steps.upload-diff.outputs.diff-3) }}
+            ${{ steps.upload-diff.outputs.diff-4 && format('![diff-4]({0})',steps.upload-diff.outputs.diff-4) }}
