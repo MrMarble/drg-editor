@@ -26,4 +26,4 @@ yarn.lock
 *.sw?
 /FSD
 __diff_output__
-/*.json
+/save*.json

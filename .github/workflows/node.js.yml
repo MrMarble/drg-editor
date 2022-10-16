@@ -6,8 +6,17 @@ name: Tests
 on:
   push:
     branches: ["main", "develop"]
+    paths-ignore:
+      - ".github/**"
+      - "assets/**"
+      - "README.md"
+
   pull_request:
     branches: ["main", "develop"]
+    paths-ignore:
+      - ".github/**"
+      - "assets/**"
+      - "README.md"
 
 jobs:
   build:
