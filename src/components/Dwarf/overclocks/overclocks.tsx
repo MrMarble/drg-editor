@@ -10,7 +10,7 @@ export const Overclocks: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
   const {
     state: { owned, forged },
     actions: { lock, unlock, forge },
-  } = useOverclocks(dwarf);
+  } = useOverclocks();
 
   const { filters } = useContext(FilterContext) as FilterContextType;
 
