@@ -27,28 +27,24 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
   const { increment } = useChangesStore();
   const { clearFilters } = useFilterStore();
 
-  const [loaded, setLoaded] = useState(false);
+  const [level, setLevel] = useState(
+    () => xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).level
+  );
+  const [xp, setXp] = useState(
+    () => xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).xp
+  );
 
-  const [level, setLevel] = useState(0);
-  const [xp, setXp] = useState(0);
-
-  const [promotion, setPromotion] = useState(0);
+  const [promotion, setPromotion] = useState(() =>
+    save.getInt32(DWARF_UID, XP_OFFSET + 108)
+  );
 
   // Perks points are shared between all dwarfs, maybe move this somewhere else?
-  const [perks, setPerks] = useState(0);
+  const [perks, setPerks] = useState(() => {
+    const points = save.getInt32(PERK_UID, 26);
+    return points > 0 ? points : 0;
+  });
 
   useEffect(() => {
-    const points = save.getInt32(PERK_UID, 26);
-    setPerks(points > 0 ? points : 0);
-
-    setPromotion(save.getInt32(DWARF_UID, XP_OFFSET + 108));
-
-    const { level, xp } = xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET));
-    setLevel(level);
-    setXp(xp);
-
-    setLoaded(true);
-
     return () => {
       clearFilters();
     };
@@ -97,37 +93,35 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
   return (
     <div className="w-full ">
       <Rank>
-        {loaded && (
-          <>
-            <Input
-              name="Level"
-              initialValue={level}
-              icon="assets/level.webp"
-              max={25}
-              onChange={handleLevelChange}
-            />
-            <Input
-              name="Progress"
-              initialValue={xp}
-              label="XP"
-              max={XP_TABLE[level] - XP_TABLE[level - 1] || undefined}
-              onChange={handleXpChange}
-            />
-            <Dropdown
-              items={PROMO_RANKS}
-              name="Promotion"
-              initialValue={promotion}
-              onChange={handlePromotionChange}
-            />
-            <Input
-              name="Perks Points"
-              initialValue={perks}
-              icon="assets/perks.webp"
-              max={0x0fffffff}
-              onChange={handlePerkChange}
-            />
-          </>
-        )}
+        <>
+          <Input
+            name="Level"
+            initialValue={level}
+            icon="assets/level.webp"
+            max={25}
+            onChange={handleLevelChange}
+          />
+          <Input
+            name="Progress"
+            initialValue={xp}
+            label="XP"
+            max={XP_TABLE[level] - XP_TABLE[level - 1] || undefined}
+            onChange={handleXpChange}
+          />
+          <Dropdown
+            items={PROMO_RANKS}
+            name="Promotion"
+            initialValue={promotion}
+            onChange={handlePromotionChange}
+          />
+          <Input
+            name="Perks Points"
+            initialValue={perks}
+            icon="assets/perks.webp"
+            max={0x0fffffff}
+            onChange={handlePerkChange}
+          />
+        </>
       </Rank>
       <div className="not-first:mt-10 relative">
         <Filters dwarf={dwarf} />
