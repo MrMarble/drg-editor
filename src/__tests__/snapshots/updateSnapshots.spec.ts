@@ -4,8 +4,8 @@ import { launch } from "puppeteer";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 const toMatchImageSnapshot = configureToMatchImageSnapshot({
-  comparisonMethod: "ssim",
-  failureThreshold: 1,
+  comparisonMethod: "pixelmatch",
+  failureThreshold: 0.02,
   failureThresholdType: "percent",
 });
 
