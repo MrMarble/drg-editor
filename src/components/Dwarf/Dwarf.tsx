@@ -6,6 +6,8 @@ import { Input } from "../UI";
 import { Rank } from "../UI/Layout";
 import { Dropdown } from "./Dropdown";
 import { Overclocks } from "./overclocks";
+import { FilterContextProvider } from "./context/filterContext";
+import Filters from "./filter/Filters";
 
 const XP_OFFSET = 26;
 const CLASS_UID = "030000005850";
@@ -113,16 +115,19 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
         />
       </Rank>
 
-      <div className="not-first:mt-10">
-        <span className="border-b-2 border-drg-primary-500 capitalize text-sm">
-          Overclocks
-        </span>
-        <div className="mt-3 md:w-auto max-h-96 overflow-auto drg-scrollbar drg-internal-scrollbar">
-          <div className="mr-4 grid grid-cols gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-            <Overclocks dwarf={dwarf} />
+      <FilterContextProvider>
+        <div className="not-first:mt-10 relative">
+          <Filters dwarf={dwarf} />
+          <span className="border-b-2 border-drg-primary-500 capitalize text-sm">
+            Overclocks
+          </span>
+          <div className="mt-3 md:w-auto max-h-96 overflow-auto drg-scrollbar drg-internal-scrollbar">
+            <div className="mr-4 grid grid-cols gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 relative">
+              <Overclocks dwarf={dwarf} />
+            </div>
           </div>
         </div>
-      </div>
+      </FilterContextProvider>
     </div>
   );
 };

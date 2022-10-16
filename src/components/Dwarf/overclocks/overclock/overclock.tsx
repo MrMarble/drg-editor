@@ -20,7 +20,6 @@ export const Overclock: FC<{
 }> = ({
   ID,
   owned,
-  description,
   name,
   asset,
   type,
