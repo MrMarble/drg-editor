@@ -32,6 +32,7 @@ body {
   @apply bg-gray-900;
   min-height: 100vh;
 }
+
 @layer utilities {
   .drg-gradient {
     background: radial-gradient(
@@ -44,6 +45,10 @@ body {
 
 .drg-framer {
   @apply border-drg-primary-500 border-t-2 border-b-2 drg-gradient;
+}
+
+.drg-title {
+  font-family: "Danger Flight";
 }
 
 .drg-button {

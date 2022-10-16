@@ -25,8 +25,8 @@ then
     if [[ -f "$file" ]]
     then
       echo "Uploading $file"
-      URL=$(curl https://api.cloudinary.com/v1_1/$CLOUD_NAME/image/upload -X POST -F "file=@$file" -F "timestamp=$timestamp" -F "api_key=$API_KEY"  -F "folder=test" -F "signature=$(echo -n "folder=test&timestamp=$timestamp$API_SECRET" | sha1sum | awk '{print $1}')" | jq -r '.secure_url')
-
+      URL=$(curl https://api.cloudinary.com/v1_1/$CLOUD_NAME/image/upload -X POST -F "file=@$file" -F "timestamp=$timestamp" -F "api_key=$API_KEY"  -F "folder=github" -F "signature=$(echo -n "folder=github&timestamp=$timestamp$API_SECRET" | sha1sum | awk '{print $1}')" | jq -r '.secure_url')
+      echo "diff-$i=$URL"
       echo "diff-$i=$URL" >> $GITHUB_OUTPUT
     fi
   done

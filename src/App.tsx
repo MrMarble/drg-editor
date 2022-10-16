@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="flex flex-col items-center w-full h-screen justify-center py-4">
         {isLoaded && (
-          <div className="justify-center font-medium text-2xl drg-framer text-center min-w-[400px] max-w-[90%] w-auto py-2 mb-6 uppercase">
+          <div className="drg-title justify-center font-medium text-2xl drg-framer text-center min-w-[400px] max-w-[90%] w-auto py-2 mb-6 uppercase">
             DRG Editor
           </div>
         )}

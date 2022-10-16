@@ -45,7 +45,12 @@ export const UploadeFile = () => {
     >
       <input {...getInputProps()} />
       <p>{`Drag 'n' drop your save here, or click to select files`}</p>
-      <em>(Only *.sav files will be accepted)</em>
+      <em className="text-gray-500">
+        (Only *.sav files will be accepted)
+        <br />
+        (add .sav at the end if using&nbsp;
+        <span className="inline-block text-gray-400 underline">Game Pass</span>)
+      </em>
     </div>
   );
 };
