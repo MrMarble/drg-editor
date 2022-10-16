@@ -1,10 +1,12 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { DWARFS, PERK_UID, PROMO_RANKS, UUIDS, XP_TABLE } from "../../constant";
 import { useChangesStore } from "../../stores/changesStore";
+import { useFilterStore } from "../../stores/filterStore";
 import { useSaveStore } from "../../stores/saveStore";
 import { Input } from "../UI";
 import { Rank } from "../UI/Layout";
 import { Dropdown } from "./Dropdown";
+import Filters from "./filter/Filters";
 import { Overclocks } from "./overclocks";
 
 const XP_OFFSET = 26;
@@ -23,12 +25,13 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
   const DWARF_UID = UUIDS[dwarf] + CLASS_UID;
   const { save, setSave } = useSaveStore();
   const { increment } = useChangesStore();
+  const { clearFilters } = useFilterStore();
 
   const [level, setLevel] = useState(
-    xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).level
+    () => xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).level
   );
   const [xp, setXp] = useState(
-    xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).xp
+    () => xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).xp
   );
 
   const [promotion, setPromotion] = useState(() =>
@@ -40,6 +43,12 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
     const points = save.getInt32(PERK_UID, 26);
     return points > 0 ? points : 0;
   });
+
+  useEffect(() => {
+    return () => {
+      clearFilters();
+    };
+  }, []);
 
   const handleLevelChange = (value: number) => {
     if (value < 1) {
@@ -84,41 +93,43 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
   return (
     <div className="w-full ">
       <Rank>
-        <Input
-          name="Level"
-          initialValue={level}
-          icon="assets/level.webp"
-          max={25}
-          onChange={handleLevelChange}
-        />
-        <Input
-          name="Progress"
-          initialValue={xp}
-          label="XP"
-          max={XP_TABLE[level] - XP_TABLE[level - 1] || undefined}
-          onChange={handleXpChange}
-        />
-        <Dropdown
-          items={PROMO_RANKS}
-          name="Promotion"
-          initialValue={promotion}
-          onChange={handlePromotionChange}
-        />
-        <Input
-          name="Perks Points"
-          initialValue={perks}
-          icon="assets/perks.webp"
-          max={0x0fffffff}
-          onChange={handlePerkChange}
-        />
+        <>
+          <Input
+            name="Level"
+            initialValue={level}
+            icon="assets/level.webp"
+            max={25}
+            onChange={handleLevelChange}
+          />
+          <Input
+            name="Progress"
+            initialValue={xp}
+            label="XP"
+            max={XP_TABLE[level] - XP_TABLE[level - 1] || undefined}
+            onChange={handleXpChange}
+          />
+          <Dropdown
+            items={PROMO_RANKS}
+            name="Promotion"
+            initialValue={promotion}
+            onChange={handlePromotionChange}
+          />
+          <Input
+            name="Perks Points"
+            initialValue={perks}
+            icon="assets/perks.webp"
+            max={0x0fffffff}
+            onChange={handlePerkChange}
+          />
+        </>
       </Rank>
-
-      <div className="not-first:mt-10">
+      <div className="not-first:mt-10 relative">
+        <Filters dwarf={dwarf} />
         <span className="border-b-2 border-drg-primary-500 capitalize text-sm">
           Overclocks
         </span>
         <div className="mt-3 md:w-auto max-h-96 overflow-auto drg-scrollbar drg-internal-scrollbar">
-          <div className="mr-4 grid grid-cols gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+          <div className="mr-4 grid grid-cols gap-5 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 relative">
             <Overclocks dwarf={dwarf} />
           </div>
         </div>

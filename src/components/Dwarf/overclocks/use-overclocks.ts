@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { DWARFS } from "../../../constant";
 import type { U8Array } from "../../../helpers";
 import { b } from "../../../helpers/hexToByte/hexToByte";
 import { UUID } from "../../../helpers/u8array/uint8array";
@@ -22,7 +21,7 @@ const COUNT_OFFSET = 28;
 const OWNED_OFFSET = 105;
 const FORGED_OFFSET = 106;
 
-export const useOverclocks = (dwarf: DWARFS) => {
+export const useOverclocks = () => {
   const { save, setSave } = useSaveStore();
   const { increment } = useChangesStore();
 
@@ -46,7 +45,6 @@ export const useOverclocks = (dwarf: DWARFS) => {
     for (let i = 0; i < length; i++) {
       forged.push(save.getUUID(FORGED_NEEDLE, FORGED_OFFSET + i * 16));
     }
-    console.log({ length, forged });
     return forged;
   });
 
