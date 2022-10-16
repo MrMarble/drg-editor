@@ -6,8 +6,17 @@ name: Tests
 on:
   push:
     branches: ["main", "develop"]
+    paths-ignore:
+      - ".github/**"
+      - "assets/**"
+      - "README.md"
+
   pull_request:
     branches: ["main", "develop"]
+    paths-ignore:
+      - ".github/**"
+      - "assets/**"
+      - "README.md"
 
 jobs:
   build:
@@ -29,3 +38,24 @@ jobs:
           npm run dev &
           sleep 5
           npm run test
+
+      - name: Upload diff
+        if: failure()
+        id: upload-diff
+        env:
+          CLOUD_NAME: ${{ secrets.CLOUD_NAME }}
+          API_KEY: ${{ secrets.API_KEY }}
+          API_SECRET: ${{ secrets.API_SECRET }}
+        run: bash tools/upload_diff.sh
+
+      - name: Create comment
+        if: github.event_name == 'pull_request' && failure()
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          body: |
+            **Visual regression test failed!**
+
+            ${{ contains(steps.upload-diff.outputs,'diff-1') && '![diff-1](' + steps.upload-diff.outputs.diff-1 + ')' || '' }}
+            ${{ contains(steps.upload-diff.outputs,'diff-2') && '![diff-2](' + steps.upload-diff.outputs.diff-2 + ')' || '' }}
+            ${{ contains(steps.upload-diff.outputs,'diff-3') && '![diff-3](' + steps.upload-diff.outputs.diff-3 + ')' || '' }}
+            ${{ contains(steps.upload-diff.outputs,'diff-4') && '![diff-4](' + steps.upload-diff.outputs.diff-4 + ')' || '' }}

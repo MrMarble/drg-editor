@@ -1,0 +1,22 @@
+name: Update screenshots
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  update-screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./tools/update-screenshots.sh
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "chore: update screenshots"
+          title: "[Auto] Update screenshots"
+          body: "This PR was created by a GitHub action. It updates the screenshots in the repository."
+          add-paths: |
+            assets/*
