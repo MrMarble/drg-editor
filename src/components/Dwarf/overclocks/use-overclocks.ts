@@ -45,7 +45,6 @@ export const useOverclocks = () => {
     for (let i = 0; i < length; i++) {
       forged.push(save.getUUID(FORGED_NEEDLE, FORGED_OFFSET + i * 16));
     }
-    console.log({ length, forged });
     return forged;
   });
 
