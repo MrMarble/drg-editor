@@ -1,4 +1,5 @@
-import { FC, useState } from "react";
+import type { ChangeEvent, FC } from "react";
+import { useState } from "react";
 import { VscWorkspaceUnknown } from "react-icons/vsc";
 
 export const Dropdown: FC<{
@@ -10,7 +11,7 @@ export const Dropdown: FC<{
 }> = ({ initialValue, name, label, onChange, items }) => {
   const [value, setValue] = useState(initialValue);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const newValue = parseInt(e.target.value);
     if (newValue === value) return;
 

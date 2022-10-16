@@ -14,7 +14,11 @@ const downloadURL = (data: string, fileName: string) => {
   a.remove();
 };
 
-const downloadBlob = (data: any, fileName: string, mimeType: string) => {
+const downloadBlob = (
+  data: ArrayBuffer,
+  fileName: string,
+  mimeType: string
+) => {
   const blob = new Blob([data], {
     type: mimeType,
   });

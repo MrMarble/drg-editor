@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { FaGithub } from "react-icons/fa";
 
 type Props = {

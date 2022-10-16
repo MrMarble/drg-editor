@@ -20,13 +20,10 @@ type Props = AllowedFiltersType & {
   tabIndex?: number;
 };
 
-function removeDuplicates<T, P>(
-  data: ItemsType[] | undefined,
-  key: (x: P) => void
-): T[] {
+function removeDuplicates<T>(data: T[] | undefined, key: (x: T) => void): T[] {
   if (!data) return [];
 
-  return [...new Map(data.map((x: any) => [key(x), x])).values()];
+  return [...new Map(data.map((x) => [key(x), x])).values()];
 }
 
 const FilterElement = ({ items, label, keySelector, tabIndex }: Props) => {

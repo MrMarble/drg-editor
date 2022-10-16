@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 export type FilterContextType = {
-  filters: Record<string, any> | null;
-  setFilters: (value: Record<string, unknown>) => void;
+  filters: Record<string, string[]> | null;
+  setFilters: (value: Record<string, string[]>) => void;
 };
 
 const FilterContext = React.createContext<FilterContextType | null>(null);
@@ -13,7 +13,7 @@ export function FilterContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [filters, setFilters] = useState<Record<string, unknown> | null>({});
+  const [filters, setFilters] = useState<Record<string, string[]> | null>({});
 
   const value = React.useMemo(
     () => ({
