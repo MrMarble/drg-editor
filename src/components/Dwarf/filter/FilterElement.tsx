@@ -1,8 +1,7 @@
 import clsx from "clsx";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
-import FilterContext, { FilterContextType } from "../context/filterContext";
-import { AllowedFiltersType } from "./Filters";
+import { FilterType, useFilterStore } from "../../../stores/filterStore";
 
 type ItemsType = {
   name: string;
@@ -14,7 +13,8 @@ type ItemsType = {
   ID: string;
 };
 
-type Props = AllowedFiltersType & {
+type Props = {
+  keySelector: FilterType;
   items?: ItemsType[];
   label: string;
   tabIndex?: number;
@@ -27,9 +27,7 @@ function removeDuplicates<T>(data: T[] | undefined, key: (x: T) => void): T[] {
 }
 
 const FilterElement = ({ items, label, keySelector, tabIndex }: Props) => {
-  const { filters, setFilters } = useContext(
-    FilterContext
-  ) as FilterContextType;
+  const { filters, addFilter, removeFilter } = useFilterStore();
   const [visibility, setVisibility] = useState<boolean>(true);
 
   const filterWithoutDuplicates: ItemsType[] = removeDuplicates(
@@ -37,25 +35,13 @@ const FilterElement = ({ items, label, keySelector, tabIndex }: Props) => {
     (prev: ItemsType) => prev[keySelector]
   );
 
-  const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const name = e.target.name;
-    const checked = e.target.checked;
-
-    if (!filters) return;
-
-    if (!Object.prototype.hasOwnProperty.call(filters, keySelector)) {
-      filters[keySelector] = [];
+    if (e.target.checked) {
+      addFilter(keySelector, name);
+    } else {
+      removeFilter(keySelector, name);
     }
-
-    const filteredFilter =
-      filters[keySelector].includes(name) && !checked
-        ? filters[keySelector].filter((value: string) => value !== name)
-        : [...filters[keySelector], name];
-
-    return setFilters({
-      ...filters,
-      [keySelector]: [...filteredFilter],
-    });
   };
 
   const handleVisibility = () => {
@@ -67,7 +53,12 @@ const FilterElement = ({ items, label, keySelector, tabIndex }: Props) => {
       <div className="dropdown">
         <label
           tabIndex={tabIndex}
-          className="px-4 py-1 cursor-pointer rounded-sm bg-slate-800 text-sm select-none"
+          className={clsx(
+            filters?.[keySelector]?.length
+              ? "bg-drg-primary-600"
+              : "bg-slate-800",
+            "px-4 py-1 cursor-pointer rounded-sm  text-sm select-none"
+          )}
         >
           {label}
         </label>
@@ -98,7 +89,7 @@ const FilterElement = ({ items, label, keySelector, tabIndex }: Props) => {
                     className="checkbox w-4 h-4 rounded-sm"
                     type="checkbox"
                     name={content[keySelector]}
-                    onChange={handleFilter}
+                    onChange={handleChange}
                     id={content[keySelector]}
                     defaultChecked={false}
                   />
