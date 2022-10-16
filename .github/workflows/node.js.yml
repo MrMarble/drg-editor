@@ -24,7 +24,7 @@ jobs:
       - run: npm run build --if-present
       - run: npm run lint:types --if-present
       - run: npm run lint --if-present
-      - run: npx prettier --check .
+      - run: npm run format --if-present
       - run: |
           npm run dev &
           sleep 5
