@@ -1,7 +1,7 @@
+import { ITEMS } from "@constant/resources";
+import { useChangesStore } from "@stores/changesStore";
+import { useSaveStore } from "@stores/saveStore";
 import { useState } from "react";
-import { ITEMS } from "../../constant/resources";
-import { useChangesStore } from "../../stores/changesStore";
-import { useSaveStore } from "../../stores/saveStore";
 import { Input } from "../UI";
 
 type Props = {

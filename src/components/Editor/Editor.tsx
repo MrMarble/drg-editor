@@ -1,6 +1,6 @@
+import type { DWARFS } from "@constant/dwarfs";
 import { Suspense, useState } from "react";
 import { lazyWithPreload } from "react-lazy-with-preload";
-import type { DWARFS } from "../../constant/dwarfs";
 import { Resources } from "../Resources";
 import { SideBar, TABS } from "../SideBar";
 

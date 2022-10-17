@@ -3,7 +3,7 @@ import {
   EXPANDED_RESOURCE_NAMES,
   ITEMS,
   RESOURCES,
-} from "../../constant/resources";
+} from "@constant/resources";
 import ResourceInput from "./ResourceInput";
 
 export const Resources = () => {

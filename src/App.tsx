@@ -1,9 +1,9 @@
+import Home from "@components/Home";
+import { useSaveStore } from "@stores/saveStore";
 import { Suspense, useEffect } from "react";
 import { lazyWithPreload } from "react-lazy-with-preload";
-import Home from "./components/Home";
-import { useSaveStore } from "./stores/saveStore";
 
-const Editor = lazyWithPreload(() => import("./components/Editor/Editor"));
+const Editor = lazyWithPreload(() => import("@components/Editor/Editor"));
 
 function App() {
   const { isLoaded } = useSaveStore();

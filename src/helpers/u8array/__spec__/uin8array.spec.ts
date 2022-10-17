@@ -1,4 +1,5 @@
 import { readFileSync } from "fs";
+// eslint-disable-next-line import/no-unresolved
 import { beforeEach, describe, expect, test } from "vitest";
 import { DWARFS, HEADER_OFFSET, UUIDS } from "../../../constant";
 import { hexStringToByteArray } from "../../hexToByte";

@@ -1,4 +1,5 @@
 import { readFileSync } from "fs";
+// eslint-disable-next-line import/no-unresolved
 import { bench, describe } from "vitest";
 import { U8Array } from "../uint8array";
 

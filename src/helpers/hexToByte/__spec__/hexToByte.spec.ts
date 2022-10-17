@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import { describe, expect, test } from "vitest";
 import { b, hexStringToByteArray } from "../hexToByte";
 

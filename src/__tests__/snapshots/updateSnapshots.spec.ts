@@ -1,6 +1,7 @@
 import { configureToMatchImageSnapshot } from "jest-image-snapshot";
 import type { Browser, ElementHandle, Page } from "puppeteer";
 import { launch } from "puppeteer";
+// eslint-disable-next-line import/no-unresolved
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 const toMatchImageSnapshot = configureToMatchImageSnapshot({
