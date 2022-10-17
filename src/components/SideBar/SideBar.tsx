@@ -11,9 +11,10 @@ export const TABS = [
   { name: DWARFS.ENGINEER, url: "assets/engineer.webp" },
 ];
 
-export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
-  onChange,
-}) => {
+export const SideBar: FC<{
+  onChange: (tab: string) => void;
+  onHover?: (tab: string) => void;
+}> = ({ onChange, onHover }) => {
   const [activeTab, setActiveTab] = useState("Resources");
 
   const onClickTabItem = (tab: string) => {
@@ -31,6 +32,7 @@ export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
             icon={tab.url}
             label={tab.name}
             onClick={onClickTabItem}
+            onHover={onHover}
           />
         ))}
       </ul>

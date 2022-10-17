@@ -6,21 +6,29 @@ export const Tab = ({
   icon,
   onClick,
   disabled,
+  onHover,
 }: {
   active: boolean;
   icon: string;
   label: string;
   disabled?: boolean;
   onClick: (label: string) => void;
+  onHover?: (label: string) => void;
 }) => {
   const onClickHandler = () => {
     if (disabled) return;
     onClick(label);
   };
 
+  const onHoverHandler = () => {
+    if (disabled) return;
+    onHover && onHover(label);
+  };
+
   return (
     <li
       onClick={onClickHandler}
+      onMouseEnter={onHoverHandler}
       className={clsx(
         disabled ? "disabled" : "hover:border-drg-primary-300",
         "rounded-md my-1 font-medium display-block"

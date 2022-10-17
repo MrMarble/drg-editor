@@ -1,12 +1,16 @@
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { defineConfig, UserConfig } from "vite";
 import Compression from "vite-compression-plugin";
 import checker from "vite-plugin-checker";
 import { chunkSplitPlugin } from "vite-plugin-chunk-split";
 import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const config = {
+  const config: UserConfig = {
+    esbuild: {
+      treeShaking: true,
+      drop: ["console", "debugger"],
+    },
     plugins: [
       react(),
       ViteWebfontDownload(),

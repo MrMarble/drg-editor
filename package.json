@@ -33,6 +33,7 @@
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.2",
     "react-icons": "^4.4.0",
+    "react-lazy-with-preload": "^2.2.1",
     "react-use": "^17.4.0",
     "zustand": "^4.1.1"
   },
