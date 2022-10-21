@@ -1,19 +1,42 @@
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
-import { imagetools } from 'vite-imagetools';
-import { ViteWebfontDownload } from 'vite-plugin-webfont-dl';
-
+import react from "@vitejs/plugin-react";
+import critical from "rollup-plugin-critical";
+import { defineConfig, UserConfig } from "vite";
+import { imagetools } from "vite-imagetools";
 // https://vitejs.dev/config/
+
+// fix types
+const criticalCSS = (critical as unknown as { default: unknown })
+  .default as typeof critical;
+
 export default defineConfig(({ mode }) => {
-  const config = {
-    plugins: [react(), ViteWebfontDownload(), imagetools()],
+  const config: UserConfig = {
+    plugins: [
+      react(),
+      imagetools(),
+      {
+        ...criticalCSS({
+          criticalUrl: "http://localhost:5173",
+          criticalBase: "dist",
+          criticalPages: [
+            { uri: mode === "vercel" ? "/" : "/drg-editor", template: "index" },
+          ],
+          criticalConfig: {
+            inline: true,
+            src: "dist/index.html",
+            base: "dist",
+          },
+        }),
+        enforce: "post",
+        apply: "build",
+      },
+    ],
   };
 
-  if (mode === 'vercel') {
+  if (mode === "vercel") {
     return config;
   }
   return {
     ...config,
-    base: '/drg-editor/',
+    base: "/drg-editor/",
   };
 });
