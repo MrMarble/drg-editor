@@ -41,7 +41,7 @@ export const UploadeFile = () => {
   return (
     <div
       {...getRootProps()}
-      className="rounded m-6 border-dashed border-drg-primary-700 border-2 p-6 text-center cursor-pointer select-none hover:bg-drg-primary-400 hover:text-slate-900 transition-all duration-200"
+      className="border-drg-primary-700 hover:bg-drg-primary-400 m-6 cursor-pointer select-none rounded border-2 border-dashed p-6 text-center transition-all duration-200 hover:text-slate-900"
     >
       <input {...getInputProps()} />
       <p>{`Drag 'n' drop your save here, or click to select files`}</p>

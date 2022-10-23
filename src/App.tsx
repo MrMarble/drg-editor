@@ -1,19 +1,19 @@
-import { Download } from './components/Download';
-import { Editor } from './components/Editor';
-import GithubButton from './components/UI/GithubButton';
-import { UploadFile } from './components/UploadFile';
-import { useSaveStore } from './stores/saveStore';
+import { Download } from "./components/Download";
+import { Editor } from "./components/Editor";
+import GithubButton from "./components/UI/GithubButton";
+import { UploadFile } from "./components/UploadFile";
+import { useSaveStore } from "./stores/saveStore";
 
 import {
   height as LogoHeight,
   src as Logo,
   width as LogoWidth,
-} from './assets/logo.png?w=128&webp&meta&imagetools';
+} from "./assets/logo.png?w=128&webp&meta&imagetools";
 import {
   height as SeasonHeight,
   src as SeasonLogo,
   width as SeasonWidth,
-} from './assets/season02.png?w=128&webp&meta&imagetools';
+} from "./assets/season02.png?w=128&webp&meta&imagetools";
 
 function App() {
   const { isLoaded } = useSaveStore();

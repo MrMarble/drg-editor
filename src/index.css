@@ -49,7 +49,7 @@ body {
 }
 
 .drg-title {
-  font-family: 'Danger Flight';
+  font-family: "Danger Flight";
 }
 
 .drg-button {
@@ -69,7 +69,7 @@ body {
 }
 
 .emblems {
-  background: url('/assets/promotion_emblems.webp') no-repeat;
+  background: url("/assets/promotion_emblems.webp") no-repeat;
   background-size: 330% 620%, cover;
   width: 30px;
   height: 30px;

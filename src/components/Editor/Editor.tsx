@@ -9,11 +9,11 @@ export const Editor = () => {
   const [activeTab, setActiveTab] = useState(TABS[0].name);
 
   return (
-    <div className="flex flex-col md:flex-col lg:flex-row max-w-7xl">
+    <div className="flex max-w-7xl flex-col md:flex-col lg:flex-row">
       <div>
         <SideBar onChange={(tab) => setActiveTab(tab)} />
       </div>
-      <div className="p-6 flex flex-row box-border w-auto h-full lg:w-[1200px] lg:h-[700px]">
+      <div className="box-border flex h-full w-auto flex-row p-6 lg:h-[700px] lg:w-[1200px]">
         {activeTab === "Resources" && <Resources />}
         {activeTab === "Season" && <Season />}
         {!["Resources", "Season"].includes(activeTab) && (

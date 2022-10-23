@@ -71,10 +71,10 @@ export const Season = () => {
         />
       </Rank>
       <div className="not-first:mt-10">
-        <span className="border-b-2 border-drg-primary-500 capitalize text-sm">
+        <span className="border-drg-primary-500 border-b-2 text-sm capitalize">
           Cosmetic Tree
         </span>
-        <div className="mt-3 md:w-auto grid grid-cols grid-rows-1 gap-2 md:grid-cols-2 lg:grid-cols-2 lg:gap-x-10 xl:grid-cols-3  max-h-96 overflow-auto">
+        <div className="grid-cols mt-3 grid max-h-96 grid-rows-1 gap-2 overflow-auto md:w-auto md:grid-cols-2 lg:grid-cols-2  lg:gap-x-10 xl:grid-cols-3">
           <WIP />
         </div>
       </div>

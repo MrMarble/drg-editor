@@ -44,13 +44,13 @@ export const Download = () => {
   };
 
   const component = (
-    <div className="alert shadow-lg absolute bottom-10 right-10 w-96 rounded-none drg-framer">
+    <div className="drg-framer alert absolute bottom-10 right-10 w-96 rounded-none shadow-lg">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          className="stroke-info flex-shrink-0 w-6 h-6"
+          className="stroke-info h-6 w-6 shrink-0"
         >
           <path
             strokeLinecap="round"

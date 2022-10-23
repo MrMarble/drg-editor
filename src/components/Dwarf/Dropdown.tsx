@@ -53,13 +53,13 @@ export const Dropdown: FC<{
     <div className="block">
       <label
         htmlFor={name.toLowerCase()}
-        className="label-text capitalize text-sm"
+        className="label-text text-sm capitalize"
       >
         {name}
       </label>
       <div className="input-group">
-        <span className="pointer-events-none select-none border-drg-primary-700 border text-sm">
-          <div className="w-8 max-w-none flex mx-auto">
+        <span className="border-drg-primary-700 pointer-events-none select-none border text-sm">
+          <div className="mx-auto flex w-8 max-w-none">
             {![0, items.length - 1].includes(value) ? (
               <DwarfPromotionEmblem value={value} />
             ) : (
@@ -72,7 +72,7 @@ export const Dropdown: FC<{
           {label && <b>{label}</b>}
         </span>
         <select
-          className="select w-full max-w-xs bg-transparent border-drg-primary-700 lg:w-44 text-[13px] tracking-wider drg-select"
+          className="drg-select select border-drg-primary-700 w-full max-w-xs bg-transparent text-[13px] tracking-wider lg:w-44"
           onChange={handleChange}
           defaultValue={initialValue}
         >

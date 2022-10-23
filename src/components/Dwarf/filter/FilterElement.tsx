@@ -57,7 +57,7 @@ const FilterElement = ({ items, label, keySelector, tabIndex }: Props) => {
             filters?.[keySelector]?.length
               ? "bg-drg-primary-600"
               : "bg-slate-800",
-            "px-4 py-1 cursor-pointer rounded-sm  text-sm select-none"
+            "cursor-pointer select-none rounded-sm px-4  py-1 text-sm"
           )}
         >
           {label}
@@ -65,9 +65,9 @@ const FilterElement = ({ items, label, keySelector, tabIndex }: Props) => {
 
         <ul
           tabIndex={tabIndex}
-          className="dropdown-content flex-start not-first:px-3 shadow rounded-md w-52 text-xs mt-2 absolute right-0 bg-slate-700 max-h-[300px] overflow-auto scroll-m-0 overflow-x-hidden drg-scrollbar drg-internal-scrollbar pb-2"
+          className="flex-start drg-scrollbar drg-internal-scrollbar dropdown-content not-first:px-3 absolute right-0 mt-2 max-h-[300px] w-52 scroll-m-0 overflow-auto overflow-x-hidden rounded-md bg-slate-700 pb-2 text-xs shadow"
         >
-          <div className="select-none flex gap-2 mb-2 sticky top-0 bg-slate-700 border-b-2 py-2">
+          <div className="sticky top-0 mb-2 flex select-none gap-2 border-b-2 bg-slate-700 py-2">
             <button className="flex gap-2" onClick={handleVisibility}>
               {label} {visibility ? <FaMinus /> : <FaPlus />}
             </button>
@@ -82,11 +82,11 @@ const FilterElement = ({ items, label, keySelector, tabIndex }: Props) => {
                   key={index}
                   className={clsx(
                     !visibility && "hidden",
-                    "flex gap-2 p-1 select-none first:mt-5"
+                    "flex select-none gap-2 p-1 first:mt-5"
                   )}
                 >
                   <input
-                    className="checkbox w-4 h-4 rounded-sm"
+                    className="checkbox h-4 w-4 rounded-sm"
                     type="checkbox"
                     name={content[keySelector]}
                     onChange={handleChange}

@@ -22,8 +22,8 @@ export const SideBar: FC<{ onChange: (tab: string) => void }> = ({
   };
 
   return (
-    <div className="mr-3 p-3 border-drg-primary-500 lg:border-r-2 w-auto lg:w-[250px] h-full">
-      <ul className="menu mr-4 flex-row justify-evenly flex-wrap md:flex-row lg:flex-col">
+    <div className="border-drg-primary-500 mr-3 h-full w-auto p-3 lg:w-[250px] lg:border-r-2">
+      <ul className="menu mr-4 flex-row flex-wrap justify-evenly md:flex-row lg:flex-col">
         {TABS.map((tab) => (
           <Tab
             key={tab.name}

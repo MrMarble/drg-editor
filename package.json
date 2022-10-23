@@ -13,7 +13,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "format": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "format:fix": "prettier --fix \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
+    "format:fix": "prettier -w  \"src/**/*.{js,jsx,ts,tsx,json,css,md}\""
   },
   "lint-staged": {
     "**/*.ts": [
