@@ -39,6 +39,9 @@ export class U8Array extends Uint8Array {
       } else {
         needleIndex = 1;
         i = this.indexOf(needle[0], i);
+        if (i == -1) {
+          return -1;
+        }
       }
     }
 
