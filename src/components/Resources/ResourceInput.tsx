@@ -14,11 +14,16 @@ export const ResourceInput = ({ name, item, uuid }: Props) => {
   const { save, setSave } = useSaveStore();
   const { increment } = useChangesStore();
 
-  const [amount, setAmount] = useState(
-    [ITEMS.CREDITS as string].includes(item)
-      ? save.getInt32(uuid, 0)
-      : save.getFloat32(uuid, 0)
-  );
+  const [amount, setAmount] = useState(() => {
+    let resources = 0;
+    if ([ITEMS.CREDITS as string].includes(item)) {
+      resources = save.getInt32(uuid, 0);
+    } else {
+      resources = save.getFloat32(uuid, 0);
+    }
+
+    return resources < 0 ? 0 : resources;
+  });
 
   const handleChange = (value: number) => {
     setAmount(value);
