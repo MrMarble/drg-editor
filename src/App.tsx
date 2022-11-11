@@ -26,7 +26,7 @@ function App() {
                   className="w-32 mx-auto"
                 />
                 <img
-                  src="assets/season02.png"
+                  src="assets/season03.png"
                   alt="season logo"
                   className="w-32 mx-auto"
                 />
