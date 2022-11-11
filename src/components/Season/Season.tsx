@@ -23,8 +23,13 @@ const SEASONS = {
 const XP_OFFSET = 32;
 
 export const Seasons = () => {
-  const [activeTab, setActiveTab] =
-    useState<keyof typeof SEASONS>("PLAGUEFALL");
+  const { save } = useSaveStore();
+  const tabs = Object.keys(SEASONS).filter(
+    (key) => save.indexOfMulti(SEASONS[key as keyof typeof SEASONS]) !== -1
+  );
+  const [activeTab, setActiveTab] = useState<keyof typeof SEASONS>(
+    tabs[tabs.length - 1] as keyof typeof SEASONS
+  );
 
   const handleChange = (value: keyof typeof SEASONS) => {
     setActiveTab(value);
@@ -34,7 +39,7 @@ export const Seasons = () => {
     <div className="w-full">
       <div className="text-sm font-medium text-center border-b border-drg-primary-500 mb-10">
         <ul className="flex flex-wrap -mb-px">
-          {Object.keys(SEASONS).map((season) => (
+          {tabs.map((season) => (
             <li key={season}>
               <a
                 className={clsx(
