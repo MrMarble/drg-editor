@@ -24,8 +24,9 @@ describe.skipIf(!process.env?.CI)("update snapshots", () => {
     page = await browser.newPage();
     page.setViewport({ width: 1430, height: 1180 });
 
-    await page.goto("http://localhost:5173/drg-editor/");
-    await page.waitForNetworkIdle();
+    await page.goto("http://localhost:5173/drg-editor/", {
+      waitUntil: "networkidle2",
+    });
   });
 
   it("Update homepage snapshot", async () => {
