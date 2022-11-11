@@ -48,11 +48,11 @@ export class U8Array extends Uint8Array {
     return i === index + needle.length ? index : -1;
   }
 
-  getInt32(needle: UUID, offset = 0): number {
+  getInt32(needle: UUID, offset = 0, from = HEADER_OFFSET): number {
     if (typeof needle === "string") {
       needle = hexStringToByteArray(needle);
     }
-    const index = this.indexOfMulti(needle, HEADER_OFFSET);
+    const index = this.indexOfMulti(needle, from);
     if (index === -1) {
       return -1;
     }
@@ -64,11 +64,16 @@ export class U8Array extends Uint8Array {
     return view.getInt32(0, true);
   }
 
-  setInt32(needle: UUID, offset: number, value: number): void {
+  setInt32(
+    needle: UUID,
+    offset: number,
+    value: number,
+    from = HEADER_OFFSET
+  ): void {
     if (typeof needle === "string") {
       needle = hexStringToByteArray(needle);
     }
-    const index = this.indexOfMulti(needle, HEADER_OFFSET);
+    const index = this.indexOfMulti(needle, from);
 
     const view = new DataView(new ArrayBuffer(4));
     view.setInt32(0, value, true);
