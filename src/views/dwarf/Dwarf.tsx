@@ -55,6 +55,12 @@ export const Dwarf: FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    setLevel(xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).level);
+    setXp(xpToLevel(save.getInt32(DWARF_UID, XP_OFFSET)).xp);
+    setPromotion(save.getInt32(DWARF_UID, XP_OFFSET + 108));
+  }, [dwarf]);
+
   const handleLevelChange = (value: number) => {
     if (value < 1) {
       value = 1;
@@ -96,8 +102,8 @@ export const Dwarf: FC = () => {
   };
 
   return (
-    <div className="w-full ">
-      <Rank>
+    <div className="w-full">
+      <Rank key={dwarf}>
         <>
           <Input
             name="Level"
