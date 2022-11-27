@@ -6,7 +6,7 @@
       "type": "Balanced",
       "category": "Total Ammo",
       "weapon": "PlasmaCarbine",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "5abf1c487bf3bd4bafdaf2a4428720ec"
     },
     {
@@ -15,7 +15,7 @@
       "type": "Balanced",
       "category": "Ricochet",
       "weapon": "PlasmaCarbine",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Ricoshet.png",
       "ID": "1bd74059739e094bbe0a3b79f2e94b46"
     },
     {
@@ -24,7 +24,7 @@
       "type": "Clean",
       "category": "Cooling",
       "weapon": "PlasmaCarbine",
-      "asset": "assets/icons/Icon_Upgrade_Cooling.png",
+      "asset": "/assets/icons/Icon_Upgrade_Cooling.png",
       "ID": "00ea09da14da7646982dd5a1b2467a08"
     },
     {
@@ -33,7 +33,7 @@
       "type": "Unstable",
       "category": "Heat",
       "weapon": "PlasmaCarbine",
-      "asset": "assets/icons/Icon_Upgrade_Heat.png",
+      "asset": "/assets/icons/Icon_Upgrade_Heat.png",
       "ID": "bffe0c3436ac584d890b6efe9124aaf1"
     },
     {
@@ -42,7 +42,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "PlasmaCarbine",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "9225769777355041bdeb70cacd946a27"
     },
     {
@@ -51,7 +51,7 @@
       "type": "Clean",
       "category": "Special",
       "weapon": "PlasmaCarbine",
-      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "asset": "/assets/icons/Icon_Upgrade_Special.png",
       "ID": "d831b000f2a2c84c8749a5b182348574"
     },
     {
@@ -60,7 +60,7 @@
       "type": "Unstable",
       "category": "Resistance",
       "weapon": "PlasmaCarbine",
-      "asset": "assets/icons/Icon_Upgrade_Resistance.png",
+      "asset": "/assets/icons/Icon_Upgrade_Resistance.png",
       "ID": "532714b803867c4f8aa6ea78fa4eaaea"
     },
     {
@@ -68,7 +68,7 @@
       "description": "Increase clip capacity and speed up reloads by getting rid of dead weight on the clips.",
       "type": "Clean",
       "weapon": "M1000",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "d006e3eee0540242a2b0bca8abcdb387"
     },
     {
@@ -77,7 +77,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "M1000",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "1073ceebecbc014e8370e259040eb71c"
     },
     {
@@ -86,7 +86,7 @@
       "type": "Unstable",
       "category": "Electricity",
       "weapon": "M1000",
-      "asset": "assets/icons/Icon_Upgrade_Electricity.png",
+      "asset": "/assets/icons/Icon_Upgrade_Electricity.png",
       "ID": "aac9b6e4458458478e50db87324097eb"
     },
     {
@@ -95,7 +95,7 @@
       "type": "Balanced",
       "category": "Accuracy",
       "weapon": "M1000",
-      "asset": "assets/icons/Icon_Upgrade_Accuracy.png",
+      "asset": "/assets/icons/Icon_Upgrade_Accuracy.png",
       "ID": "2a12358f750b704996c37d467ecf1d36"
     },
     {
@@ -104,7 +104,7 @@
       "type": "Clean",
       "category": "Special Mobility",
       "weapon": "M1000",
-      "asset": "assets/icons/Icon_Overclock_Slowdown.png",
+      "asset": "/assets/icons/Icon_Overclock_Slowdown.png",
       "ID": "8a0122e44e42104baaad6b4534a9de8f"
     },
     {
@@ -113,7 +113,7 @@
       "type": "Balanced",
       "category": "Movement Speed",
       "weapon": "M1000",
-      "asset": "assets/icons/Icon_Upgrade_MovementSpeed.png",
+      "asset": "/assets/icons/Icon_Upgrade_MovementSpeed.png",
       "ID": "d1544b3528938a48964e8d9a6309d1da"
     },
     {
@@ -122,7 +122,7 @@
       "type": "Balanced",
       "category": "Accuracy",
       "weapon": "SawedOff",
-      "asset": "assets/icons/Icon_Upgrade_Accuracy.png",
+      "asset": "/assets/icons/Icon_Upgrade_Accuracy.png",
       "ID": "ef0cac2aef57bd41a72155b4da395d47"
     },
     {
@@ -131,7 +131,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "SawedOff",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "0b1a2ec60168c54e9e47ca764c3b70bd"
     },
     {
@@ -140,7 +140,7 @@
       "type": "Clean",
       "category": "Pellet Count",
       "weapon": "SawedOff",
-      "asset": "assets/icons/Icon_Upgrade_Shotgun_Pellet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Shotgun_Pellet.png",
       "ID": "3f68cb7c2fab2843b1446d133bd92c1d"
     },
     {
@@ -149,7 +149,7 @@
       "type": "Clean",
       "category": "Rate of Fire",
       "weapon": "SawedOff",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "5f090bb3efc96f4297f1bfc3f152c663"
     },
     {
@@ -158,7 +158,7 @@
       "type": "Clean",
       "category": "Total Ammo",
       "weapon": "SawedOff",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "fa40ee4a1f8cb04fbfaf916469e4b167"
     },
     {
@@ -167,7 +167,7 @@
       "type": "Clean",
       "category": "Special Mobility",
       "weapon": "SawedOff",
-      "asset": "assets/icons/Icon_Overclock_ShotgunJump.png",
+      "asset": "/assets/icons/Icon_Overclock_ShotgunJump.png",
       "ID": "e6daf7d6065004439ef966d6fdbd69a6"
     },
     {
@@ -176,7 +176,7 @@
       "type": "Unstable",
       "category": "Ricochet",
       "weapon": "Crossbow",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Ricoshet.png",
       "ID": "aecb0f241dfa194ab04bbb86563fa840"
     },
     {
@@ -185,7 +185,7 @@
       "type": "Balanced",
       "category": "Cold",
       "weapon": "Crossbow",
-      "asset": "assets/icons/Icon_Upgrade_Cold.png",
+      "asset": "/assets/icons/Icon_Upgrade_Cold.png",
       "ID": "75cfd0a90f31c94a9d6a8d02147de1fc"
     },
     {
@@ -194,7 +194,7 @@
       "type": "Balanced",
       "category": "Heat",
       "weapon": "Crossbow",
-      "asset": "assets/icons/Icon_Upgrade_Heat.png",
+      "asset": "/assets/icons/Icon_Upgrade_Heat.png",
       "ID": "ddca81e29c6be8488c2df4f0b0c72a72"
     },
     {
@@ -203,7 +203,7 @@
       "type": "Clean",
       "category": "Rate of Fire",
       "weapon": "Crossbow",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "1cfa57fa35d0db49a9aaf87caa011ef4"
     },
     {
@@ -212,7 +212,7 @@
       "type": "Clean",
       "category": "Special",
       "weapon": "Crossbow",
-      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "asset": "/assets/icons/Icon_Upgrade_Special.png",
       "ID": "6c464531820ea849bb3c80c0f190a74f"
     },
     {
@@ -221,7 +221,7 @@
       "type": "Unstable",
       "category": "Special Damage",
       "weapon": "Crossbow",
-      "asset": "assets/icons/Icon_Overclock_LastShellHigherDamage.png",
+      "asset": "/assets/icons/Icon_Overclock_LastShellHigherDamage.png",
       "ID": "62fe96de32a5454eb0f1952bd68dbaf4"
     },
     {
@@ -230,7 +230,7 @@
       "type": "Unstable",
       "category": "Cold",
       "weapon": "DualMP",
-      "asset": "assets/icons/Icon_Upgrade_Cold.png",
+      "asset": "/assets/icons/Icon_Upgrade_Cold.png",
       "ID": "43cd8d27eaeaaa4a8e6dc43e0438a10c"
     },
     {
@@ -238,7 +238,7 @@
       "description": "Fit more of these custom rounds in each magazine but at small reduction in the rate of fire.",
       "type": "Balanced",
       "weapon": "DualMP",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "24a286c31f45ea469a20102af4d741d3"
     },
     {
@@ -247,7 +247,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "DualMP",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "828b2bbc50ec424385efd00ea6854597"
     },
     {
@@ -256,7 +256,7 @@
       "type": "Unstable",
       "category": "Reload Effect",
       "weapon": "DualMP",
-      "asset": "assets/icons/Icon_Overclock_Special_Magazine.png",
+      "asset": "/assets/icons/Icon_Overclock_Special_Magazine.png",
       "ID": "faf35071ba63b2429855fbc8a09bffd0"
     },
     {
@@ -265,7 +265,7 @@
       "type": "Clean",
       "category": "Reload Speed",
       "weapon": "DualMP",
-      "asset": "assets/icons/Icon_Upgrade_Reload_Speed.png",
+      "asset": "/assets/icons/Icon_Upgrade_Reload_Speed.png",
       "ID": "98a0452b235402459cff5cc3b34ccc69"
     },
     {
@@ -273,7 +273,7 @@
       "description": "Stuff a few more of these compact rounds into each magazine and they have a bit less recoil as well.",
       "type": "Clean",
       "weapon": "AssaultRifle",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "af945b93a7b9d64ca6dd00683627bc80"
     },
     {
@@ -282,7 +282,7 @@
       "type": "Unstable",
       "category": "Reload Effect",
       "weapon": "AssaultRifle",
-      "asset": "assets/icons/Icon_Overclock_Special_Magazine.png",
+      "asset": "/assets/icons/Icon_Overclock_Special_Magazine.png",
       "ID": "ff94b9e7834d774292daccca3ea023b9"
     },
     {
@@ -291,7 +291,7 @@
       "type": "Unstable",
       "category": "Accuracy",
       "weapon": "AssaultRifle",
-      "asset": "assets/icons/Icon_Upgrade_Accuracy.png",
+      "asset": "/assets/icons/Icon_Upgrade_Accuracy.png",
       "ID": "11f123e174103140957957506bd576d7"
     },
     {
@@ -300,7 +300,7 @@
       "type": "Clean",
       "category": "Randomized Damage",
       "weapon": "AssaultRifle",
-      "asset": "assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
+      "asset": "/assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
       "ID": "4cdf41f3a0f8e4499d1bac6168347799"
     },
     {
@@ -309,7 +309,7 @@
       "type": "Balanced",
       "category": "Rate of Fire",
       "weapon": "AssaultRifle",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "c3060324ce482c4ab6dc44ed498cba39"
     },
     {
@@ -318,7 +318,7 @@
       "type": "Clean",
       "category": "Rate of Fire",
       "weapon": "AssaultRifle",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "f6e2e547f2eb674dbda591f47de6d017"
     },
     {
@@ -326,7 +326,7 @@
       "type": "Balanced",
       "category": "Damage",
       "weapon": "AssaultRifle",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "7306221f1264b04b8c025db4de9d1667"
     }
   ],
@@ -336,7 +336,7 @@
       "description": "Get all you can from your fuel and lose pressure slower from the main chamber.",
       "type": "Clean",
       "weapon": "Cryospray",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "ce660c4dd9980043a802a17a4569c0ac"
     },
     {
@@ -345,7 +345,7 @@
       "type": "Balanced",
       "category": "Cold",
       "weapon": "Cryospray",
-      "asset": "assets/icons/Icon_Upgrade_Cold.png",
+      "asset": "/assets/icons/Icon_Upgrade_Cold.png",
       "ID": "6adb23b3c8ed884086a88b8107c93cbe"
     },
     {
@@ -354,7 +354,7 @@
       "type": "Balanced",
       "category": "Special",
       "weapon": "Cryospray",
-      "asset": "assets/icons/Icon_Upgrade_Duration.png",
+      "asset": "/assets/icons/Icon_Upgrade_Duration.png",
       "ID": "88f8eab206ec7b46a31c8f034b44931a"
     },
     {
@@ -363,7 +363,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "Cryospray",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "7b11755997b6564e97b1032a828eb90f"
     },
     {
@@ -372,7 +372,7 @@
       "type": "Balanced",
       "category": "Projectile Speed",
       "weapon": "Cryospray",
-      "asset": "assets/icons/Icon_Upgrade_ProjectileSpeed.png",
+      "asset": "/assets/icons/Icon_Upgrade_ProjectileSpeed.png",
       "ID": "d518cb371a32a0449b345e4f58d34c91"
     },
     {
@@ -381,7 +381,7 @@
       "type": "Unstable",
       "category": "Area of Effect",
       "weapon": "Cryospray",
-      "asset": "assets/icons/Icon_Upgrade_Area.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area.png",
       "ID": "c1f16f970c9c1047af836bf6cbfebcad"
     },
     {
@@ -390,7 +390,7 @@
       "type": "Clean",
       "category": "Ricochet",
       "weapon": "Pistol",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Ricoshet.png",
       "ID": "a4ab7c627af7fe4fa235e3aac398ed1f"
     },
     {
@@ -398,7 +398,7 @@
       "description": "Custom magazine that can fit a lot more ammo but it's a bit unwieldy and takes longer to reload.",
       "type": "Balanced",
       "weapon": "Pistol",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "f13e20c4e74976438e85c237ae071830"
     },
     {
@@ -407,7 +407,7 @@
       "type": "Unstable",
       "category": "Reload Effect",
       "weapon": "Pistol",
-      "asset": "assets/icons/Icon_Overclock_Special_Magazine.png",
+      "asset": "/assets/icons/Icon_Overclock_Special_Magazine.png",
       "ID": "2949a3be68ea2a4197d532af80549101"
     },
     {
@@ -416,7 +416,7 @@
       "type": "Unstable",
       "category": "Rate of Fire",
       "weapon": "Pistol",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "28a8e817e50a7346963e418ba08dfe18"
     },
     {
@@ -425,7 +425,7 @@
       "type": "Clean",
       "category": "Randomized Damage",
       "weapon": "Pistol",
-      "asset": "assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
+      "asset": "/assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
       "ID": "d57b542fbc793542b6bb5617c1a67229"
     },
     {
@@ -434,7 +434,7 @@
       "type": "Unstable",
       "category": "Stun",
       "weapon": "Pistol",
-      "asset": "assets/icons/Icon_Upgrade_Stun.png",
+      "asset": "/assets/icons/Icon_Upgrade_Stun.png",
       "ID": "587488ba77b28d4da177400d995737a7"
     },
     {
@@ -443,7 +443,7 @@
       "type": "Balanced",
       "category": "Energy Consumption",
       "weapon": "EPC",
-      "asset": "assets/icons/Icon_Upgrade_Fuel.png",
+      "asset": "/assets/icons/Icon_Upgrade_Fuel.png",
       "ID": "a0e018c45fe679418fd3730e6e9b631d"
     },
     {
@@ -452,7 +452,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "EPC",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "55bb52a0ecfa7c43b37bbbe640114196"
     },
     {
@@ -461,7 +461,7 @@
       "type": "Clean",
       "category": "Charge Speed",
       "weapon": "EPC",
-      "asset": "assets/icons/Icon_Upgrade_ChargeUp.png",
+      "asset": "/assets/icons/Icon_Upgrade_ChargeUp.png",
       "ID": "97822071d586ce45acd6489782b700fa"
     },
     {
@@ -470,7 +470,7 @@
       "type": "Clean",
       "category": "Cooling",
       "weapon": "EPC",
-      "asset": "assets/icons/Icon_Upgrade_Cooling.png",
+      "asset": "/assets/icons/Icon_Upgrade_Cooling.png",
       "ID": "f1e6cc307c11de4586b88b419e530abf"
     },
     {
@@ -479,7 +479,7 @@
       "type": "Balanced",
       "category": "Damage",
       "weapon": "EPC",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "39e43e13cc0dae4691dd51a11383e9e1"
     },
     {
@@ -488,7 +488,7 @@
       "type": "Unstable",
       "category": "Duration",
       "weapon": "EPC",
-      "asset": "assets/icons/Icon_Upgrade_Duration_V2.png",
+      "asset": "/assets/icons/Icon_Upgrade_Duration_V2.png",
       "ID": "165cd93e660b8147bca2f86cde5cf8f7"
     },
     {
@@ -497,7 +497,7 @@
       "type": "Balanced",
       "category": "Area Damage",
       "weapon": "GooCannon",
-      "asset": "assets/icons/Icon_Upgrade_Area_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area_Damage.png",
       "ID": "c1d77a8bafd433408e4a8397f1a63aec"
     },
     {
@@ -506,7 +506,7 @@
       "type": "Unstable",
       "category": "Special",
       "weapon": "GooCannon",
-      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "asset": "/assets/icons/Icon_Upgrade_Special.png",
       "ID": "4ccc7e994163a14aaac97ab3777ff1f9"
     },
     {
@@ -515,7 +515,7 @@
       "type": "Clean",
       "category": "Projectile Speed",
       "weapon": "GooCannon",
-      "asset": "assets/icons/Icon_Upgrade_ProjectileSpeed.png",
+      "asset": "/assets/icons/Icon_Upgrade_ProjectileSpeed.png",
       "ID": "4956672ba68d3a439d4ec260f0b98ce4"
     },
     {
@@ -524,7 +524,7 @@
       "type": "Clean",
       "category": "Corrosive Damage",
       "weapon": "GooCannon",
-      "asset": "assets/icons/Player_State_Acid.png",
+      "asset": "/assets/icons/Player_State_Acid.png",
       "ID": "eccab2551405f044a93ffb6c51ff9b39"
     },
     {
@@ -533,7 +533,7 @@
       "type": "Balanced",
       "category": "Damage",
       "weapon": "GooCannon",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "539f16d0eca50447b21bd3b1add439cb"
     },
     {
@@ -542,7 +542,7 @@
       "type": "Unstable",
       "category": "Charge Mode: Multi-Shot Blast",
       "weapon": "GooCannon",
-      "asset": "assets/icons/Icon_Upgrade_Shotgun_Pellet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Shotgun_Pellet.png",
       "ID": "ea7d273b56099b4b9f44768a099a8c1c"
     },
     {
@@ -550,7 +550,7 @@
       "description": "The smaller mechanism allows for greater tank capacity and more fuel at the cost of reload speed and operational range.",
       "type": "Balanced",
       "weapon": "Flamethrower",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "71588d43a7589a4abe61a8de2eb449bf"
     },
     {
@@ -559,7 +559,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "Flamethrower",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "6431a8ddeaa6894b90c57bac7552a5ff"
     },
     {
@@ -568,7 +568,7 @@
       "type": "Clean",
       "category": "Total Ammo",
       "weapon": "Flamethrower",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "c5057a9608cf5e4ba4aab32ad613ba3e"
     },
     {
@@ -577,7 +577,7 @@
       "type": "Balanced",
       "category": "Reach",
       "weapon": "Flamethrower",
-      "asset": "assets/icons/Icon_Upgrade_Reach.png",
+      "asset": "/assets/icons/Icon_Upgrade_Reach.png",
       "ID": "19e85d1c3585b349b151779cbd7303d9"
     },
     {
@@ -586,7 +586,7 @@
       "type": "Unstable",
       "category": "Duration",
       "weapon": "Flamethrower",
-      "asset": "assets/icons/Icon_Upgrade_Duration_V2.png",
+      "asset": "/assets/icons/Icon_Upgrade_Duration_V2.png",
       "ID": "f28c3ee38a960d48965e9f69f56b3f19"
     },
     {
@@ -595,7 +595,7 @@
       "type": "Clean",
       "category": "Duration",
       "weapon": "Flamethrower",
-      "asset": "assets/icons/Icon_Upgrade_Duration_V2.png",
+      "asset": "/assets/icons/Icon_Upgrade_Duration_V2.png",
       "ID": "415f1d83a77e7a448dbf60383103fd6c"
     },
     {
@@ -604,7 +604,7 @@
       "type": "Unstable",
       "category": "Weak Spot Bonus",
       "weapon": "MicrowaveGun",
-      "asset": "assets/icons/Icon_Upgrade_WeakspotBonus.png",
+      "asset": "/assets/icons/Icon_Upgrade_WeakspotBonus.png",
       "ID": "48648832aa11e04dae9f2e8adf89ad8d"
     },
     {
@@ -613,7 +613,7 @@
       "type": "Balanced",
       "category": "Blowthrough",
       "weapon": "MicrowaveGun",
-      "asset": "assets/icons/Icon_Upgrade_Blow_Through.png",
+      "asset": "/assets/icons/Icon_Upgrade_Blow_Through.png",
       "ID": "0cd9e18b85e271449901d38d50ba62b4"
     },
     {
@@ -622,7 +622,7 @@
       "type": "Clean",
       "category": "Cooling",
       "weapon": "MicrowaveGun",
-      "asset": "assets/icons/Icon_Upgrade_Cooling.png",
+      "asset": "/assets/icons/Icon_Upgrade_Cooling.png",
       "ID": "5f614059b3ada14e930831ef4b609802"
     },
     {
@@ -631,7 +631,7 @@
       "type": "Unstable",
       "category": "Radiation",
       "weapon": "MicrowaveGun",
-      "asset": "assets/icons/Player_State_Radioactive.png",
+      "asset": "/assets/icons/Player_State_Radioactive.png",
       "ID": "5edd2987db047f498add72fceb6c1ee3"
     },
     {
@@ -640,7 +640,7 @@
       "type": "Balanced",
       "category": "Total Ammo",
       "weapon": "MicrowaveGun",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "a3e85790abcbc74abccb3cc636509a1b"
     },
     {
@@ -649,7 +649,7 @@
       "type": "Clean",
       "category": "Accuracy",
       "weapon": "MicrowaveGun",
-      "asset": "assets/icons/Icon_Upgrade_Accuracy.png",
+      "asset": "/assets/icons/Icon_Upgrade_Accuracy.png",
       "ID": "79a870ed00c9814a942be4ad49a10b63"
     }
   ],
@@ -660,7 +660,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "Autocannon",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "86aa0dd13fd37e43b2fbf176ee5de815"
     },
     {
@@ -669,7 +669,7 @@
       "type": "Balanced",
       "category": "Area Damage",
       "weapon": "Autocannon",
-      "asset": "assets/icons/Icon_Upgrade_Area_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area_Damage.png",
       "ID": "8c0142a687637a4ea4cc8a7f84b9610a"
     },
     {
@@ -678,7 +678,7 @@
       "type": "Clean",
       "category": "Total Ammo",
       "weapon": "Autocannon",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "01e23067cbb9a6428ae4394c99f1d2bb"
     },
     {
@@ -687,7 +687,7 @@
       "type": "Balanced",
       "category": "Movement Speed",
       "weapon": "Autocannon",
-      "asset": "assets/icons/Icon_Upgrade_MovementSpeed.png",
+      "asset": "/assets/icons/Icon_Upgrade_MovementSpeed.png",
       "ID": "3dd5e8141c483e43aa3e0708ce75d663"
     },
     {
@@ -696,7 +696,7 @@
       "type": "Unstable",
       "category": "Neurotoxin",
       "weapon": "Autocannon",
-      "asset": "assets/icons/Player_State_Poison.png",
+      "asset": "/assets/icons/Player_State_Poison.png",
       "ID": "32654e9478165e4da3f0dbd33b180341"
     },
     {
@@ -705,7 +705,7 @@
       "type": "Clean",
       "category": "Area of Effect",
       "weapon": "Autocannon",
-      "asset": "assets/icons/Icon_Upgrade_Area.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area.png",
       "ID": "cb83fd6c13c63f4982dc87b9796311c8"
     },
     {
@@ -714,7 +714,7 @@
       "type": "Clean",
       "category": "Rate of Fire",
       "weapon": "BRT",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "6f26a8b49f967c4d999f734645eae2c4"
     },
     {
@@ -723,7 +723,7 @@
       "type": "Balanced",
       "category": "Total Ammo",
       "weapon": "BRT",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "2ff3d4c92d59304592009fa2e39bffc6"
     },
     {
@@ -732,7 +732,7 @@
       "type": "Unstable",
       "category": "Electricity",
       "weapon": "BRT",
-      "asset": "assets/icons/Icon_Upgrade_Electricity.png",
+      "asset": "/assets/icons/Icon_Upgrade_Electricity.png",
       "ID": "4a4f93fe1ac31e41b897c1f1b264a672"
     },
     {
@@ -741,7 +741,7 @@
       "type": "Clean",
       "category": "Damage",
       "weapon": "BRT",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "414916957ad3d0409b5fe3692a46dd19"
     },
     {
@@ -750,7 +750,7 @@
       "type": "Balanced",
       "category": "Damage",
       "weapon": "BRT",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "88abd40a78329942884c00d7f22dac90"
     },
     {
@@ -759,7 +759,7 @@
       "type": "Unstable",
       "category": "Special",
       "weapon": "BRT",
-      "asset": "assets/icons/Icon_Overclock_SmallBullets.png",
+      "asset": "/assets/icons/Icon_Overclock_SmallBullets.png",
       "ID": "8f1c6a1a23a6df4cbca5510c4a19f221"
     },
     {
@@ -768,7 +768,7 @@
       "type": "Unstable",
       "category": "Special",
       "weapon": "BRT",
-      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "asset": "/assets/icons/Icon_Upgrade_Special.png",
       "ID": "f1ae55cf592e7746a0001d61584bdf2a"
     },
     {
@@ -777,7 +777,7 @@
       "type": "Balanced",
       "category": "Total Ammo",
       "weapon": "Gatling",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "2e9fbfb43b7b554fb3728780f1334824"
     },
     {
@@ -786,7 +786,7 @@
       "type": "Clean",
       "category": "Cooling",
       "weapon": "Gatling",
-      "asset": "assets/icons/Icon_Upgrade_Cooling.png",
+      "asset": "/assets/icons/Icon_Upgrade_Cooling.png",
       "ID": "01d4653903832f498c50f7719d58e89b"
     },
     {
@@ -795,7 +795,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "Gatling",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "7cd10e2c55583041b577141c854bee62"
     },
     {
@@ -804,7 +804,7 @@
       "type": "Balanced",
       "category": "Damage",
       "weapon": "Gatling",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "fbb1014758606a41888e378f69e3cd61"
     },
     {
@@ -813,7 +813,7 @@
       "type": "Clean",
       "category": "Damage",
       "weapon": "Gatling",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "b55d6170eea5d743ac4b28293c0c4673"
     },
     {
@@ -822,7 +822,7 @@
       "type": "Balanced",
       "category": "Heat",
       "weapon": "Gatling",
-      "asset": "assets/icons/Icon_Upgrade_Heat.png",
+      "asset": "/assets/icons/Icon_Upgrade_Heat.png",
       "ID": "63156673f2174f449f598f8729ac0c65"
     },
     {
@@ -831,7 +831,7 @@
       "type": "Unstable",
       "category": "Ricochet",
       "weapon": "Gatling",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Ricoshet.png",
       "ID": "ed4036806a69e848bc72dde3cdeac456"
     },
     {
@@ -839,7 +839,7 @@
       "description": "An updated casing profile lets you squeeze 2 more rounds into the cylinder and take a few more rounds with you, but all that filing and drilling has compromised the accuracy of the weapon and it takes longer to reload.",
       "type": "Balanced",
       "weapon": "Revolver",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "a937dc3938dee8418cd0641cce19b46a"
     },
     {
@@ -848,7 +848,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "Revolver",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "d53f94fbc05e0448b57bc9df6846267b"
     },
     {
@@ -857,7 +857,7 @@
       "type": "Clean",
       "category": "Ricochet",
       "weapon": "Revolver",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Ricoshet.png",
       "ID": "5885a33b15ae844591a66b65a2e5494e"
     },
     {
@@ -866,7 +866,7 @@
       "type": "Unstable",
       "category": "Ricochet",
       "weapon": "Revolver",
-      "asset": "assets/icons/Icon_Upgrade_Ricoshet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Ricoshet.png",
       "ID": "db02b4e77d43bf44a4749982c0879b77"
     },
     {
@@ -875,7 +875,7 @@
       "type": "Balanced",
       "category": "Randomized Damage",
       "weapon": "Revolver",
-      "asset": "assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
+      "asset": "/assets/icons/Icon_Overclock_ChangeOfHigherDamage.png",
       "ID": "cd6993f938e27c49ac69293bf942a8f0"
     },
     {
@@ -884,7 +884,7 @@
       "type": "Balanced",
       "category": "Heat",
       "weapon": "Revolver",
-      "asset": "assets/icons/Icon_Upgrade_Heat.png",
+      "asset": "/assets/icons/Icon_Upgrade_Heat.png",
       "ID": "d1306cbc8421b248a4b95b332df3e056"
     },
     {
@@ -893,7 +893,7 @@
       "type": "Clean",
       "category": "Area of Effect",
       "weapon": "MicroMissileLauncher",
-      "asset": "assets/icons/Icon_Upgrade_Area.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area.png",
       "ID": "1e41880c9e18fc439b82b69f19f0a191"
     },
     {
@@ -902,7 +902,7 @@
       "type": "Unstable",
       "category": "Charge Mode: Multi-Shot Blast",
       "weapon": "MicroMissileLauncher",
-      "asset": "assets/icons/Icon_Upgrade_Shotgun_Pellet.png",
+      "asset": "/assets/icons/Icon_Upgrade_Shotgun_Pellet.png",
       "ID": "52de47b5a2579e418564f19382240866"
     },
     {
@@ -911,7 +911,7 @@
       "type": "Clean",
       "category": "Projectile Control",
       "weapon": "MicroMissileLauncher",
-      "asset": "assets/icons/Icon_Overclock_Spinning_Linecutter.png",
+      "asset": "/assets/icons/Icon_Overclock_Spinning_Linecutter.png",
       "ID": "8e6816c3daee2c49b93e8fa67cf13b1a"
     },
     {
@@ -920,7 +920,7 @@
       "type": "Unstable",
       "category": "Projectile Speed",
       "weapon": "MicroMissileLauncher",
-      "asset": "assets/icons/Icon_Upgrade_ProjectileSpeed.png",
+      "asset": "/assets/icons/Icon_Upgrade_ProjectileSpeed.png",
       "ID": "c24639fb04a00949be8f00cd38462b84"
     },
     {
@@ -929,7 +929,7 @@
       "type": "Balanced",
       "category": "Special",
       "weapon": "MicroMissileLauncher",
-      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "asset": "/assets/icons/Icon_Upgrade_Special.png",
       "ID": "c873e29a463e4f4dad4821d92bc31fb4"
     },
     {
@@ -938,7 +938,7 @@
       "type": "Balanced",
       "category": "Blowthrough",
       "weapon": "MicroMissileLauncher",
-      "asset": "assets/icons/Icon_Upgrade_Blow_Through.png",
+      "asset": "/assets/icons/Icon_Upgrade_Blow_Through.png",
       "ID": "01cd9aad2398fb46818a3f6f6a96384a"
     },
     {
@@ -947,7 +947,7 @@
       "type": "Clean",
       "category": "Rate of Fire",
       "weapon": "MicroMissileLauncher",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "2a257648df688844ba3db091a3756ba5"
     },
     {
@@ -956,7 +956,7 @@
       "type": "Unstable",
       "category": "Heat",
       "weapon": "Coilgun",
-      "asset": "assets/icons/Icon_Upgrade_Heat.png",
+      "asset": "/assets/icons/Icon_Upgrade_Heat.png",
       "ID": "80dea90ad5f3174695138ff47a32a96a"
     },
     {
@@ -965,7 +965,7 @@
       "type": "Balanced",
       "category": "Total Ammo",
       "weapon": "Coilgun",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "f82f326576e8a74899753cb6316b7c20"
     },
     {
@@ -974,7 +974,7 @@
       "type": "Balanced",
       "category": "Blowthrough",
       "weapon": "Coilgun",
-      "asset": "assets/icons/Icon_Upgrade_Blow_Through.png",
+      "asset": "/assets/icons/Icon_Upgrade_Blow_Through.png",
       "ID": "56471f219be014448dfe5f087cabd447"
     },
     {
@@ -983,7 +983,7 @@
       "type": "Clean",
       "category": "Special",
       "weapon": "Coilgun",
-      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "asset": "/assets/icons/Icon_Upgrade_Special.png",
       "ID": "8c5d24bd68d5f14a89a6b87a857ccd9b"
     },
     {
@@ -992,7 +992,7 @@
       "type": "Clean",
       "category": "Duration",
       "weapon": "Coilgun",
-      "asset": "assets/icons/Icon_Upgrade_Duration_V2.png",
+      "asset": "/assets/icons/Icon_Upgrade_Duration_V2.png",
       "ID": "26841eb5823a284b81bf7da3792708d7"
     },
     {
@@ -1001,7 +1001,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "Coilgun",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "a6751da1b87c134ebc5710c7431c1453"
     }
   ],
@@ -1012,7 +1012,7 @@
       "type": "Clean",
       "category": "Total Ammo",
       "weapon": "CombatShotgun",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "cd4eec38c029724e8317ccdc22d06057"
     },
     {
@@ -1021,7 +1021,7 @@
       "type": "Clean",
       "category": "Stun",
       "weapon": "CombatShotgun",
-      "asset": "assets/icons/Icon_Upgrade_Stun.png",
+      "asset": "/assets/icons/Icon_Upgrade_Stun.png",
       "ID": "338dd238332a2e4ea5490208aad7f502"
     },
     {
@@ -1030,7 +1030,7 @@
       "type": "Unstable",
       "category": "Special",
       "weapon": "CombatShotgun",
-      "asset": "assets/icons/Icon_Overclock_SmallBullets.png",
+      "asset": "/assets/icons/Icon_Overclock_SmallBullets.png",
       "ID": "62d4c94c1367e8419691b677837da4fb"
     },
     {
@@ -1039,7 +1039,7 @@
       "type": "Unstable",
       "category": "Rate of Fire",
       "weapon": "CombatShotgun",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "70122ba2fbdabf4895dc09c90294e685"
     },
     {
@@ -1048,7 +1048,7 @@
       "type": "Balanced",
       "category": "Accuracy",
       "weapon": "CombatShotgun",
-      "asset": "assets/icons/Icon_Upgrade_Accuracy.png",
+      "asset": "/assets/icons/Icon_Upgrade_Accuracy.png",
       "ID": "07e9279956bf9c418eea313e2dc59f8d"
     },
     {
@@ -1057,7 +1057,7 @@
       "type": "Clean",
       "category": "Total Ammo",
       "weapon": "LineCutter",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "96940c7cdcefa84084dd4d60d2e81b2d"
     },
     {
@@ -1066,7 +1066,7 @@
       "type": "Clean",
       "category": "Damage",
       "weapon": "LineCutter",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "3d7c9c85f6d3a549a2d6edb09918314b"
     },
     {
@@ -1075,7 +1075,7 @@
       "type": "Balanced",
       "category": "Electricity",
       "weapon": "LineCutter",
-      "asset": "assets/icons/Icon_Upgrade_Electricity.png",
+      "asset": "/assets/icons/Icon_Upgrade_Electricity.png",
       "ID": "7fa184cb9d21874d82bf9ddafc7c91d7"
     },
     {
@@ -1084,7 +1084,7 @@
       "type": "Unstable",
       "category": "Heat",
       "weapon": "LineCutter",
-      "asset": "assets/icons/Icon_Upgrade_Heat.png",
+      "asset": "/assets/icons/Icon_Upgrade_Heat.png",
       "ID": "8ed912f8267b844482eeda86604451a5"
     },
     {
@@ -1093,7 +1093,7 @@
       "type": "Balanced",
       "category": "Projectile Control",
       "weapon": "LineCutter",
-      "asset": "assets/icons/Icon_Overclock_ForthAndBack_Linecutter.png",
+      "asset": "/assets/icons/Icon_Overclock_ForthAndBack_Linecutter.png",
       "ID": "744251ed25d4484aa38dfbdbf43bc5b9"
     },
     {
@@ -1102,7 +1102,7 @@
       "type": "Clean",
       "category": "Projectile Control",
       "weapon": "LineCutter",
-      "asset": "assets/icons/Icon_Overclock_Spinning_Linecutter.png",
+      "asset": "/assets/icons/Icon_Overclock_Spinning_Linecutter.png",
       "ID": "05db2fa3b969e04f8644f5be6c204020"
     },
     {
@@ -1111,7 +1111,7 @@
       "type": "Unstable",
       "category": "Special",
       "weapon": "LineCutter",
-      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "asset": "/assets/icons/Icon_Upgrade_Special.png",
       "ID": "340afbc6c306044281013181e0026e1b"
     },
     {
@@ -1120,7 +1120,7 @@
       "type": "Clean",
       "category": "Armor Breaking",
       "weapon": "LockOnRifle",
-      "asset": "assets/icons/Icon_Upgrade_ArmorBreaking.png",
+      "asset": "/assets/icons/Icon_Upgrade_ArmorBreaking.png",
       "ID": "b63d1376d90ddd4c986851d791e737ab"
     },
     {
@@ -1128,7 +1128,7 @@
       "description": "Clean up the caves with an expanded magazine combined with the ability to acquire more locks.",
       "type": "Clean",
       "weapon": "LockOnRifle",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "538a52e774fcb24c85e5f7f1ce63e3fa"
     },
     {
@@ -1137,7 +1137,7 @@
       "type": "Unstable",
       "category": "Weak Spot Bonus",
       "weapon": "LockOnRifle",
-      "asset": "assets/icons/Icon_Upgrade_WeakspotBonus.png",
+      "asset": "/assets/icons/Icon_Upgrade_WeakspotBonus.png",
       "ID": "8884ed69b093e44681f36c74fd1e772f"
     },
     {
@@ -1146,7 +1146,7 @@
       "type": "Balanced",
       "category": "Explosion",
       "weapon": "LockOnRifle",
-      "asset": "assets/icons/Icon_Upgrade_Explosion.png",
+      "asset": "/assets/icons/Icon_Upgrade_Explosion.png",
       "ID": "6fa83e783551f54a97bc04f09df1a842"
     },
     {
@@ -1155,7 +1155,7 @@
       "type": "Balanced",
       "category": "Accuracy",
       "weapon": "LockOnRifle",
-      "asset": "assets/icons/Icon_Upgrade_Accuracy.png",
+      "asset": "/assets/icons/Icon_Upgrade_Accuracy.png",
       "ID": "798b9546ab16b34cad766dab554150d9"
     },
     {
@@ -1164,7 +1164,7 @@
       "type": "Unstable",
       "category": "Slowdown",
       "weapon": "LockOnRifle",
-      "asset": "assets/icons/Icon_Upgrade_Slowdown.png",
+      "asset": "/assets/icons/Icon_Upgrade_Slowdown.png",
       "ID": "956bb51f4d8f254291a0c0e740bd07cf"
     },
     {
@@ -1173,7 +1173,7 @@
       "type": "Clean",
       "category": "Total Ammo",
       "weapon": "PGL",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "a97694e1a9b7484eb66e14dbf830db6b"
     },
     {
@@ -1182,7 +1182,7 @@
       "type": "Balanced",
       "category": "Total Ammo",
       "weapon": "PGL",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "ee5713fa91a0e245a1c0bfce15212074"
     },
     {
@@ -1191,7 +1191,7 @@
       "type": "Unstable",
       "category": "Area Damage",
       "weapon": "PGL",
-      "asset": "assets/icons/Icon_Upgrade_Area_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area_Damage.png",
       "ID": "87d2434388d3fc45884e351dcbe70f7c"
     },
     {
@@ -1200,7 +1200,7 @@
       "type": "Clean",
       "category": "Area of Effect",
       "weapon": "PGL",
-      "asset": "assets/icons/Icon_Upgrade_Area.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area.png",
       "ID": "b912059a3f86e44ba2985450d136ccb5"
     },
     {
@@ -1209,7 +1209,7 @@
       "type": "Balanced",
       "category": "Special Mobility",
       "weapon": "PGL",
-      "asset": "assets/icons/Icon_Overclock_ExplosionJump.png",
+      "asset": "/assets/icons/Icon_Overclock_ExplosionJump.png",
       "ID": "db7ec788b46fce4c9800a25010a0e8ea"
     },
     {
@@ -1218,7 +1218,7 @@
       "type": "Unstable",
       "category": "Projectile Speed",
       "weapon": "PGL",
-      "asset": "assets/icons/Icon_Upgrade_ProjectileSpeed.png",
+      "asset": "/assets/icons/Icon_Upgrade_ProjectileSpeed.png",
       "ID": "bc4cd684621bf6449607373a534a574f"
     },
     {
@@ -1227,7 +1227,7 @@
       "type": "Unstable",
       "category": "Area Damage",
       "weapon": "SMG",
-      "asset": "assets/icons/Icon_Upgrade_Area_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area_Damage.png",
       "ID": "2e424ee0192cd643a0daf8f73b5351b3"
     },
     {
@@ -1236,7 +1236,7 @@
       "type": "Balanced",
       "category": "Total Ammo",
       "weapon": "SMG",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "05b157a075e0734bb471ef8dae692865"
     },
     {
@@ -1245,7 +1245,7 @@
       "type": "Clean",
       "category": "Rate of Fire",
       "weapon": "SMG",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "ce9490445b036b49b89db2bc8d18fd12"
     },
     {
@@ -1254,7 +1254,7 @@
       "type": "Balanced",
       "category": "Rate of Fire",
       "weapon": "SMG",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "81b842310e01b847bf99774dbc3dc0dd"
     },
     {
@@ -1262,7 +1262,7 @@
       "description": "Same power but in a smaller package giving slightly better accuracy and letting you fit a few more rounds in each magazine.",
       "type": "Clean",
       "weapon": "SMG",
-      "asset": "assets/icons/Icon_Upgrade_Magazine_Size.png",
+      "asset": "/assets/icons/Icon_Upgrade_Magazine_Size.png",
       "ID": "13cf1c4a6992924a9aff5ceaf05b7106"
     },
     {
@@ -1271,7 +1271,7 @@
       "type": "Unstable",
       "category": "Area Damage",
       "weapon": "SMG",
-      "asset": "assets/icons/Icon_Upgrade_Area_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area_Damage.png",
       "ID": "0c1baa64b03cb94ebb77b7b55e7c6c87"
     },
     {
@@ -1280,7 +1280,7 @@
       "type": "Unstable",
       "category": "Electricity",
       "weapon": "SMG",
-      "asset": "assets/icons/Icon_Upgrade_Electricity.png",
+      "asset": "/assets/icons/Icon_Upgrade_Electricity.png",
       "ID": "3c42dbea3021ee44af6d944a91314d75"
     },
     {
@@ -1289,7 +1289,7 @@
       "type": "Balanced",
       "category": "Area of Effect",
       "weapon": "HeavyParticleCannon",
-      "asset": "assets/icons/Icon_Upgrade_Area.png",
+      "asset": "/assets/icons/Icon_Upgrade_Area.png",
       "ID": "f1880c6f7bef10478e77ee4fc63481f6"
     },
     {
@@ -1298,7 +1298,7 @@
       "type": "Balanced",
       "category": "Rate of Fire",
       "weapon": "HeavyParticleCannon",
-      "asset": "assets/icons/Icon_Upgrade_RateOfFire.png",
+      "asset": "/assets/icons/Icon_Upgrade_RateOfFire.png",
       "ID": "71d81bc3dbc28f4d905a6c9f4a8b55ae"
     },
     {
@@ -1307,7 +1307,7 @@
       "type": "Unstable",
       "category": "Explosion",
       "weapon": "HeavyParticleCannon",
-      "asset": "assets/icons/Icon_Upgrade_Explosion.png",
+      "asset": "/assets/icons/Icon_Upgrade_Explosion.png",
       "ID": "d330723969bce44cb1ebe9009a2f6e0d"
     },
     {
@@ -1316,7 +1316,7 @@
       "type": "Clean",
       "category": "Total Ammo",
       "weapon": "HeavyParticleCannon",
-      "asset": "assets/icons/Icon_Upgrade_Total_Ammo.png",
+      "asset": "/assets/icons/Icon_Upgrade_Total_Ammo.png",
       "ID": "f1432f121f68e04da0c5dd8e50cf717d"
     },
     {
@@ -1325,7 +1325,7 @@
       "type": "Unstable",
       "category": "Damage",
       "weapon": "HeavyParticleCannon",
-      "asset": "assets/icons/Icon_Upgrade_Damage.png",
+      "asset": "/assets/icons/Icon_Upgrade_Damage.png",
       "ID": "187a18ba5283d24c905a37f4fb123ba0"
     },
     {
@@ -1334,7 +1334,7 @@
       "type": "Balanced",
       "category": "Special",
       "weapon": "HeavyParticleCannon",
-      "asset": "assets/icons/Icon_Upgrade_Special.png",
+      "asset": "/assets/icons/Icon_Upgrade_Special.png",
       "ID": "7bb7c21fa1d1e64a8c007ce6a023a412"
     }
   ]

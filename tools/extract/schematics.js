@@ -151,7 +151,7 @@ async function main() {
             type,
             category,
             weapon,
-            asset: `assets/icons/${asset}.png`,
+            asset: `/assets/icons/${asset}.png`,
           });
           //console.log({ dwarf, ID, name, current });
         } else {

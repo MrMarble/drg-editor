@@ -5,9 +5,10 @@ import { useSaveStore } from "../../stores/saveStore";
 
 const HEADER = [0x47, 0x56, 0x41, 0x53]; // GVAS
 
-export const UploadeFile = () => {
+export const useFileUpload = ({ onLoad }: { onLoad: () => void }) => {
   const fr = new FileReader();
   const { setSave, setName } = useSaveStore();
+
   fr.onloadend = () => {
     const data = fr.result;
     if (!data || typeof data === "string") return;
@@ -20,6 +21,7 @@ export const UploadeFile = () => {
     }
 
     setSave(new U8Array(data));
+    onLoad();
   };
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
@@ -38,21 +40,5 @@ export const UploadeFile = () => {
     },
   });
 
-  return (
-    <div
-      {...getRootProps()}
-      className="rounded m-6 border-dashed border-drg-primary-700 border-2 p-6 text-center cursor-pointer select-none hover:bg-drg-primary-400 hover:text-slate-900 transition-all duration-200"
-    >
-      <input {...getInputProps()} />
-      <p>{`Drag 'n' drop your save here, or click to select files`}</p>
-      <em className="text-gray-500">
-        (Only *.sav files will be accepted)
-        <br />
-        (add .sav at the end if using&nbsp;
-        <span className="inline-block text-gray-400 underline">Game Pass</span>)
-      </em>
-    </div>
-  );
+  return { getRootProps, getInputProps };
 };
-
-export default UploadeFile;

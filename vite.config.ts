@@ -1,15 +1,38 @@
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
+import { defineConfig, UserConfigExport } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  if (mode === "vercel") {
+  process.env.BASE_PATH = "/";
+
+  const base: UserConfigExport = {
+    plugins: [tsconfigPaths(), react()],
+    build: {
+      sourcemap: false,
+      minify: false,
+      emptyOutDir: true,
+      outDir: "dist",
+      rollupOptions: {
+        output: {
+          chunkFileNames: "bundle/[name].[hash].js",
+          manualChunks: (id) => {
+            if (id.includes("node_modules")) {
+              return "vendor";
+            }
+          },
+        },
+      },
+    },
+  };
+
+  // Github publish content based on the repo name.
+  // For vercel, we need to keep the base path as /.
+  if (mode !== "vercel") {
+    process.env.BASE_PATH = "/drg-editor/";
     return {
-      plugins: [react(), ViteWebfontDownload()],
+      ...base,
+      base: process.env.BASE_PATH,
     };
   }
-  return {
-    plugins: [react(), ViteWebfontDownload()],
-    base: "/drg-editor/",
-  };
 });

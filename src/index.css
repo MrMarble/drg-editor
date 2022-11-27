@@ -73,3 +73,19 @@ body {
   width: 30px;
   height: 30px;
 }
+@layer base {
+  @font-face {
+    font-family: heavitas;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/assets/fonts/Heavitas.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Danger Flight";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/dangerflight.ttf") format("truetype");
+  }
+}

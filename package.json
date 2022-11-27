@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "@loadable/component": "^5.15.2",
     "clsx": "^1.2.1",
     "countapi-js": "^1.0.2",
     "daisyui": "^2.31.0",
@@ -33,11 +34,13 @@
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.2",
     "react-icons": "^4.4.0",
+    "react-router-dom": "^6.4.3",
     "react-use": "^17.4.0",
     "zustand": "^4.1.1"
   },
   "devDependencies": {
     "@types/jest-image-snapshot": "^5.1.0",
+    "@types/loadable__component": "^5.13.4",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
@@ -56,7 +59,7 @@
     "tailwindcss": "^3.1.8",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
-    "vite-plugin-webfont-dl": "^3.1.1",
+    "vite-tsconfig-paths": "^3.6.0",
     "vitest": "^0.24.0"
   }
 }

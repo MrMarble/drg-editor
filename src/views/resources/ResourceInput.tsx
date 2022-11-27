@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { Input } from "../../components/UI";
 import { ITEMS } from "../../constant/resources";
 import { useChangesStore } from "../../stores/changesStore";
 import { useSaveStore } from "../../stores/saveStore";
-import { Input } from "../UI";
 
 type Props = {
   name: string;
