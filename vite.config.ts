@@ -10,10 +10,11 @@ export default defineConfig(({ mode }) => {
     plugins: [tsconfigPaths(), react()],
     build: {
       sourcemap: false,
-      minify: false,
+      minify: true,
       emptyOutDir: true,
       outDir: "dist",
       rollupOptions: {
+        treeshake: true,
         output: {
           chunkFileNames: "bundle/[name].[hash].js",
           manualChunks: (id) => {
