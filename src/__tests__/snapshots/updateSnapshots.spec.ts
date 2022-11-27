@@ -32,6 +32,7 @@ describe.skipIf(!process.env?.CI)("update snapshots", () => {
   it("Update homepage snapshot", async () => {
     const image = await page.screenshot();
 
+    await page.waitForNetworkIdle({ idleTime: 1000 });
     await waitForTransition();
     expect(image).toMatchImageSnapshot();
   });
@@ -46,7 +47,7 @@ describe.skipIf(!process.env?.CI)("update snapshots", () => {
 
     await fileInput.uploadFile("src/__tests__/fixtures/with_overclocks.sav");
     await page.waitForSelector("ul.menu");
-
+    await page.waitForNetworkIdle({ idleTime: 1000 });
     await waitForTransition();
     const image = await page.screenshot();
 
@@ -57,6 +58,7 @@ describe.skipIf(!process.env?.CI)("update snapshots", () => {
     await page.click("li:nth-child(2)");
     await page.click(".block:nth-child(1) button");
 
+    await page.waitForNetworkIdle({ idleTime: 1000 });
     await waitForTransition();
     const image = await page.screenshot();
 
@@ -66,6 +68,7 @@ describe.skipIf(!process.env?.CI)("update snapshots", () => {
   it("Update dwarf snapshot", async () => {
     await page.click("li:nth-child(3)");
 
+    await page.waitForNetworkIdle({ idleTime: 1000 });
     await waitForTransition();
     const image = await page.screenshot();
 
