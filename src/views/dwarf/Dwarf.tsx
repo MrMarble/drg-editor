@@ -102,7 +102,7 @@ export const Dwarf: FC = () => {
           <Input
             name="Level"
             initialValue={level}
-            icon="/assets/level.webp"
+            icon={`${import.meta.env.BASE_URL}assets/level.webp`}
             max={25}
             onChange={handleLevelChange}
           />
@@ -122,7 +122,7 @@ export const Dwarf: FC = () => {
           <Input
             name="Perks Points"
             initialValue={perks}
-            icon="/assets/perks.webp"
+            icon={`${import.meta.env.BASE_URL}assets/perks.webp`}
             max={0x0fffffff}
             onChange={handlePerkChange}
           />
