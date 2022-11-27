@@ -24,7 +24,7 @@ export const Tab = ({
         className={({ isActive }) =>
           clsx(
             isActive && "border-b-4 !border-drg-primary-500",
-            "hover:border-drg-secondary-500 justify-center md:justify-start flex-col md:flex-col lg:flex-row active:bg-drg-primary-400 focus:bg-drg-primary-400 rounded-none"
+            "justify-center md:justify-start flex-col md:flex-col lg:flex-row active:bg-slate-200 active:bg-opacity-10 focus:bg-transparent rounded-none"
           )
         }
       >
