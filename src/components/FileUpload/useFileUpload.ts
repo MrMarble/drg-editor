@@ -5,7 +5,7 @@ import { useSaveStore } from "../../stores/saveStore";
 
 const HEADER = [0x47, 0x56, 0x41, 0x53]; // GVAS
 
-export const useFileUpload = ({ onLoad }: { onLoad: () => void }) => {
+export const useFileUpload = ({ onLoad }: { onLoad?: () => void }) => {
   const fr = new FileReader();
   const { setSave, setName } = useSaveStore();
 
@@ -21,7 +21,7 @@ export const useFileUpload = ({ onLoad }: { onLoad: () => void }) => {
     }
 
     setSave(new U8Array(data));
-    onLoad();
+    onLoad && onLoad();
   };
 
   const onDrop = useCallback((acceptedFiles: File[]) => {

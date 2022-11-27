@@ -1,6 +1,6 @@
 import { useFileUpload } from "./useFileUpload";
 
-export const UploadeFile = ({ onLoad }: { onLoad: () => void }) => {
+export const UploadeFile = ({ onLoad }: { onLoad?: () => void }) => {
   const { getInputProps, getRootProps } = useFileUpload({ onLoad });
   return (
     <div

@@ -1,11 +1,6 @@
 import { UploadFile } from "../../components/FileUpload";
 
 export const HomeView = () => {
-  const onLoad = () => {
-    console.log("onLoad");
-    //TODO: Redirect to editor
-  };
-
   return (
     <>
       <div className="flex items-center justify-center">
@@ -16,7 +11,7 @@ export const HomeView = () => {
           className="w-32 mx-auto"
         />
       </div>
-      <UploadFile onLoad={onLoad} />
+      <UploadFile />
     </>
   );
 };
