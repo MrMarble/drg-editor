@@ -1,10 +1,11 @@
+import { Input } from "@/components/UI";
+import { Rank } from "@/components/UI/Layout";
 import { FC, useEffect, useState } from "react";
+import { Navigate, useParams } from "react-router-dom";
 import { DWARFS, PERK_UID, PROMO_RANKS, UUIDS, XP_TABLE } from "../../constant";
 import { useChangesStore } from "../../stores/changesStore";
 import { useFilterStore } from "../../stores/filterStore";
 import { useSaveStore } from "../../stores/saveStore";
-import { Input } from "../UI";
-import { Rank } from "../UI/Layout";
 import { Dropdown } from "./Dropdown";
 import Filters from "./filter/Filters";
 import { Overclocks } from "./overclocks";
@@ -21,7 +22,11 @@ const xpToLevel = (xp: number) => {
   return { level: 25, xp: 0 };
 };
 
-export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
+export const Dwarf: FC = () => {
+  const { dwarf } = useParams<{ dwarf: DWARFS }>();
+  if (!dwarf) {
+    return <Navigate to="/" replace />;
+  }
   const DWARF_UID = UUIDS[dwarf] + CLASS_UID;
   const { save, setSave } = useSaveStore();
   const { increment } = useChangesStore();
@@ -97,7 +102,7 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
           <Input
             name="Level"
             initialValue={level}
-            icon="assets/level.webp"
+            icon={`${import.meta.env.BASE_URL}assets/level.webp`}
             max={25}
             onChange={handleLevelChange}
           />
@@ -117,7 +122,7 @@ export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
           <Input
             name="Perks Points"
             initialValue={perks}
-            icon="assets/perks.webp"
+            icon={`${import.meta.env.BASE_URL}assets/perks.webp`}
             max={0x0fffffff}
             onChange={handlePerkChange}
           />

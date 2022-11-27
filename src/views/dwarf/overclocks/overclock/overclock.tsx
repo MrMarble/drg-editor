@@ -38,12 +38,12 @@ export const Overclock: FC<{
       className={clsx("relative w-16 h-16", !(owned || forged) && "opacity-40")}
     >
       <img
-        src={`assets/frames/${type}.png`}
+        src={`${import.meta.env.BASE_URL}assets/frames/${type}.png`}
         alt={type}
         className="absolute left-1/2 top-1/2 -translate-x-1/2  -translate-y-1/2"
       />
       <img
-        src={asset}
+        src={`${import.meta.env.BASE_URL}${asset}`}
         alt={name}
         className="absolute w-8  left-1/2 top-1/2  -translate-x-1/2  -translate-y-1/2"
       />

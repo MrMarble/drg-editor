@@ -1,11 +1,11 @@
+import { Input } from "@/components/UI";
+import { Rank } from "@/components/UI/Layout";
+import { WIP } from "@/components/Wip";
+import { ITEMS, RESOURCES } from "@/constant/resources";
+import { useChangesStore } from "@/stores/changesStore";
+import { useSaveStore } from "@/stores/saveStore";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
-import { ITEMS, RESOURCES } from "../../constant/resources";
-import { useChangesStore } from "../../stores/changesStore";
-import { useSaveStore } from "../../stores/saveStore";
-import { Input } from "../UI";
-import { Rank } from "../UI/Layout";
-import { WIP } from "../Wip";
 
 const XP_PER_LEVEL = 5000;
 
