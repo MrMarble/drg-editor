@@ -109,8 +109,8 @@ export const Season = ({ season }: { season: keyof typeof SEASONS }) => {
   }, [season]);
 
   return (
-    <div className="w-full ">
-      <Rank>
+    <div className="w-full">
+      <Rank key={season}>
         <Input
           name="Level"
           initialValue={level}
