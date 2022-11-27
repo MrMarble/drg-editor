@@ -36,4 +36,6 @@ export default defineConfig(({ mode }) => {
       base: process.env.BASE_PATH,
     };
   }
+
+  return base;
 });
