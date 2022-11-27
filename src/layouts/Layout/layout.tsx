@@ -1,3 +1,4 @@
+import { Download } from "../../components/Download";
 import { Outlet } from "react-router-dom";
 import GithubButton from "../../components/UI/GithubButton";
 
@@ -9,6 +10,7 @@ export const Layout = () => (
     <div className="shadow-md max-w-[90%] p-6 bg-gray-800 drg-framer !border-b-[15px] max-h-[90%] overflow-auto transition-all duration-1000 drg-scrollbar">
       <Outlet />
     </div>
+    <Download />
     <GithubButton />
   </div>
 );
