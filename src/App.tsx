@@ -17,15 +17,17 @@ function App() {
 
   useEffect(() => {
     if (isLoaded) {
-      CreateResources.preload();
-      CreateSeason.preload();
-      CreateDwarf.preload();
-
       startTransition(() => {
         navigate("/resources");
       });
     }
   }, [isLoaded]);
+
+  useEffect(() => {
+    CreateResources.preload();
+    CreateSeason.preload();
+    CreateDwarf.preload();
+  }, []);
 
   return (
     <Routes>
