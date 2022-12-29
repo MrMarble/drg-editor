@@ -1,7 +1,7 @@
+import { FilterType, useFilterStore } from "@/stores/filterStore";
 import clsx from "clsx";
 import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
-import { FilterType, useFilterStore } from "../../../stores/filterStore";
 
 type ItemsType = {
   name: string;

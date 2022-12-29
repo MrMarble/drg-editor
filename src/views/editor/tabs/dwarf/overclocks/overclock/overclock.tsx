@@ -1,9 +1,9 @@
+import { DWARFS } from "@/constant";
 import clsx from "clsx";
 import type { FC } from "react";
 import { FaLock } from "react-icons/fa";
 import { GiAnvil } from "react-icons/gi";
 import { HiArchive } from "react-icons/hi";
-import { DWARFS } from "../../../../constant";
 
 export const Overclock: FC<{
   ID: string;

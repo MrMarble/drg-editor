@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { Input } from "../../components/UI";
-import { ITEMS } from "../../constant/resources";
-import { useChangesStore } from "../../stores/changesStore";
-import { useSaveStore } from "../../stores/saveStore";
+import { Input } from "@/components/UI";
+import { ITEMS } from "@/constant/resources";
+import { useChangesStore } from "@/stores/changesStore";
+import { useSaveStore } from "@/stores/saveStore";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
   name: string;
@@ -11,8 +11,25 @@ type Props = {
 };
 
 export const ResourceInput = ({ name, item, uuid }: Props) => {
-  const { save, setSave } = useSaveStore();
-  const { increment } = useChangesStore();
+  const saveRef = useRef(useSaveStore.getState());
+  const { save, setSave } = saveRef.current;
+
+  const changesRef = useRef(useChangesStore.getState());
+  const { increment } = changesRef.current;
+
+  useEffect(() => {
+    const unsubSave = useSaveStore.subscribe(
+      (state) => (saveRef.current = state)
+    );
+    const unsubChange = useChangesStore.subscribe(
+      (state) => (changesRef.current = state)
+    );
+
+    return () => {
+      unsubSave();
+      unsubChange();
+    };
+  }, []);
 
   const [amount, setAmount] = useState(() => {
     let resources = 0;

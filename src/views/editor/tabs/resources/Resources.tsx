@@ -3,12 +3,12 @@ import {
   EXPANDED_RESOURCE_NAMES,
   ITEMS,
   RESOURCES,
-} from "../../constant/resources";
+} from "@/constant/resources";
 import ResourceInput from "./ResourceInput";
 
 export const Resources = () => {
   return (
-    <div className="w-full">
+    <div className="w-full" id="resources">
       {Object.entries(CATEGORIES).map(([category, items]) => {
         return (
           <div className="not-first:mt-10" key={category}>

@@ -1,11 +1,10 @@
 import { Input } from "@/components/UI";
 import { Rank } from "@/components/UI/Layout";
+import { DWARFS, PERK_UID, PROMO_RANKS, UUIDS, XP_TABLE } from "@/constant";
+import { useChangesStore } from "@/stores/changesStore";
+import { useFilterStore } from "@/stores/filterStore";
+import { useSaveStore } from "@/stores/saveStore";
 import { FC, useEffect, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
-import { DWARFS, PERK_UID, PROMO_RANKS, UUIDS, XP_TABLE } from "../../constant";
-import { useChangesStore } from "../../stores/changesStore";
-import { useFilterStore } from "../../stores/filterStore";
-import { useSaveStore } from "../../stores/saveStore";
 import { Dropdown } from "./Dropdown";
 import Filters from "./filter/Filters";
 import { Overclocks } from "./overclocks";
@@ -22,11 +21,7 @@ const xpToLevel = (xp: number) => {
   return { level: 25, xp: 0 };
 };
 
-export const Dwarf: FC = () => {
-  const { dwarf } = useParams<{ dwarf: DWARFS }>();
-  if (!dwarf) {
-    return <Navigate to="/" replace />;
-  }
+export const Dwarf: FC<{ dwarf: DWARFS }> = ({ dwarf }) => {
   const DWARF_UID = UUIDS[dwarf] + CLASS_UID;
   const { save, setSave } = useSaveStore();
   const { increment } = useChangesStore();
@@ -102,7 +97,7 @@ export const Dwarf: FC = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full" id="dwarf">
       <Rank key={dwarf}>
         <>
           <Input

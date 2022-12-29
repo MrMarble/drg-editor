@@ -36,7 +36,7 @@ export const Seasons = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full" id="season">
       <div className="text-sm font-medium text-center border-b border-drg-primary-500 mb-10">
         <ul className="flex flex-wrap -mb-px">
           {tabs.map((season) => (

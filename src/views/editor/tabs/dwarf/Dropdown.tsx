@@ -75,6 +75,7 @@ export const Dropdown: FC<{
           className="select w-full max-w-xs bg-transparent border-drg-primary-700 lg:w-44 text-[13px] tracking-wider drg-select"
           onChange={handleChange}
           defaultValue={initialValue}
+          id={name.toLowerCase()}
         >
           {items.map((item: string, index: number) => {
             return (

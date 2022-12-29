@@ -1,9 +1,9 @@
+import type { U8Array } from "@/helpers";
+import { b } from "@/helpers/hexToByte/hexToByte";
+import { UUID } from "@/helpers/u8array/uint8array";
+import { useChangesStore } from "@/stores/changesStore";
+import { useSaveStore } from "@/stores/saveStore";
 import { useState } from "react";
-import type { U8Array } from "../../../helpers";
-import { b } from "../../../helpers/hexToByte/hexToByte";
-import { UUID } from "../../../helpers/u8array/uint8array";
-import { useChangesStore } from "../../../stores/changesStore";
-import { useSaveStore } from "../../../stores/saveStore";
 
 const FORGED_NEEDLE: UUID = [
   0x46, 0x6f, 0x72, 0x67, 0x65, 0x64, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x74,

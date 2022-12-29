@@ -1,7 +1,7 @@
+import Schematics from "@/../data/schematics.json";
+import { DWARFS } from "@/constant";
+import { FilterType, useFilterStore } from "@/stores/filterStore";
 import { FC } from "react";
-import Schematics from "../../../../data/schematics.json";
-import { DWARFS } from "../../../constant";
-import { FilterType, useFilterStore } from "../../../stores/filterStore";
 import { Overclock } from "./overclock";
 import { useOverclocks } from "./use-overclocks";
 

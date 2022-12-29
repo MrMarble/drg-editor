@@ -67,7 +67,9 @@ export const Download = () => {
     </div>
   );
 
-  return createPortal(changes ? component : null, document.body);
+  const maybeComponent = changes ? component : null;
+
+  return createPortal(maybeComponent, document.body);
 };
 
 export default Download;

@@ -1,6 +1,6 @@
+import Schematics from "@/../data/schematics.json";
+import { DWARFS } from "@/constant";
 import React from "react";
-import { DWARFS } from "../../../constant";
-import Schematics from "../../../../data/schematics.json";
 
 type FilterWrapperType = {
   schema: typeof Schematics;

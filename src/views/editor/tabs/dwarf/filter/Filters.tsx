@@ -1,7 +1,7 @@
+import Schematics from "@/../data/schematics.json";
+import { DWARFS } from "@/constant";
+import { FilterType } from "@/stores/filterStore";
 import { FC } from "react";
-import Schematics from "../../../../data/schematics.json";
-import { DWARFS } from "../../../constant";
-import { FilterType } from "../../../stores/filterStore";
 import FilterElement from "./FilterElement";
 import FilterWrapper from "./FilterWrapper";
 

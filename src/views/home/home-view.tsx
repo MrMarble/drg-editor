@@ -1,8 +1,9 @@
+import { Layout } from "@/layouts/Layout";
 import { UploadFile } from "../../components/FileUpload";
 
 export const HomeView = () => {
   return (
-    <>
+    <Layout>
       <div className="flex items-center justify-center">
         <img
           src="assets/logo.png"
@@ -20,6 +21,6 @@ export const HomeView = () => {
         />
       </div>
       <UploadFile />
-    </>
+    </Layout>
   );
 };
