@@ -11,7 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
-
+/coverage
+cypress/screenshots
+cypress/videos
+cypress/downloads
 yarn.lock
 
 # Editor directories and files

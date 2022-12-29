@@ -25,10 +25,14 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "types": [
+      "vitest/globals"
+    ]
   },
   "include": [
-    "src"
+    "src",
+    "__mocks__"
   ],
   "exclude": [
     "node_modules"
