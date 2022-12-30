@@ -5,6 +5,7 @@
     "es2021": true,
     "node": true
   },
+  "ignorePatterns": ["__mocks__"],
   "extends": [
     "eslint:all",
     "plugin:@typescript-eslint/all",

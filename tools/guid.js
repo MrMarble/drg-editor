@@ -12,21 +12,21 @@
  * @param {string} guid
  * @returns {string}
  */
-const guidToHex = (guid) =>
+const guidToHex = guid =>
   guid
-    .split("-")
-    .map((segment) => parseInt(segment, 16))
-    .map((segment) => {
+    .split('-')
+    .map(segment => parseInt(segment, 16))
+    .map(segment => {
       const view = new DataView(new ArrayBuffer(4));
       view.setUint32(0, segment, true);
       return new Uint8Array(view.buffer);
     })
-    .map((segment) =>
+    .map(segment =>
       Array.from(segment)
-        .map((byte) => byte.toString(16).padStart(2, "0"))
-        .join("")
+        .map(byte => byte.toString(16).padStart(2, '0'))
+        .join('')
     )
-    .join("");
+    .join('');
 
 /**
  * Converts a hex string of the form 22bc4f7d07d13e43bfca81bd9c14b1af
@@ -35,19 +35,19 @@ const guidToHex = (guid) =>
  * @param {string} hex
  * @returns {string|undefined}
  */
-const hexToGuid = (hex) =>
+const hexToGuid = hex =>
   hex
     .match(/.{8}/g)
-    ?.map((segment) =>
-      parseInt(segment.match(/.{2}/g)?.reverse()?.join("") ?? "", 16)
+    ?.map(segment =>
+      parseInt(segment.match(/.{2}/g)?.reverse()?.join('') ?? '', 16)
     )
-    ?.map((segment) => segment.toString(16).toUpperCase())
-    ?.join("-");
+    ?.map(segment => segment.toString(16).toUpperCase())
+    ?.join('-');
 
 function main(args) {
   const guid = parseArgs(args);
 
-  if (guid.includes("-")) {
+  if (guid.includes('-')) {
     console.log(guidToHex(guid));
   } else {
     console.log(hexToGuid(guid));
@@ -61,7 +61,7 @@ function main(args) {
  */
 function parseArgs(args) {
   if (args.length !== 3) {
-    console.error("Usage: guid.js <guid>");
+    console.error('Usage: guid.js <guid>');
   }
   return args[2];
 }

@@ -2,9 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "ESNext"
-    ],
+    "lib": ["ESNext"],
     "module": "ESNext",
     "moduleResolution": "Node",
     "noEmit": true,
@@ -12,12 +10,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": [
-      "cypress",
-      "@testing-library/cypress"
-    ]
+    "types": ["cypress", "@testing-library/cypress"]
   },
-  "include": [
-    "."
-  ]
+  "include": ["."]
 }

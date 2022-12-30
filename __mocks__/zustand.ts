@@ -1,6 +1,7 @@
-import { act } from "react-dom/test-utils";
-import { beforeEach } from "vitest";
-import actualCreate, { StateCreator } from "zustand";
+import { act } from 'react-dom/test-utils';
+import { beforeEach } from 'vitest';
+import type { StateCreator } from 'zustand';
+import actualCreate from 'zustand';
 
 // a variable to hold reset functions for all stores declared in the app
 const storeResetFns = new Set<() => void>();
@@ -17,7 +18,7 @@ const create =
 
 // Reset all stores after each test run
 beforeEach(() => {
-  act(() => storeResetFns.forEach((resetFn) => resetFn()));
+  act(() => storeResetFns.forEach(resetFn => resetFn()));
 });
 
 export default create;
