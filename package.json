@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
+    "commit": "cz",
     "build": "vite build",
     "preview": "vite preview",
     "preview:test": "start-server-and-test preview http://localhost:4173/drg-editor",
@@ -27,6 +28,13 @@
     "*.{ts,tsx}": [
       "eslint --cache --fix",
       "vitest related --run --coverage=false"
+    ]
+  },
+  "browserslist": {
+    "production": "Edge >= 18, Firefox >= 60, Chrome >= 61, Safari >= 11, Opera >= 48",
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
     ]
   },
   "dependencies": {
@@ -56,7 +64,9 @@
     "@vitejs/plugin-react": "^2.1.0",
     "@vitest/coverage-istanbul": "^0.26.2",
     "autoprefixer": "^10.4.12",
+    "commitizen": "^4.2.6",
     "cypress": "^12.2.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.25.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
