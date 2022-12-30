@@ -22,13 +22,11 @@
     "format": "prettier -uw --cache --ignore-path .gitignore ."
   },
   "lint-staged": {
-    "**/*.ts": [
-      "prettier --write --ignore-unknown",
-      "eslint --fix"
-    ],
-    "**/*.tsx": [
-      "prettier --write --ignore-unknown",
-      "eslint --fix"
+    "*": "prettier -uw --cache",
+    "*.css": "stylelint --cache --fix",
+    "*.{ts,tsx}": [
+      "eslint --cache --fix",
+      "vitest related --run --coverage=false"
     ]
   },
   "dependencies": {
