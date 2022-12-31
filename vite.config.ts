@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
     },
     test: {
       css: false,
-      include: ['./src/**/__tests__/*'],
+      include: ['./src/**/__tests__/*', './src/__tests__/**/*.spec.ts'],
       globals: true,
       clearMocks: true,
       coverage: {
