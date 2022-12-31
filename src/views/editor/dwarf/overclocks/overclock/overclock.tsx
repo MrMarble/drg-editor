@@ -62,6 +62,7 @@ function Overclock({
       <div className='w-18 absolute bottom-0 right-0 flex h-8 flex-row rounded-tl-lg rounded-br-md bg-gray-700 p-0'>
         <button
           type='button'
+          title='Lock'
           className={clsx(
             'btn btn-ghost btn-square btn-sm rounded-none rounded-tl-lg',
             !(owned || forged) && 'btn-disabled bg-drg-primary-400 text-black'
@@ -72,6 +73,7 @@ function Overclock({
         </button>
         <button
           type='button'
+          title='Unlock'
           className={clsx(
             'btn btn-ghost btn-square btn-sm rounded-none ',
             owned && 'btn-disabled bg-drg-primary-400 text-black'
@@ -82,6 +84,7 @@ function Overclock({
         </button>
         <button
           type='button'
+          title='Forge'
           className={clsx(
             'btn btn-ghost btn-square btn-sm rounded-none rounded-br-md',
             forged && 'btn-disabled bg-drg-primary-400 text-black'
