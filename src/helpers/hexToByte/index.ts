@@ -1,1 +1,1 @@
-export { hexStringToByteArray } from "./hexToByte";
+export { b, hexStringToByteArray } from './hexToByte';

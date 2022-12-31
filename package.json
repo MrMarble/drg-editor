@@ -20,7 +20,8 @@
     "run-tsc": "tsc",
     "run-stylelint": "stylelint --cache --fix --ignore-path .gitignore **/*.css",
     "run-eslint": "eslint --cache --fix --ignore-path .gitignore --ext .ts,.tsx .",
-    "format": "prettier -uw --cache --ignore-path .gitignore ."
+    "format": "prettier -uw --cache --ignore-path .gitignore .",
+    "validate": "run-p lint test:ci test:e2e:headless"
   },
   "lint-staged": {
     "*": "prettier -uw --cache",

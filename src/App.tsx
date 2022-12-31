@@ -1,14 +1,15 @@
-import { useSaveStore } from "@/stores/saveStore";
-import { lazy, Suspense } from "react";
-import shallow from "zustand/shallow";
-import { HomeView } from "./views/home";
+import useSaveStore from '@/stores/saveStore';
+import type { ReactElement } from 'react';
+import { lazy, Suspense } from 'react';
+import shallow from 'zustand/shallow';
+import { HomeView } from './views/home';
 
-const editorViewPromise = import("./views/editor");
-const EditorView = lazy(() => editorViewPromise);
+const editorViewPromise = import('./views/editor/editorView');
+const EditorView = lazy(async () => editorViewPromise);
 
-function App() {
+function App(): ReactElement {
   const { isLoaded } = useSaveStore(
-    (state) => ({ isLoaded: state.isLoaded }),
+    state => ({ isLoaded: state.isLoaded }),
     shallow
   );
 

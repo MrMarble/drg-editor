@@ -104,7 +104,7 @@
         "devDependencies": [
           "cypress.config.ts",
           "vite.config.ts",
-          "src/setup.ts",
+          "src/setupTests.ts",
           "src/mocks/**",
           "__mocks__",
           "**/__tests__/**/*.{ts,tsx}"

@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
         reportsDirectory: 'coverage'
       },
       environment: 'jsdom',
-      setupFiles: './src/__tests__/setup.ts'
+      setupFiles: './src/setupTests.ts'
     },
     build: {
       commonjsOptions: {
