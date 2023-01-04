@@ -15,8 +15,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: "chore: update screenshots"
-          title: "[Auto] Update screenshots"
-          body: "This PR was created by a GitHub action. It updates the screenshots in the repository."
+          commit-message: 'chore: update screenshots'
+          title: '[Auto] Update screenshots'
+          body: 'This PR was created by a GitHub action. It updates the screenshots in the repository.'
           add-paths: |
             assets/*

@@ -1,0 +1,45 @@
+// Vitest Snapshot v1
+
+exports[`Download > should not render when there are no changes 1`] = `null`;
+
+exports[`Download > should render when there are changes 1`] = `
+<div
+  className="drg-framer alert absolute bottom-10 right-10 w-96 rounded-none shadow-lg"
+>
+  <div>
+    <svg
+      className="h-6 w-6 flex-shrink-0 stroke-info"
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+    <span>
+      You made 
+      10
+       changes
+    </span>
+  </div>
+  <div
+    className="flex-none"
+  >
+    <div
+      className="group border-l-4 border-r-4 border-drg-primary-600 px-1 transition-all duration-300 hover:border-drg-secondary-400"
+    >
+      <button
+        className="bg-drg-primary-500 px-4 py-1 text-slate-900 group-hover:hover:bg-drg-secondary-400"
+        onClick={[Function]}
+        type="button"
+      >
+        Download
+      </button>
+    </div>
+  </div>
+</div>
+`;

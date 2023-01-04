@@ -1,5 +1,5 @@
-import create from "zustand";
-import { U8Array } from "../helpers";
+import create from 'zustand';
+import { U8Array } from '../helpers';
 
 interface SaveState {
   isLoaded: boolean;
@@ -9,10 +9,10 @@ interface SaveState {
   setSave: (save: U8Array) => void;
 }
 
-export const useSaveStore = create<SaveState>()((set) => ({
+export default create<SaveState>()(set => ({
   isLoaded: false,
   save: new U8Array(0),
-  name: "",
-  setName: (name: string) => set({ name }),
-  setSave: (save) => set({ isLoaded: true, save }),
+  name: '',
+  setName: (name: string): void => set({ name }),
+  setSave: (save): void => set({ isLoaded: true, save })
 }));
