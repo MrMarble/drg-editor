@@ -1,1 +1,1 @@
-export { HomeView } from "./home-view";
+export * from './homeView';

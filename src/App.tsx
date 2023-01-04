@@ -1,68 +1,24 @@
-import ProtectedRoute from "@/components/ProtectedRoute";
-import { Layout } from "@/layouts/Layout";
-import { SideBar } from "@/layouts/SideBar";
-import { useSaveStore } from "@/stores/saveStore";
-import { HomeView } from "@/views/home";
-import loadable from "@loadable/component";
-import { startTransition, Suspense, useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import useSaveStore from '@/stores/saveStore';
+import type { ReactElement } from 'react';
+import { lazy, Suspense } from 'react';
+import shallow from 'zustand/shallow';
+import { HomeView } from './views/home';
 
-const CreateResources = loadable(() => import("./views/resources"));
-const CreateSeason = loadable(() => import("./views/season"));
-const CreateDwarf = loadable(() => import("./views/dwarf"));
+const editorViewPromise = import('./views/editor/editorView');
+const EditorView = lazy(async () => editorViewPromise);
 
-function App() {
-  const { isLoaded } = useSaveStore();
-  const navigate = useNavigate();
+function App(): ReactElement {
+  const { isLoaded } = useSaveStore(
+    state => ({ isLoaded: state.isLoaded }),
+    shallow
+  );
 
-  useEffect(() => {
-    if (isLoaded) {
-      startTransition(() => {
-        navigate("/resources");
-      });
-    }
-  }, [isLoaded]);
-
-  useEffect(() => {
-    CreateResources.preload();
-    CreateSeason.preload();
-    CreateDwarf.preload();
-  }, []);
-
-  return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<HomeView />} />
-        <Route element={<ProtectedRoute allowed={isLoaded} />}>
-          <Route element={<SideBar />}>
-            <Route
-              path="/resources"
-              element={
-                <Suspense>
-                  <CreateResources />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/season"
-              element={
-                <Suspense>
-                  <CreateSeason />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/dwarf/:dwarf"
-              element={
-                <Suspense>
-                  <CreateDwarf />
-                </Suspense>
-              }
-            />
-          </Route>
-        </Route>
-      </Route>
-    </Routes>
+  return isLoaded ? (
+    <Suspense>
+      <EditorView />
+    </Suspense>
+  ) : (
+    <HomeView />
   );
 }
 

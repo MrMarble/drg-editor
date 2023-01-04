@@ -1,9 +1,9 @@
-import create from "zustand";
+import create from 'zustand';
 
 export enum FilterType {
-  CATEGORY = "category",
-  WEAPON = "weapon",
-  TYPE = "type",
+  CATEGORY = 'category',
+  WEAPON = 'weapon',
+  TYPE = 'type'
 }
 
 interface FilterState {
@@ -13,22 +13,23 @@ interface FilterState {
   clearFilters: () => void;
 }
 
-export const useFilterStore = create<FilterState>((set) => ({
+export const useFilterStore = create<FilterState>(set => ({
   filters: {},
-  clearFilters: () => set({ filters: {} }),
-  addFilter: (type, value) => {
-    set((state) => ({
+  clearFilters: (): void => set({ filters: {} }),
+  addFilter: (type, value): void => {
+    set(state => ({
       filters: {
         ...state.filters,
-        [type]: [...(state.filters?.[type] ?? []), value],
-      },
+        [type]: [...(state.filters[type] ?? []), value]
+      }
     }));
   },
-  removeFilter: (type, value) => {
-    set((state) => {
-      const newFilters = state.filters[type]?.filter((v) => v !== value);
+  removeFilter: (type, value): void => {
+    set(state => {
+      const filters = state.filters[type]?.filter(v => v !== value);
 
-      if (newFilters?.length === 0) {
+      if (filters?.length === 0) {
+        // eslint-disable-next-line no-param-reassign, @typescript-eslint/no-dynamic-delete
         delete state.filters[type];
         return { filters: { ...state.filters } };
       }
@@ -36,9 +37,9 @@ export const useFilterStore = create<FilterState>((set) => ({
       return {
         filters: {
           ...state.filters,
-          [type]: newFilters,
-        },
+          [type]: filters
+        }
       };
     });
-  },
+  }
 }));

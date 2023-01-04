@@ -11,8 +11,13 @@ node_modules
 dist
 dist-ssr
 *.local
-
+/coverage
+cypress/screenshots
+cypress/videos
+cypress/downloads
 yarn.lock
+.eslintcache
+.stylelintcache
 
 # Editor directories and files
 .vscode/*

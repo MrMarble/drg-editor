@@ -14,7 +14,7 @@
 }
 
 .drg-scrollbar::-webkit-scrollbar-track {
-  @apply bg-gray-800 my-2;
+  @apply my-2 bg-gray-800;
 }
 
 .drg-internal-scrollbar::-webkit-scrollbar-track {
@@ -28,8 +28,9 @@
 }
 
 body {
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(255 255 255 / 87%);
   @apply bg-gray-900;
+
   min-height: 100vh;
 }
 
@@ -37,38 +38,38 @@ body {
   .drg-gradient {
     background: radial-gradient(
       circle,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.04) 100%
+      rgb(0 0 0 / 40%) 0%,
+      rgb(0 0 0 / 4%) 100%
     );
   }
 }
 
 .drg-framer {
-  @apply border-drg-primary-500 border-t-2 border-b-2 drg-gradient;
+  @apply drg-gradient border-t-2 border-b-2 border-drg-primary-500;
 }
 
 .drg-title {
-  font-family: "Danger Flight";
+  font-family: 'Danger Flight', Arial, Helvetica, sans-serif;
 }
 
 .drg-button {
-  @apply px-10 py-3 bg-black hover:bg-drg-primary-600 text-white cursor-pointer transition-all duration-300 mx-2;
+  @apply mx-2 cursor-pointer bg-black px-10 py-3 text-white transition-all duration-300 hover:bg-drg-primary-600;
 }
 
 .drg-button-disabled {
-  @apply text-slate-400 bg-black opacity-80 cursor-not-allowed hover:bg-gray-900;
+  @apply cursor-not-allowed bg-black text-slate-400 opacity-80 hover:bg-gray-900;
 }
 
 .drg-select > option {
-  @apply bg-gray-800 rounded-none border-0;
+  @apply rounded-none border-0 bg-gray-800;
 }
 
 .drg-select > option:checked {
-  @apply bg-gray-700 rounded-none border-0;
+  @apply rounded-none border-0 bg-gray-700;
 }
 
 .emblems {
-  background: url("/assets/promotion_emblems.webp") no-repeat;
+  background: url('/assets/promotion_emblems.webp') no-repeat;
   background-size: 330% 620%, cover;
   width: 30px;
   height: 30px;
@@ -79,13 +80,13 @@ body {
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/assets/fonts/Heavitas.ttf) format("truetype");
+    src: url('/assets/fonts/Heavitas.ttf') format('truetype');
   }
   @font-face {
-    font-family: "Danger Flight";
+    font-family: 'Danger Flight';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/assets/fonts/dangerflight.ttf") format("truetype");
+    src: url('/assets/fonts/dangerflight.ttf') format('truetype');
   }
 }

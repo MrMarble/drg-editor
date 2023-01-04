@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "composite": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext"
   },
-  "include": [
-    "vite.config.ts"
-  ]
+  "include": ["vite.config.ts", "cypress.config.ts", "__mocks__"]
 }

@@ -1,0 +1,40 @@
+// Vitest Snapshot v1
+
+exports[`Sidebar > should render correctly 1`] = `
+<div
+  className="flex max-w-7xl flex-col md:flex-col lg:flex-row"
+>
+  <div
+    className="mr-3 h-full w-auto border-drg-primary-500 p-3 lg:w-[250px] lg:border-r-2"
+  >
+    <ul
+      className="menu mr-4 flex-row flex-wrap justify-evenly md:flex-row lg:flex-col"
+    >
+      <li
+        className="hover:border-drg-primary-300 display-block my-1 rounded-md font-medium"
+        role="tab"
+      >
+        <button
+          className="border-b-4 !border-drg-primary-500 flex-col justify-center rounded-none focus:bg-transparent active:bg-slate-200 active:bg-opacity-10 md:flex-col md:justify-start lg:flex-row"
+          onClick={[Function]}
+          type="button"
+        >
+          <img
+            alt="Resources"
+            className="w-12"
+            src="assets/resources.webp"
+          />
+          <p
+            className="my-auto text-sm md:text-sm"
+          >
+            Resources
+          </p>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="box-border flex h-full w-auto flex-row p-6 lg:h-[700px] lg:w-[1200px]"
+  />
+</div>
+`;

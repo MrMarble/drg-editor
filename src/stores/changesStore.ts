@@ -1,4 +1,4 @@
-import create from "zustand";
+import create from 'zustand';
 
 interface ChangesState {
   changes: number;
@@ -6,8 +6,8 @@ interface ChangesState {
   reset: () => void;
 }
 
-export const useChangesStore = create<ChangesState>()((set) => ({
+export default create<ChangesState>()(set => ({
   changes: 0,
-  increment: () => set((state) => ({ changes: state.changes + 1 })),
-  reset: () => set({ changes: 0 }),
+  increment: (): void => set(state => ({ changes: state.changes + 1 })),
+  reset: (): void => set({ changes: 0 })
 }));
