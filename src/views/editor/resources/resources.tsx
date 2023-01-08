@@ -4,10 +4,16 @@ import {
   EXPANDED_RESOURCE_NAMES,
   RESOURCES
 } from '@/constant/resources';
+import { b } from '@/helpers';
+import useSaveStore from '@/stores/saveStore';
 import type { ReactElement } from 'react';
+import { useRef } from 'react';
 import ResourceInput from './resourceInput/resourceInput';
 
 function Resources(): ReactElement {
+  const saveReference = useRef(useSaveStore.getState());
+  const offset = saveReference.current.save.indexOfMulti(b`Resources`);
+
   return (
     <div className='w-full' id='resources'>
       {Object.entries(CATEGORIES).map(([category, items]) => (
@@ -22,6 +28,7 @@ function Resources(): ReactElement {
                 item={item}
                 name={EXPANDED_RESOURCE_NAMES[item] || item}
                 uuid={RESOURCES[item]}
+                from={offset}
               />
             ))}
           </div>

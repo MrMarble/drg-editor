@@ -6,13 +6,14 @@ interface Properties {
   name: string;
   item: string;
   uuid: number[];
+  from: number;
 }
 
-function ResourceInput({ name, item, uuid }: Properties): ReactElement {
+function ResourceInput({ name, item, uuid, from }: Properties): ReactElement {
   const {
     state: { amount },
     actions: { onInputChange }
-  } = useResourceInput({ item, uuid });
+  } = useResourceInput({ item, uuid, from });
 
   return (
     <Input

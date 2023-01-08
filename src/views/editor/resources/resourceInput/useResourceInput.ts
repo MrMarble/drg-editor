@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 interface Properties {
   item: string;
   uuid: number[];
+  from: number;
 }
 
 interface ReturnType {
@@ -17,7 +18,7 @@ interface ReturnType {
   };
 }
 
-function useResourceInput({ item, uuid }: Properties): ReturnType {
+function useResourceInput({ item, uuid, from }: Properties): ReturnType {
   const saveReference = useRef(useSaveStore.getState());
   const { save, setSave } = saveReference.current;
 
@@ -28,7 +29,7 @@ function useResourceInput({ item, uuid }: Properties): ReturnType {
     let resources = 0;
     resources = [ITEMS.CREDITS as string].includes(item)
       ? save.getInt32(uuid, 0)
-      : save.getFloat32(uuid, 0);
+      : save.getFloat32(uuid, 0, from);
 
     return resources < 0 ? 0 : resources;
   });
@@ -53,7 +54,7 @@ function useResourceInput({ item, uuid }: Properties): ReturnType {
     if ([ITEMS.CREDITS as string].includes(item)) {
       save.setInt32(uuid, 0, value);
     } else {
-      save.setFloat32(uuid, 0, value);
+      save.setFloat32(uuid, 0, value, from);
     }
 
     setSave(save);

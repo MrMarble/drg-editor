@@ -26,7 +26,7 @@ describe('U8Array', () => {
   ];
 
   describe.each(cases)('UUID as $type', ({ uuid }) => {
-    test.skip(`Should find the UUID ${uuid.toString()}`, () => {
+    test(`Should find the UUID ${uuid.toString()}`, () => {
       expect(haystack.indexOfMulti(uuid)).toBe(44_531);
     });
 
