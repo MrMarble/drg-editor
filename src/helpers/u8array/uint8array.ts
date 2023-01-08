@@ -22,7 +22,7 @@ export class U8Array extends Uint8Array {
     const hexNeedle =
       typeof needle === 'string' ? hexStringToByteArray(needle) : needle;
 
-    let index = Array.prototype.indexOf.call(this, needle[0], offset);
+    let index = Array.prototype.indexOf.call(this, hexNeedle[0], offset);
 
     if (hexNeedle.length === 1 || index === -1) {
       // Not found or no other elements to check
@@ -86,11 +86,11 @@ export class U8Array extends Uint8Array {
     this.set(u8, index + hexNeedle.length + offset);
   }
 
-  public getFloat32(needle: UUID, offset = 0): number {
+  public getFloat32(needle: UUID, offset = 0, from = HEADER_OFFSET): number {
     const hexNeedle =
       typeof needle === 'string' ? hexStringToByteArray(needle) : needle;
 
-    const index = this.indexOfMulti(hexNeedle, HEADER_OFFSET);
+    const index = this.indexOfMulti(hexNeedle, from);
     if (index === -1) {
       return -1;
     }
@@ -102,10 +102,15 @@ export class U8Array extends Uint8Array {
     return view.getFloat32(0, true);
   }
 
-  public setFloat32(needle: UUID, offset: number, value: number): void {
+  public setFloat32(
+    needle: UUID,
+    offset: number,
+    value: number,
+    from = HEADER_OFFSET
+  ): void {
     const hexNeedle =
       typeof needle === 'string' ? hexStringToByteArray(needle) : needle;
-    const index = this.indexOfMulti(hexNeedle, HEADER_OFFSET);
+    const index = this.indexOfMulti(hexNeedle, from);
     const view = new DataView(new ArrayBuffer(FLOAT32_NUM_BYTES));
     view.setFloat32(0, value, true);
 
