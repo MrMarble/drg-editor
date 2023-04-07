@@ -1,3 +1,7 @@
+# ⚠️ NOTICE
+
+# AS REQUESTED BY THE DEVELOPERS OF THE GAME, I TOOK DOWN THE ONLINE EDITOR AND I'M NOT GOING TO UPDATE IT ANY MORE, THE CODE WILL BE AVAILABLE FOR ANYONE TO MANTAIN/FORK.
+
 # Deep Rock Galactic Save Editor
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
@@ -8,7 +12,7 @@
 Online save editor for deep rock galactic game. [Try it out!](https://mrmarble.dev/drg-editor/)
 
 > ⚠️ ALWAYS BACKUP YOUR SAVE FILE!
-
+> 
 ## Work in progress
 
 Current features:
